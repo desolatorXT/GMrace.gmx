@@ -50,8 +50,29 @@ instance_create(32,room_height - 180,menu_controls_OBJ)
 instance_create(32,room_height - 120,menu_credits_OBJ)
 instance_create(32,room_height - 60,menu_exit_OBJ)
 
+//setup selections
+sel_len = 0
+sel_ids[sel_len] = menu_sp_OBJ.id
+sel_txt[sel_len] = "Launch the game's test level."
+sel_len += 1
+sel_ids[sel_len] = menu_mp_OBJ.id
+sel_txt[sel_len] = "Currently NOT available."
+sel_len += 1
+sel_ids[sel_len] = menu_options_OBJ.id
+sel_txt[sel_len] = "Configure game's settings."
+sel_len += 1
+sel_ids[sel_len] = menu_controls_OBJ.id
+sel_txt[sel_len] = "Change the game's control scheme."
+sel_len += 1
+sel_ids[sel_len] = menu_credits_OBJ.id
+sel_txt[sel_len] = "Currently NOT available."
+sel_len += 1
+sel_ids[sel_len] = menu_exit_OBJ.id
+sel_txt[sel_len] = "Exit to Windows."
+sel_len += 1
+
 //selection control
-selection = 1
+selection = 0
 select_id = menu_sp_OBJ.id
 can_select = 1
 //temp vars
@@ -79,63 +100,7 @@ counter = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// everything considering selection and action button included
-if (global_debugger_OBJ.ctrl_press = 1)&amp;&amp;(select_id.wait == 0) then {
-select_id.alarm[0] = 1
-}
-
-if (can_select = 0) then {
- counter = counter + 1
- if (counter &gt; 5 or (global_debugger_OBJ.down_press == 0 and global_debugger_OBJ.up_press == 0)) then {
-  counter = 0 
-  can_select = 1
- }
-}
-
-if (selection = 1) then {
-select_id = menu_sp_OBJ.id
-menu_draw_text_OBJ.text = "Launch the game's test level."
-}
-if (selection = 2) then {
-select_id = menu_mp_OBJ.id
-menu_draw_text_OBJ.text = "Currently NOT availiable."
-}
-if (selection = 3) then {
-select_id = menu_options_OBJ.id
-menu_draw_text_OBJ.text = "Configure game's settings."
-}
-if (selection = 4) then {
-select_id = menu_controls_OBJ.id
-menu_draw_text_OBJ.text = "Change the game's control scheme."
-}
-if (selection = 5) then {
-select_id = menu_credits_OBJ.id
-menu_draw_text_OBJ.text = "Currently NOT availiable."
-}
-if (selection = 6) then {
-select_id = menu_exit_OBJ.id
-menu_draw_text_OBJ.text = "Exit to Windows."
-}
-
-if (global_debugger_OBJ.up_press = 1)&amp;&amp;(can_select = 1) then {
- selection = selection - 1
- if (selection &lt; 1) then {selection = 6}
- can_select = 0
- audio_play_sound(ping2_SND,0,0)
- exit;
-}
-
-if (global_debugger_OBJ.down_press = 1)&amp;&amp;(can_select = 1) then {
- selection = selection + 1
- if (selection &gt; 6) then {selection = 1}
- can_select = 0
- audio_play_sound(ping2_SND,0,0)
- exit;
-}
-//everything considering selection and action button
-
-
-
+            <string>menu_selections_SCR(self, menu_draw_text_OBJ)
 </string>
           </argument>
         </arguments>

@@ -171,6 +171,7 @@
       <script>scripts\en_spawn_SCR.gml</script>
       <script>scripts\rotate_dir_SCR.gml</script>
       <script>scripts\powerup_drop_SCR.gml</script>
+      <script>scripts\menu_selections_SCR.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\movement_SCR.gml</script>
