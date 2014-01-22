@@ -100,7 +100,7 @@ counter = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu_selections_SCR(self, menu_draw_text_OBJ)
+            <string>menu_selections_SCR(self)
 </string>
           </argument>
         </arguments>

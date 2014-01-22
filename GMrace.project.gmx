@@ -244,8 +244,6 @@
     </objects>
     <objects name="menu_options">
       <object>objects\opt_main_OBJ</object>
-      <object>objects\opt_message_board_OBJ</object>
-      <object>objects\opt_draw_text_OBJ</object>
       <object>objects\opt_snd_volume_OBJ</object>
       <object>objects\opt_game_speed_OBJ</object>
       <object>objects\opt_fullscreen_OBJ</object>
@@ -258,8 +256,6 @@
     </objects>
     <objects name="menu_controls">
       <object>objects\ctr_main_OBJ</object>
-      <object>objects\ctr_message_board_OBJ</object>
-      <object>objects\ctr_draw_text_OBJ</object>
       <object>objects\ctr_up_OBJ</object>
       <object>objects\ctr_down_OBJ</object>
       <object>objects\ctr_left_OBJ</object>

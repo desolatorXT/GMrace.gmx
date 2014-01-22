@@ -29,8 +29,8 @@
 
 draw_set_font(retro_FN)
 
-instance_create(0,room_height-32,opt_message_board_OBJ)
-instance_create(0,0,opt_draw_text_OBJ)
+instance_create(0,room_height-32,menu_message_board_OBJ)
+instance_create(0,0,menu_draw_text_OBJ)
 
 //create option buttons:
 instance_create(32,room_height - 420,opt_snd_volume_OBJ)
@@ -94,7 +94,7 @@ counter = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu_selections_SCR(self, opt_draw_text_OBJ)
+            <string>menu_selections_SCR(self)
 </string>
           </argument>
         </arguments>

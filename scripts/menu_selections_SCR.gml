@@ -1,5 +1,5 @@
 menu = argument0
-drawer = argument1
+drawer = menu_draw_text_OBJ
 
 // everything considering selection and action button included
 if (global_debugger_OBJ.ctrl_press = 1)&&(menu.select_id.wait == 0) then {
