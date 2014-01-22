@@ -1,0 +1,12 @@
+- Invincibility frames για τον παίκτη (+ εφέ "αναβοσβησίματος", λογικά θα γίνει ανεβοκταβάζοντας το image alpha)
+- Διόρθωση bug ανάγνωσης τιμών από Settings.txt
+- Ο χώρος που πιάνει το HUD να μην είναι χώρος του game room.
+- Weapon objects (new weapon system, ξεχωριστό weapon object για τον παίκτη)
+* Main weapon: γρήγορα shots με λίγο damage χωρίς delay
+* Secondary: κρατάει το τωρινό effect με τα 2 particle που φτιάχνουν το shot.
+- Νέα projectiles για enemies (ή και παίκτες), laset shot.
+- Νέα ΑΙ patterns
+- Credits room
+- 2o test room με vertical scrolling
+- Explosions για τα missiles (το explosion να έχει range και να προκαλεί το ανάλογο damage, το effect υπάρχει ήδη και μπορεί να τροποποιηθεί αναλόγως)
+- 2player co-op mode (χρειάζεται μερικές αλλαγές ο κώδικας καθώς ψάχνει player_OBJ γενικά σε κάποια σημεία.)
