@@ -181,6 +181,9 @@
       <script>scripts\spd_ctrl_SCR.gml</script>
       <script>scripts\upgrades_SCR.gml</script>
     </scripts>
+    <scripts name="player_testing">
+      <script>scripts\invincibility_effect_SCR.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\retro_FN</font>

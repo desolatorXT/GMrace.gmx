@@ -25,14 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 100
+            <string>//fdasfdf
+hp = 100
 spd = 0
 moving = 0
 
+invincible = 0
+invis_counter = 0
+
 primary_weap = instance_create(x,y,unimaginetively_named_weapon_OBJ)
-primary_weap.onwer = self.id
+primary_weap.owner = self.id
 secondary_weap = instance_create(x,y,homing_missile_weap_OBJ)
-secondary_weap.onwer = self.id
+secondary_weap.owner = self.id
 
 
 
@@ -70,6 +74,7 @@ attspd_level = 1
             <kind>1</kind>
             <string>movement_SCR(self.id,spd)
 room_bound_SCR(self.id)
+invincibility_effect_SCR(self.id,invincible)
 
 if (global_debugger_OBJ.fire_press = 1) then {
  primary_weap.firing = 1
@@ -81,6 +86,29 @@ if (global_debugger_OBJ.altfire_press = 1) then {
 } else {
  secondary_weap.firing = 0
 } 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>invincible = 1
 </string>
           </argument>
         </arguments>
