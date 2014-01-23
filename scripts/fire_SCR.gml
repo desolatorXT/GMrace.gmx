@@ -9,7 +9,7 @@ if (user.fire_counter > user.fire_rate) then {
  }
 }
 
-if (g.ctrl_press = 1) then {
+if (g.fire_press = 1) then {
  if (user.can_fire = 1) then {
   if (user.firing = 0) then {
   fx_up = instance_create(user.x,user.y-8,fire_fx_OBJ)

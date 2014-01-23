@@ -25,15 +25,15 @@ if (keyboard_check_released(g.cf_right_key)) then {
  g.right_press = 0
 }
 if (keyboard_check_pressed(g.cf_fire_key)) then {
- g.ctrl_press = 1
+ g.fire_press = 1
 }
 if (keyboard_check_released(g.cf_fire_key)) then {
- g.ctrl_press = 0
+ g.fire_press = 0
 }
 if (keyboard_check_pressed(g.cf_altfire_key)) then {
- g.alt_press = 1
+ g.altfire_press = 1
 }
 if (keyboard_check_released(g.cf_altfire_key)) then {
- g.alt_press = 0
+ g.altfire_press = 0
 }
 

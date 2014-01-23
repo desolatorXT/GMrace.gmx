@@ -2,11 +2,11 @@ menu = argument0
 drawer = menu_draw_text_OBJ
 
 // everything considering selection and action button included
-if (global_debugger_OBJ.ctrl_press = 1)&&(menu.select_id.wait == 0) then {
+if (global_debugger_OBJ.fire_press = 1)&&(menu.select_id.wait == 0) then {
     menu.select_id.alarm[0] = 1
 }
 
-if (global_debugger_OBJ.alt_press == 1 && menu.cancel != noone) then {
+if (global_debugger_OBJ.altfire_press == 1 && menu.cancel != noone) then {
     if (menu.cancel.wait == 0) then menu.cancel.alarm[0] = 1
 }
 

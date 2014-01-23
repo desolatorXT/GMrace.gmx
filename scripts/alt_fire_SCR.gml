@@ -9,7 +9,7 @@ if (user.missile_counter > user.missile_rate) then {
  }
 }
 
-if (g.alt_press = 1) then {
+if (g.altfire_press = 1) then {
  if (user.missile_rd = 1) then {
   if (user.missile_ammo > 0) then {
   instance_create(user.x,user.y,pl_missile_OBJ)
