@@ -72,6 +72,9 @@ can_select = 1
 //temp vars
 counter = 0
 
+//cancelation
+cancel = opt_back_OBJ.id
+
 </string>
           </argument>
         </arguments>

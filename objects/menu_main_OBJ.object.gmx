@@ -78,6 +78,9 @@ can_select = 1
 //temp vars
 counter = 0
 
+//cancelation
+cancel = noone
+
 </string>
           </argument>
         </arguments>
