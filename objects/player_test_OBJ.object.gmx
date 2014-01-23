@@ -71,12 +71,12 @@ attspd_level = 1
             <string>movement_SCR(self.id,spd)
 room_bound_SCR(self.id)
 
-if (global_debugger_OBJ.ctrl_press = 1) then {
+if (global_debugger_OBJ.fire_press = 1) then {
  primary_weap.firing = 1
 } else {
  primary_weap.firing = 0
 } 
-if (global_debugger_OBJ.alt_press = 1) then {
+if (global_debugger_OBJ.altfire_press = 1) then {
  secondary_weap.firing = 1
 } else {
  secondary_weap.firing = 0
