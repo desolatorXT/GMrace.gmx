@@ -274,6 +274,7 @@
     <room>rooms\options_RM</room>
     <room>rooms\controls_RM</room>
     <room>rooms\test_RM</room>
+    <room>rooms\credits_RM</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
