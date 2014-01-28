@@ -135,7 +135,7 @@ draw_sprite(pow_level_SPR,pow_subimage,80,room_height-15)
 draw_sprite(frate_level_SPR,attspd_subimage,120,room_height-15)
 //ALT WEAPON AMMO bar
 draw_sprite(missile_hud_SPR,missile_subimage,160,room_height-15)
-draw_text_color(179,room_height-15,string(player_OBJ.missile_ammo),c_white,c_white,c_white,c_white,0.5)
+draw_text_color(179,room_height-15,string(player_OBJ.secondary_weap.ammo),c_white,c_white,c_white,c_white,0.5)
 
 //DRAW SCORE
 draw_text_color(2,2,'Score: '+string(global_debugger_OBJ.g_score),c_white,c_white,c_white,c_white,0.5)

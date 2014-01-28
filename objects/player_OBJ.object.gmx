@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>player_PAR</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,24 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = 100
+            <string>//fdasfdf
+hp = 100
 spd = 0
 moving = 0
 
-//can_fire = 1
-//fire_counter = 0
-//fire_rate = 10
-//firing = 0
-fx_up = -1
-fx_down = -1
-//damage = 51
+invincible = 0
+invis_counter = 0
 
-missile_rd = 1
-missile_counter = 0
-missile_rate = 60
+primary_weap = instance_create(0,0,default_weapon_OBJ)
+primary_weap.owner = self.id
 
+secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
+secondary_weap.owner = self.id
+
+
+
+
+
+
+
+
+
+
+//hud debug variables
 missile_ammo = 5
-
 pow_level = 1
 attspd_level = 1
 </string>
@@ -69,18 +76,17 @@ attspd_level = 1
             <kind>1</kind>
             <string>movement_SCR(self.id,spd)
 room_bound_SCR(self.id)
-//upgrades_SCR(self.id)
-//fire_SCR(self.id)
-//alt_fire_SCR(self.id)
+invincibility_effect_SCR(self.id,invincible)
 
-
+primary_weap.firing = global_debugger_OBJ.fire_press
+secondary_weap.firing = global_debugger_OBJ.altfire_press
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="enemy_PAR">
+    <event eventtype="9" enumb="32">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -97,10 +103,7 @@ room_bound_SCR(self.id)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp = hp - 59
-audio_play_sound(shot2_SND,0,0)
-
-other.hp = -1
+            <string>invincible = 1
 </string>
           </argument>
         </arguments>
