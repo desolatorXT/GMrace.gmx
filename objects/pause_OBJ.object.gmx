@@ -68,7 +68,7 @@ can_select = 1
 counter = 0
 
 //cancelation
-cancel = noone
+cancel = pause_resume_OBJ.id
 
 </string>
           </argument>
