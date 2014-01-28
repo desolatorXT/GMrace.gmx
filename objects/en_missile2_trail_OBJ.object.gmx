@@ -74,7 +74,11 @@ direction = creator.direction + 180
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha = image_alpha*0.90
+            <string>if (not(instance_exists(creator))) then {
+ instance_destroy()
+}
+
+image_alpha = image_alpha*0.90
 counter = counter + 1
 
 if (counter &gt; 30) then {

@@ -209,15 +209,17 @@ if os_is_paused() then {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (pause = 0) then {
-alarm[2] = 1
-exit;
+            <string>if (pause == 0) then {
+ pause = 1
+ instance_deactivate_all(self.id)
+ instance_create(0,0,pause_OBJ)
+ exit;
 }
-if (pause = 1) then {
-instance_activate_all()
-instance_deactivate_object(pause_OBJ)
-pause = 0
-exit;
+
+if (pause == 1) then {
+ pause = 0
+ instance_activate_all()
+ instance_deactivate_object(pause_OBJ)
 }
 </string>
           </argument>
