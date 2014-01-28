@@ -75,11 +75,9 @@ cf_altfire_key = file_text_read_real(cf_fname)
 file_text_readln(cf_fname);
 
 cf_fullscreen = file_text_read_real(cf_fname)
-cf_fullscreen = 0
 file_text_readln(cf_fname);
 
 cf_wsize = file_text_read_real(cf_fname)
-cf_wsize = 800
 file_text_readln(cf_fname);
 
 file_text_close(cf_fname);
@@ -87,8 +85,7 @@ file_text_close(cf_fname);
 audio_master_gain(cf_snd_volume/100)
 
 
-temp_fs = 'false'
-window_set_fullscreen(temp_fs)
+window_set_fullscreen(cf_fullscreen == 2)
 
 
 pause = 0
