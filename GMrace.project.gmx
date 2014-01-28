@@ -226,6 +226,7 @@
       <object>objects\missile_pickup_OBJ</object>
       <object>objects\pow_pickup_OBJ</object>
       <object>objects\attspd_pickup_OBJ</object>
+      <object>objects\pickup_PAR</object>
     </objects>
     <objects name="menu">
       <object>objects\menu_main_OBJ</object>
