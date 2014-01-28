@@ -216,9 +216,10 @@
       <object>objects\en8_OBJ</object>
       <object>objects\dummy_OBJ</object>
       <objects name="projectiles">
+        <object>objects\en_projectile_PAR</object>
         <object>objects\en_missile3_OBJ</object>
-        <object>objects\en_missile2_trail_OBJ</object>
         <object>objects\en_missile2_OBJ</object>
+        <object>objects\en_missile2_trail_OBJ</object>
         <object>objects\en_missile2_dummy_OBJ</object>
         <object>objects\en_bullet_expl_part_OBJ</object>
         <object>objects\en_expl_part_OBJ</object>
@@ -274,7 +275,7 @@
     <objects name="player testing">
       <object>objects\player_test_OBJ</object>
       <object>objects\weapon_PAR</object>
-      <object>objects\unimaginetively_named_weapon_OBJ</object>
+      <object>objects\default_weapon_OBJ</object>
       <object>objects\homing_missile_weap_OBJ</object>
     </objects>
   </objects>

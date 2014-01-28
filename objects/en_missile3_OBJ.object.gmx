@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>en_projectile_PAR</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -87,36 +87,6 @@ if (counter &gt; 120) then {
  instance_destroy()
 }
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="player_OBJ">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>other.hp = other.hp - 29
-audio_play_sound(explos1_SND,0,0)
-for (i=0; i&lt;part_count;i=i+1) {
-x_mod = choose(1,-1)
-y_mod = choose(1,-1)
-instance_create(x+x_mod*random(4),y+y_mod*random(4),en_bullet_expl_part_OBJ)
-}
-instance_destroy()
 </string>
           </argument>
         </arguments>

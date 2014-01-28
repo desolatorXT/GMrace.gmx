@@ -33,7 +33,7 @@ moving = 0
 invincible = 0
 invis_counter = 0
 
-primary_weap = instance_create(x,y,unimaginetively_named_weapon_OBJ)
+primary_weap = instance_create(x,y,default_weapon_OBJ)
 primary_weap.owner = self.id
 secondary_weap = instance_create(x,y,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
