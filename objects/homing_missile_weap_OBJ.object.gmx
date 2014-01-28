@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>weapon_PAR</parentName>
@@ -19,17 +19,17 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>default_weapon_OBJ</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-damage = 15
-
-fire_rate = 5
+damage = 200
+fire_rate = 30
 counter = 0
+
 can_fire = 1
 </string>
           </argument>
@@ -53,16 +53,18 @@ can_fire = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (firing = 1) then {
-    if (can_fire = 1) then {
-        if ((counter mod fire_rate) = 0) then {
+            <string>if (firing == 1) then {
+    if (can_fire == 1) then {
+        if (counter == 0) then {
         bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
         bullet.damage = damage
-        counter = 0
+        counter = fire_rate // "hack" to activate the loop below without losing 1 step
         }
-        counter = counter + 1
     }
 }
+
+if (counter &gt; 0) counter = (counter + 1) mod fire_rate
+
 </string>
           </argument>
         </arguments>

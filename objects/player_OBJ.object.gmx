@@ -29,13 +29,13 @@
 spd = 0
 moving = 0
 
-can_fire = 1
-fire_counter = 0
-fire_rate = 10
-firing = 0
+//can_fire = 1
+//fire_counter = 0
+//fire_rate = 10
+//firing = 0
 fx_up = -1
 fx_down = -1
-damage = 51
+//damage = 51
 
 missile_rd = 1
 missile_counter = 0
@@ -69,9 +69,9 @@ attspd_level = 1
             <kind>1</kind>
             <string>movement_SCR(self.id,spd)
 room_bound_SCR(self.id)
-upgrades_SCR(self.id)
-fire_SCR(self.id)
-alt_fire_SCR(self.id)
+//upgrades_SCR(self.id)
+//fire_SCR(self.id)
+//alt_fire_SCR(self.id)
 
 
 

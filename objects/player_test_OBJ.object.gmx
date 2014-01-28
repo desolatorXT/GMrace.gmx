@@ -33,10 +33,12 @@ moving = 0
 invincible = 0
 invis_counter = 0
 
-primary_weap = instance_create(x,y,default_weapon_OBJ)
+primary_weap = instance_create(0,0,default_weapon_OBJ)
 primary_weap.owner = self.id
-secondary_weap = instance_create(x,y,homing_missile_weap_OBJ)
+
+secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
+
 
 
 
@@ -76,16 +78,9 @@ attspd_level = 1
 room_bound_SCR(self.id)
 invincibility_effect_SCR(self.id,invincible)
 
-if (global_debugger_OBJ.fire_press = 1) then {
- primary_weap.firing = 1
-} else {
- primary_weap.firing = 0
-} 
-if (global_debugger_OBJ.altfire_press = 1) then {
- secondary_weap.firing = 1
-} else {
- secondary_weap.firing = 0
-} 
+primary_weap.firing = global_debugger_OBJ.fire_press
+secondary_weap.firing = global_debugger_OBJ.altfire_press
+
 </string>
           </argument>
         </arguments>
