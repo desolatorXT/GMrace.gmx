@@ -28,13 +28,12 @@
             <string>speed = 1
 direction = 180
 
-
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="pickup_PAR">
+    <event eventtype="4" ename="player_PAR">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -51,7 +50,7 @@ direction = 180
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>other.primary_weap.atk_spd_buff_lifetime = 30 * 30
 instance_destroy()
 </string>
           </argument>

@@ -51,7 +51,7 @@ direction = 180
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>other.primary_weap.pow_buff_lifetime = 30 * 30
 instance_destroy()
 </string>
           </argument>

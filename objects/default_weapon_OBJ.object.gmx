@@ -28,9 +28,13 @@
             <string>event_inherited()
 damage = 15
 
-fire_rate = 5
+fire_rate = 6
 counter = 0
 can_fire = 1
+
+// buffs
+atk_spd_buff_lifetime = 0
+pow_buff_lifetime = 0
 </string>
           </argument>
         </arguments>
@@ -53,7 +57,21 @@ can_fire = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (firing == 1) then {
+            <string>// handle buffs
+if (atk_spd_buff_lifetime &gt; 0) {
+    atk_spd_buff_lifetime--
+    fire_rate = 4
+}
+else fire_rate = 6
+
+if (pow_buff_lifetime &gt; 0) {
+    pow_buff_lifetime--
+    damage = 30
+}
+else damage = 15
+
+// firing
+if (firing == 1) then {
     if (can_fire == 1) then {
         if (counter == 0) then {
         bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
