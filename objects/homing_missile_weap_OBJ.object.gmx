@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 damage = 200
-fire_rate = 30
-counter = 0
-
+ammo = 5
 can_fire = 1
 </string>
           </argument>
@@ -55,15 +53,18 @@ can_fire = 1
             <kind>1</kind>
             <string>if (firing == 1) then {
     if (can_fire == 1) then {
-        if (counter == 0) then {
-        bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
-        bullet.damage = damage
-        counter = fire_rate // "hack" to activate the loop below without losing 1 step
-        }
+        if (ammo &gt; 0) then {
+            bullet = instance_create(owner.x,owner.y,pl_missile_OBJ)
+            bullet.damage = damage
+            ammo -= 1
+            can_fire = 0
+        } else {/*play sound*/}
     }
-}
+} else {can_fire = 1}
 
-if (counter &gt; 0) counter = (counter + 1) mod fire_rate
+
+
+
 
 </string>
           </argument>
