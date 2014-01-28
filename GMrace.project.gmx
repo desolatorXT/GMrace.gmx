@@ -190,7 +190,6 @@
     <font>fonts\retro_FN</font>
   </fonts>
   <objects name="objects">
-    <object>objects\pause_OBJ</object>
     <object>objects\hud_OBJ</object>
     <object>objects\enemy_ctrl_OBJ</object>
     <object>objects\global_debugger_OBJ</object>
@@ -278,6 +277,9 @@
         <object>objects\pl_bullet_OBJ</object>
         <object>objects\fire_fx_OBJ</object>
       </objects>
+    </objects>
+    <objects name="pause_menu">
+      <object>objects\pause_OBJ</object>
     </objects>
   </objects>
   <rooms name="rooms">
