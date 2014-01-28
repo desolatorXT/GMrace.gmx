@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 damage = 200
+max_ammo = 5
 ammo = 5
 can_fire = 1
 </string>
@@ -51,7 +52,9 @@ can_fire = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (firing == 1) then {
+            <string>if (ammo &gt; max_ammo) ammo = max_ammo
+
+if (firing == 1) then {
     if (can_fire == 1) then {
         if (ammo &gt; 0) then {
             bullet = instance_create(owner.x,owner.y,pl_missile_OBJ)
