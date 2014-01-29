@@ -82,7 +82,9 @@ attspd_level = 1
 room_bound_SCR(self.id)
 invincibility_effect_SCR(self.id,invincible)
 
-if (godmode == 1) hp = max_hp
+if (godmode == 1) then {
+    invincible = 1
+}
 
 if (hp &gt; max_hp) hp = max_hp
 
