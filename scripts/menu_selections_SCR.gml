@@ -18,24 +18,22 @@ if (menu.can_select = 0) then {
  }
 }
 
-menu.select_id = menu.sel_ids[menu.selection]
-drawer.text = menu.sel_txt[menu.selection]
+movement = 0
+if (global_debugger_OBJ.up_press == 1) movement--
+if (global_debugger_OBJ.down_press == 1) movement++
 
-if (global_debugger_OBJ.up_press = 1)&&(can_select = 1) then {
- menu.selection -= 1
- if (menu.selection < 0) then { menu.selection = menu.sel_len - 1 }
- menu.can_select = 0
- audio_play_sound(ping2_SND,0,0)
- exit;
+if (movement != 0 && can_select == 1) {
+    do {
+        menu.selection += movement
+        if (menu.selection < 0) menu.selection = menu.sel_len - 1
+        if (menu.selection >= menu.sel_len) menu.selection = 0
+        menu.select_id = menu.sel_ids[menu.selection]
+    } until (menu.select_id.enabled == 1)
+    drawer.text = menu.sel_txt[menu.selection]
+    menu.can_select = 0
+    audio_play_sound(ping2_SND,0,0)
 }
 
-if (global_debugger_OBJ.down_press = 1)&&(can_select = 1) then {
- menu.selection += 1
- if (menu.selection >= menu.sel_len) then { menu.selection = 0 }
- menu.can_select = 0
- audio_play_sound(ping2_SND,0,0)
- exit;
-}
 //everything considering selection and action button
 
 

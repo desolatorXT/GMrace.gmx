@@ -203,6 +203,52 @@
     <object>objects\draw_debug_stats_OBJ</object>
     <object>objects\star_ctrl_OBJ</object>
     <object>objects\star_OBJ</object>
+    <objects name="menus">
+      <objects name="menu_main">
+        <object>objects\menu_main_OBJ</object>
+        <object>objects\menu_message_board_OBJ</object>
+        <object>objects\menu_draw_text_OBJ</object>
+        <object>objects\menu_sp_OBJ</object>
+        <object>objects\menu_mp_OBJ</object>
+        <object>objects\menu_options_OBJ</object>
+        <object>objects\menu_controls_OBJ</object>
+        <object>objects\menu_credits_OBJ</object>
+        <object>objects\menu_exit_OBJ</object>
+      </objects>
+      <objects name="menu_options">
+        <object>objects\opt_main_OBJ</object>
+        <object>objects\opt_snd_volume_OBJ</object>
+        <object>objects\opt_game_speed_OBJ</object>
+        <object>objects\opt_fullscreen_OBJ</object>
+        <object>objects\opt_wsize_OBJ</object>
+        <object>objects\opt_default_OBJ</object>
+        <object>objects\opt_save_OBJ</object>
+        <object>objects\opt_back_OBJ</object>
+        <object>objects\opt_value_draw_OBJ</object>
+        <object>objects\opt_value_draw_text_OBJ</object>
+      </objects>
+      <objects name="menu_controls">
+        <object>objects\ctr_main_OBJ</object>
+        <object>objects\ctr_up_OBJ</object>
+        <object>objects\ctr_down_OBJ</object>
+        <object>objects\ctr_left_OBJ</object>
+        <object>objects\ctr_right_OBJ</object>
+        <object>objects\ctr_fire_OBJ</object>
+        <object>objects\ctr_altfire_OBJ</object>
+        <object>objects\ctr_default_OBJ</object>
+        <object>objects\ctr_save_OBJ</object>
+        <object>objects\ctr_back_OBJ</object>
+        <object>objects\ctr_value_draw_OBJ</object>
+        <object>objects\ctr_value_draw_text_OBJ</object>
+      </objects>
+      <objects name="menu_pause">
+        <object>objects\pause_OBJ</object>
+        <object>objects\pause_resume_OBJ</object>
+        <object>objects\pause_main_menu_OBJ</object>
+        <object>objects\pause_exit_OBJ</object>
+      </objects>
+      <object>objects\menu_item_PAR</object>
+    </objects>
     <objects name="enemies">
       <object>objects\enemy_PAR</object>
       <object>objects\en1_OBJ</object>
@@ -235,43 +281,6 @@
       <object>objects\attspd_pickup_OBJ</object>
       <object>objects\pickup_PAR</object>
     </objects>
-    <objects name="menu">
-      <object>objects\menu_main_OBJ</object>
-      <object>objects\menu_message_board_OBJ</object>
-      <object>objects\menu_draw_text_OBJ</object>
-      <object>objects\menu_sp_OBJ</object>
-      <object>objects\menu_mp_OBJ</object>
-      <object>objects\menu_options_OBJ</object>
-      <object>objects\menu_controls_OBJ</object>
-      <object>objects\menu_credits_OBJ</object>
-      <object>objects\menu_exit_OBJ</object>
-    </objects>
-    <objects name="menu_options">
-      <object>objects\opt_main_OBJ</object>
-      <object>objects\opt_snd_volume_OBJ</object>
-      <object>objects\opt_game_speed_OBJ</object>
-      <object>objects\opt_fullscreen_OBJ</object>
-      <object>objects\opt_wsize_OBJ</object>
-      <object>objects\opt_default_OBJ</object>
-      <object>objects\opt_save_OBJ</object>
-      <object>objects\opt_back_OBJ</object>
-      <object>objects\opt_value_draw_OBJ</object>
-      <object>objects\opt_value_draw_text_OBJ</object>
-    </objects>
-    <objects name="menu_controls">
-      <object>objects\ctr_main_OBJ</object>
-      <object>objects\ctr_up_OBJ</object>
-      <object>objects\ctr_down_OBJ</object>
-      <object>objects\ctr_left_OBJ</object>
-      <object>objects\ctr_right_OBJ</object>
-      <object>objects\ctr_fire_OBJ</object>
-      <object>objects\ctr_altfire_OBJ</object>
-      <object>objects\ctr_default_OBJ</object>
-      <object>objects\ctr_save_OBJ</object>
-      <object>objects\ctr_back_OBJ</object>
-      <object>objects\ctr_value_draw_OBJ</object>
-      <object>objects\ctr_value_draw_text_OBJ</object>
-    </objects>
     <objects name="player">
       <object>objects\player_OBJ</object>
       <object>objects\player_PAR</object>
@@ -287,12 +296,6 @@
         <object>objects\pl_missile_expl_part_OBJ</object>
         <object>objects\pl_missile_OBJ</object>
       </objects>
-    </objects>
-    <objects name="pause_menu">
-      <object>objects\pause_OBJ</object>
-      <object>objects\pause_resume_OBJ</object>
-      <object>objects\pause_main_menu_OBJ</object>
-      <object>objects\pause_exit_OBJ</object>
     </objects>
     <object>objects\en_explosion_radius_OBJ</object>
     <object>objects\pl_explosion_radius_OBJ</object>
