@@ -204,8 +204,9 @@ instance_create(32,32,player_OBJ)
 if (room_current &gt; 0) then {
  if (instance_exists(player_OBJ)) then {
  if (player_OBJ.hp &lt;= 0)&amp;&amp;(debug_enabled = 0) then {
-  show_message('Game Over')
-  game_restart()
+      pause = 1
+      instance_deactivate_all(self.id)
+      instance_create(0,0,pause_OBJ)
   }
  }
 }
