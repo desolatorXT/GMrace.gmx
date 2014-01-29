@@ -207,6 +207,8 @@ if (room_current &gt; 0) then {
       pause = 1
       instance_deactivate_all(self.id)
       instance_create(0,0,pause_OBJ)
+      pause_resume_OBJ.enabled = 0
+      menu_next_sel(pause_OBJ)
   }
  }
 }
@@ -216,6 +218,7 @@ if ((os_is_paused())&amp;&amp;(pause = 0)) then {
   pause = 1
   instance_deactivate_all(self.id)
   instance_create(0,0,pause_OBJ)
+  pause_resume_OBJ.enabled = 1
  }
 }
 </string>
