@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>wait = 0
 counter = 0
+enabled = 0
 
 </string>
           </argument>
@@ -73,9 +74,13 @@ counter = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>wait = 1
-audio_play_sound(woop3_SND,0,0)
-
+            <string>if (enabled == 1) {
+    wait = 1
+    audio_play_sound(woop3_SND,0,0)
+}
+else {
+    audio_play_sound(dong1_SND,0,0)
+}
 
 
 
@@ -101,11 +106,17 @@ audio_play_sound(woop3_SND,0,0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (wait = 1) then {
- counter = counter + 1
- if (counter &gt; 8) then {
-  alarm[1] = 1
- }
+            <string>if (enabled == 1) {
+    image_blend = c_white
+    if (wait = 1) then {
+        counter = counter + 1
+        if (counter &gt; 8) then {
+            alarm[1] = 1
+        }
+    }
+}
+else {
+    image_blend = c_dkgray
 }
 </string>
           </argument>
