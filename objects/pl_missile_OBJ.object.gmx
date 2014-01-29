@@ -29,7 +29,8 @@
 direction = 0
 counter = 0
 
-part_count = 20
+part_count = 30
+explosion_size = 24
 
 detect = 0
 target = -1
@@ -57,10 +58,15 @@ target = -1
           <argument>
             <kind>1</kind>
             <string>audio_play_sound(explos1_SND,0,0)
+xpl = instance_create(x,y,pl_explosion_radius_OBJ)
+xpl.image_xscale = 1
+xpl.image_yscale = 1
+xpl.radius = 1
+xpl.damage = 200
 for (i=0; i&lt;part_count;i=i+1) {
 x_mod = choose(1,-1)
 y_mod = choose(1,-1)
-instance_create(x+x_mod*random(10),y+y_mod*random(10),pl_missile_expl_part_OBJ)
+instance_create(x+x_mod*random(explosion_size),y+y_mod*random(explosion_size),pl_missile_expl_part_OBJ)
 }
 instance_destroy()
 </string>
