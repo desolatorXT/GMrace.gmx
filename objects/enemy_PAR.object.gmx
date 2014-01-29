@@ -108,7 +108,9 @@ if (x &lt; -12)or(y&lt;-12)or(y&gt;room_height+12) then {
             <kind>1</kind>
             <string>temp = point_distance(x,y,other.x,other.y)
 r = other.sprite_height
-hp = hp - (other.damage)*(100-temp)/100
+temp_p = (100*temp)/r
+temp_p = 100-temp_p
+hp = hp - (other.damage)*(temp_p)/100
 </string>
           </argument>
         </arguments>
