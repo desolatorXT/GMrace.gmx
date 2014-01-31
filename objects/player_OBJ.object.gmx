@@ -96,6 +96,8 @@ attspd_level = 1
     secondary_weap.firing = global_debugger_OBJ.altfire_press
 } else { 
 visible = 0
+primary_weap.firing = 0
+secondary_weap.firing = 0
 }
 
 </string>

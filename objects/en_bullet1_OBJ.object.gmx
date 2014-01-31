@@ -29,8 +29,7 @@
 speed = 5
 direction = 180
 part_count = 10
-damage = 10
-explosive = 0
+
 </string>
           </argument>
         </arguments>

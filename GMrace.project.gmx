@@ -202,7 +202,6 @@
     <object>objects\hud_OBJ</object>
     <object>objects\enemy_ctrl_OBJ</object>
     <object>objects\global_debugger_OBJ</object>
-    <object>objects\draw_debug_stats_OBJ</object>
     <object>objects\star_ctrl_OBJ</object>
     <object>objects\star_OBJ</object>
     <objects name="menus">
@@ -287,8 +286,8 @@
       <object>objects\pickup_PAR</object>
     </objects>
     <objects name="player">
-      <object>objects\player_OBJ</object>
       <object>objects\player_PAR</object>
+      <object>objects\player_OBJ</object>
       <objects name="weapons">
         <object>objects\weapon_PAR</object>
         <object>objects\default_weapon_OBJ</object>

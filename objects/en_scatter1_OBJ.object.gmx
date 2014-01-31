@@ -56,7 +56,8 @@ audio_play_sound(bloop1_SND,0,0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//fires 5 missiles
+            <string>event_inherited()
+//fires 5 missiles
 m1 = instance_create(x,y,en_missile_scatter1_OBJ)
 m1.speed = 3
 m1.direction = 160
@@ -77,13 +78,8 @@ m5 = instance_create(x,y,en_missile_scatter1_OBJ)
 m5.speed = 3
 m5.direction = 200
 
-for (i=0; i&lt;part_count;i=i+1) {
-x_mod = choose(1,-1)
-y_mod = choose(1,-1)
-instance_create(x+x_mod*random(4),y+y_mod*random(4),en_bullet_expl_part_OBJ)
-}
 audio_play_sound(bloop1_SND,0,0)
-instance_destroy()
+
 </string>
           </argument>
         </arguments>

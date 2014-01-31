@@ -32,7 +32,6 @@ target = instance_nearest(x,y,player_OBJ)
 direction = point_direction(x,y,target.x,target.y)
 speed = 2
 
-part_count = 20
 damage = 30
 explosive = 1
 
