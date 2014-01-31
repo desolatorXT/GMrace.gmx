@@ -43,6 +43,10 @@ primary_weap.owner = self.id
 secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
 
+part_count = 64
+explosion_size = 32
+playable = 1
+
 
 
 
@@ -78,18 +82,21 @@ attspd_level = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movement_SCR(self.id,spd)
-room_bound_SCR(self.id)
-invincibility_effect_SCR(self.id,invincible)
+            <string>if (playable = 1) then {
+    movement_SCR(self.id,spd)
+    room_bound_SCR(self.id)
+    invincibility_effect_SCR(self.id,invincible)
 
-if (godmode == 1) then {
-    invincible = 1
+    if (godmode == 1) then {
+        invincible = 1
+    }
+
+    if (hp &gt; max_hp) hp = max_hp
+    primary_weap.firing = global_debugger_OBJ.fire_press
+    secondary_weap.firing = global_debugger_OBJ.altfire_press
+} else { 
+visible = 0
 }
-
-if (hp &gt; max_hp) hp = max_hp
-
-primary_weap.firing = global_debugger_OBJ.fire_press
-secondary_weap.firing = global_debugger_OBJ.altfire_press
 
 </string>
           </argument>

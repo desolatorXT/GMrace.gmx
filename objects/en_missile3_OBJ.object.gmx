@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_count = 20
+            <string>event_inherited()
+part_count = 20
 counter = 0
+damage = 30
+explosive = 1
 
 audio_play_sound(shot1_SND,0,0)
 

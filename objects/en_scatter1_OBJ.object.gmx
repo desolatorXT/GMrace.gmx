@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction = 180
+            <string>event_inherited()
+direction = 180
 speed = 2.5
+damage = 30
+explosive = 1
 
 part_count = 10
 

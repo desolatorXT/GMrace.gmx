@@ -31,6 +31,7 @@ key_var_init_SCR()
 
 room_current = 0 //0 = menu
 debug_enabled = 0
+game_over = 0
 
 //normalize sound
 audio_sound_gain(shot1_SND,1.4,-1)
@@ -203,12 +204,10 @@ instance_create(32,32,player_OBJ)
 
 if (room_current &gt; 0) then {
  if (instance_exists(player_OBJ)) then {
- if (player_OBJ.hp &lt;= 0)&amp;&amp;(debug_enabled = 0) then {
-      pause = 1
-      instance_deactivate_all(self.id)
-      instance_create(0,0,pause_OBJ)
-      pause_resume_OBJ.enabled = 0
-      menu_next_sel(pause_OBJ)
+  if (player_OBJ.hp &lt;= 0)&amp;&amp;(debug_enabled = 0)&amp;&amp;(game_over = 0) then {
+    //game over
+    instance_create(room_width/2,room_height/2,game_over_OBJ)
+    game_over = 1
   }
  }
 }

@@ -25,13 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(player_OBJ)) then {
+            <string>event_inherited()
+if (instance_exists(player_OBJ)) then {
 target = instance_nearest(x,y,player_OBJ)
 }
 direction = point_direction(x,y,target.x,target.y)
 speed = 2
 
 part_count = 20
+damage = 30
+explosive = 1
 
 audio_play_sound(bloop1_SND,0,0)
 </string>
