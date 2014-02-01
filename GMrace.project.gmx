@@ -72,6 +72,7 @@
       <sprite>sprites\pl_bullet_simple_SPR</sprite>
       <sprite>sprites\pl_missile_SPR</sprite>
       <sprite>sprites\pl_missile_expl_part_SPR</sprite>
+      <sprite>sprites\lasershot_SPR</sprite>
     </sprites>
     <sprites name="stars">
       <sprites name="layer1">
@@ -292,6 +293,7 @@
         <object>objects\weapon_PAR</object>
         <object>objects\default_weapon_OBJ</object>
         <object>objects\homing_missile_weap_OBJ</object>
+        <object>objects\laser_weap_OBJ</object>
       </objects>
       <objects name="projectiles">
         <object>objects\fire_fx_OBJ</object>
@@ -299,6 +301,7 @@
         <object>objects\pl_bullet_expl_part_OBJ</object>
         <object>objects\pl_missile_expl_part_OBJ</object>
         <object>objects\pl_missile_OBJ</object>
+        <object>objects\lasershot_OBJ</object>
       </objects>
     </objects>
     <object>objects\en_explosion_radius_OBJ</object>
