@@ -97,7 +97,7 @@ if (speed &gt; 5) then {
  speed = 5
 }
 //DETECT ENEMY
-if (counter == 10) then {
+if (counter &gt; 10 &amp;&amp; target &lt; 0) then {
  if (instance_exists(enemy_PAR)) then {
   target = instance_nearest(x,y,enemy_PAR)
  } else {target = -1}
@@ -109,7 +109,7 @@ if (counter == 10) then {
     audio_play_sound(pong1_SND,0,0)
     detect = 2
    }
- } else {audio_play_sound(dong1_SND,0,0)}
+ }
 }
 //end of detect target + play sound
 //every step behaviour
@@ -123,10 +123,7 @@ if (counter &gt; 10) then {
   speed = 6
   direction = direction + random(20)
   }
-} else {
-// behaviour if target not detected
-speed = 6
-direction = direction + random(20)}
+}
 }
 //----------------------------------
 

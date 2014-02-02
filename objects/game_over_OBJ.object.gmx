@@ -28,6 +28,8 @@
             <string>counter = 0
 player_OBJ.playable = 0
 player_OBJ.alarm[1] = 1
+player_OBJ.x = -100
+player_OBJ.y = -100
 </string>
           </argument>
         </arguments>

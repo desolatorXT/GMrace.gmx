@@ -51,7 +51,7 @@ direction = 180
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.hp += 50
+            <string>other.hp += 25
 instance_destroy()
 </string>
           </argument>
