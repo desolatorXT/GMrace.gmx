@@ -25,7 +25,6 @@ if (vert_mov != 0)or(hor_mov != 0) then {
  user.moving = 1
 } else {user.moving = 0}
 
-//spd = spd_ctrl_SCR(spd,moving)
 spd = 3
 
 
