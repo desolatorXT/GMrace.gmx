@@ -2,10 +2,10 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>weapon_PAR</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -19,20 +19,17 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>default_weapon_OBJ</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-damage = 15
+            <string>pow_buff_active = 0
+pow_timer = 0
 
-fire_rate = 6
-counter = 0
-can_fire = 1
-
-
+attspd_buff_active = 0
+attspd_timer = 0
 </string>
           </argument>
         </arguments>
@@ -55,19 +52,30 @@ can_fire = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// firing
-if (firing == 1) then {
-    if (can_fire == 1) then {
-        if (counter == 0) then {
-        bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
-        bullet.damage = damage
-        counter = fire_rate // "hack" to activate the loop below without losing 1 step
-        }
-    }
+            <string>//pow buff ctrl
+if (pow_buff_active = 1) then {
+ pow_timer = pow_timer + 1
+ owner.primary_weap.damage = 30
+ owner.pow_aura = 1
+ if (pow_timer &gt; 240) then {
+  pow_timer = 0
+  owner.primary_weap.damage = 15
+  owner.pow_aura = 0
+  pow_buff_active = 0
+ }
 }
-
-if (counter &gt; 0) counter = (counter + 1) mod fire_rate
-
+//attack speed buff ctrl
+if (attspd_buff_active = 1) then {
+ attspd_timer = attspd_timer + 1
+ owner.primary_weap.fire_rate = 4
+ owner.attspd_aura = 1
+ if (attspd_timer &gt; 240) then {
+  attspd_timer = 0
+  owner.primary_weap.fire_rate = 6
+  owner.attspd_aura = 0
+  attspd_buff_active = 0
+ }
+}
 </string>
           </argument>
         </arguments>

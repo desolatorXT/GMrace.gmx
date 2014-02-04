@@ -35,6 +35,9 @@ explosion_size = 24
 detect = 0
 target = -1
 
+target_effect_ctrl = instance_create(0,0,pl_missile_target_draw_OBJ)
+target_effect_ctrl.owner = self.id
+
 </string>
           </argument>
         </arguments>

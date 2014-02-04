@@ -2,43 +2,13 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
-  <depth>0</depth>
+  <visible>-1</visible>
+  <depth>-99</depth>
   <persistent>0</persistent>
-  <parentName>weapon_PAR</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>default_weapon_OBJ</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>event_inherited()
-damage = 15
-
-fire_rate = 6
-counter = 0
-can_fire = 1
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,19 +25,13 @@ can_fire = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// firing
-if (firing == 1) then {
-    if (can_fire == 1) then {
-        if (counter == 0) then {
-        bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
-        bullet.damage = damage
-        counter = fire_rate // "hack" to activate the loop below without losing 1 step
-        }
-    }
+            <string>if (owner.pow_aura = 1) then {
+ draw_sprite(pow_aura_SPR,0,owner.x,owner.y)
 }
 
-if (counter &gt; 0) counter = (counter + 1) mod fire_rate
-
+if (owner.attspd_aura = 1) then {
+ draw_sprite(attspd_aura_SPR,0,owner.x,owner.y)
+}
 </string>
           </argument>
         </arguments>

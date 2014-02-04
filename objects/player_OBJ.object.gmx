@@ -43,11 +43,19 @@ primary_weap.owner = self.id
 secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
 
+buff_controller = instance_create(0,0,buff_ctrl_OBJ)
+buff_controller.owner = self.id
+
+aura_controller = instance_create(0,0,pl_aura_draw_OBJ)
+aura_controller.owner = self.id
+
 part_count = 64
 explosion_size = 32
 playable = 1
 
-
+//buff auras
+pow_aura = 0
+attspd_aura = 0
 
 
 
