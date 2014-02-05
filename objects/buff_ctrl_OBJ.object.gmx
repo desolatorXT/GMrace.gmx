@@ -72,7 +72,7 @@ if (attspd_timer &gt; 0) then {
 
 if (spd_timer &gt; 0) then {
     spd_timer--
-    owner.spd = 5
+    owner.spd = 4
 } else {
     owner.spd = 3
 }
