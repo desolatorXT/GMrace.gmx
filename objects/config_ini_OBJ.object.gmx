@@ -43,6 +43,10 @@ wsize[0] = 640
 wsize[1] = 800
 wsize[2] = 1024
 
+hsize[0] = 480
+hsize[1] = 600
+hsize[2] = 768
+
 file = ini_open(fname)
 
 up_key = ini_read_real("keys","up",38)
@@ -61,6 +65,7 @@ ini_close()
 
 audio_master_gain(snd_volume/100)
 
+window_set_size(wsize[wsize_sel], hsize[wsize_sel])
 window_set_fullscreen(fullscreen == 1)
 
 </string>

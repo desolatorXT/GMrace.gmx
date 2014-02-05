@@ -68,6 +68,8 @@ current_sel = (current_sel + 1) mod sel_size
 current_value = cfg.wsize[current_sel]
 cfg.wsize_sel = current_sel
 
+window_set_size(cfg.wsize[current_sel], cfg.hsize[current_sel])
+
 wait = 0
 counter = 0
 
