@@ -37,12 +37,14 @@ fullscreen = 0
 wsize = 800
 fname = working_directory+"settings.txt"
 
+/*
 if (not file_exists(fname)) {
     alarm[1] = 1
     alarm[2] = 1
     alarm[0] = 1
     exit
 }
+*/
 
 file = file_text_open_read(fname);
 
