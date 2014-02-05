@@ -63,22 +63,17 @@
 wait = 0
 counter = 0
 
-global_debugger_OBJ.cf_game_speed = 30
+global_debugger_OBJ.config.alarm[1] = 1
+
 opt_game_speed_OBJ.current_value = 30
 opt_game_speed_OBJ.my_text.text = string(opt_game_speed_OBJ.current_value)
 
-
-global_debugger_OBJ.cf_snd_volume = 100
 opt_snd_volume_OBJ.current_value = 100
 opt_snd_volume_OBJ.my_text.text = string(opt_snd_volume_OBJ.current_value)
-audio_master_gain(1)
 
-global_debugger_OBJ.cf_fullscreen = 0
-opt_fullscreen_OBJ.current_value = 0
-opt_fullscreen_OBJ.my_text.text = string(opt_fullscreen_OBJ.current_value)
-window_set_fullscreen(false)
+opt_fullscreen_OBJ.current_value = 1
+opt_fullscreen_OBJ.my_text.text = "OFF"
 
-global_debugger_OBJ.cf_wsize = 800
 opt_wsize_OBJ.current_value = 800
 opt_wsize_OBJ.my_text.text = string(opt_wsize_OBJ.current_value)
 

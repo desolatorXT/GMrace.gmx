@@ -32,7 +32,6 @@ godmode = 0
 max_hp = 100
 hp = 100
 spd = 3
-moving = 0
 
 invincible = 0
 invis_counter = 0

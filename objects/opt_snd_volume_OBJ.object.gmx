@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 
-current_value = global_debugger_OBJ.cf_snd_volume
+current_value = global_debugger_OBJ.config.snd_volume
 
 my_backdrop = instance_create(0,0,opt_value_draw_OBJ)
 my_backdrop.creator = self.id
@@ -87,22 +87,22 @@ my_text.text = string(current_value)
           <argument>
             <kind>1</kind>
             <string>if (global_debugger_OBJ.left_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
- global_debugger_OBJ.cf_snd_volume = global_debugger_OBJ.cf_snd_volume - 5
- if (global_debugger_OBJ.cf_snd_volume &lt; 0) then {
-  global_debugger_OBJ.cf_snd_volume = 0
+ global_debugger_OBJ.config.snd_volume = global_debugger_OBJ.config.snd_volume - 5
+ if (global_debugger_OBJ.config.snd_volume &lt; 0) then {
+  global_debugger_OBJ.config.snd_volume = 0
  }
- current_value = global_debugger_OBJ.cf_snd_volume
+ current_value = global_debugger_OBJ.config.snd_volume
  audio_master_gain(current_value/100)
  my_text.text = string(current_value)
  wait = 1
  audio_play_sound(woop3_SND,0,0)
 }
 if (global_debugger_OBJ.right_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
- global_debugger_OBJ.cf_snd_volume = global_debugger_OBJ.cf_snd_volume + 5
- if (global_debugger_OBJ.cf_snd_volume &gt; 100) then {
-  global_debugger_OBJ.cf_snd_volume = 100
+ global_debugger_OBJ.config.snd_volume = global_debugger_OBJ.config.snd_volume + 5
+ if (global_debugger_OBJ.config.snd_volume &gt; 100) then {
+  global_debugger_OBJ.config.snd_volume = 100
  }
- current_value = global_debugger_OBJ.cf_snd_volume
+ current_value = global_debugger_OBJ.config.snd_volume
  audio_master_gain(current_value/100)
  my_text.text = string(current_value)
  wait = 1

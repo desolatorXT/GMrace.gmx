@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -29,65 +29,10 @@
 
 key_var_init_SCR()
 
+config = instance_create(0,0,config_OBJ)
+
 room_current = 0 //0 = menu
 game_over = 0
-
-//normalize sound
-audio_sound_gain(shot1_SND,1.4,-1)
-audio_master_gain(0.75)
-
-cf_game_speed = 0
-cf_snd_volume = 0
-cf_up_key = 0
-cf_down_key = 0
-cf_left_key = 0
-cf_right_key = 0
-cf_fire_key = 0
-cf_altfire_key = 0
-cf_fullscreen = 0
-cf_wsize = 800
-
-
-cf_fname = file_text_open_read(working_directory+"settings.txt");
-
-cf_game_speed = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_snd_volume = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_up_key = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_down_key = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_left_key = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_right_key = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_fire_key = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_altfire_key = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_fullscreen = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-cf_wsize = file_text_read_real(cf_fname)
-file_text_readln(cf_fname);
-
-file_text_close(cf_fname);
-
-audio_master_gain(cf_snd_volume/100)
-
-
-window_set_fullscreen(cf_fullscreen == 2)
-
-
 pause = 0
 </string>
           </argument>
@@ -144,7 +89,7 @@ with (menu_draw_text_OBJ) instance_destroy()
           <argument>
             <kind>1</kind>
             <string>//refresh master sound volume
-audio_master_gain(cf_snd_volume/100)
+audio_master_gain(config.snd_volume/100)
 
 
 </string>
@@ -170,7 +115,7 @@ audio_master_gain(cf_snd_volume/100)
           <argument>
             <kind>1</kind>
             <string>// initiate game room
-room_speed = cf_game_speed
+room_speed = config.game_speed
 g_score = 0
 
 instance_create(0,0,star_ctrl_OBJ)
@@ -213,7 +158,7 @@ if (room_current &gt; 0) then {
  }
 }
 
-if ((os_is_paused())&amp;&amp;(pause = 0)) then {
+if (os_is_paused() &amp;&amp; pause == 0) then {
  if (room_current &gt; 0) then {
   pause = 1
   instance_deactivate_all(self.id)

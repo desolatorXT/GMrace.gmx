@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 
-current_value = global_debugger_OBJ.cf_fullscreen
+current_value = global_debugger_OBJ.config.fullscreen
 
 my_backdrop = instance_create(0,0,opt_value_draw_OBJ)
 my_backdrop.creator = self.id
@@ -62,15 +62,15 @@ else my_text.text = "ON"
           <argument>
             <kind>1</kind>
             <string>//toggle_fullscreen
-if (current_value = 1) then {
+if (current_value == 1) then {
  current_value = 2
- global_debugger_OBJ.cf_fullscreen = 2
+ global_debugger_OBJ.config.fullscreen = 2
  window_set_fullscreen(true)
  my_text.text = "ON"
 }
 else {
  current_value = 1
- global_debugger_OBJ.cf_fullscreen = 1
+ global_debugger_OBJ.config.fullscreen = 1
  window_set_fullscreen(false)
  my_text.text = "OFF"
 }

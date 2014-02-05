@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 
-current_value = global_debugger_OBJ.cf_game_speed
+current_value = global_debugger_OBJ.config.game_speed
 
 my_backdrop = instance_create(0,0,opt_value_draw_OBJ)
 my_backdrop.creator = self.id
@@ -87,21 +87,21 @@ my_text.text = string(current_value)
           <argument>
             <kind>1</kind>
             <string>if (global_debugger_OBJ.left_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
- global_debugger_OBJ.cf_game_speed = global_debugger_OBJ.cf_game_speed - 1
- if (global_debugger_OBJ.cf_game_speed &lt; 15) then {
-  global_debugger_OBJ.cf_game_speed = 15
+ global_debugger_OBJ.config.game_speed = global_debugger_OBJ.config.game_speed - 1
+ if (global_debugger_OBJ.config.game_speed &lt; 15) then {
+  global_debugger_OBJ.config.game_speed = 15
  }
- current_value = global_debugger_OBJ.cf_game_speed
+ current_value = global_debugger_OBJ.config.game_speed
  my_text.text = string(current_value)
  wait = 1
  audio_play_sound(woop3_SND,0,0)
 }
 if (global_debugger_OBJ.right_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
- global_debugger_OBJ.cf_game_speed = global_debugger_OBJ.cf_game_speed + 1
- if (global_debugger_OBJ.cf_game_speed &gt; 60) then {
-  global_debugger_OBJ.cf_game_speed = 60
+ global_debugger_OBJ.config.game_speed = global_debugger_OBJ.config.game_speed + 1
+ if (global_debugger_OBJ.config.game_speed &gt; 60) then {
+  global_debugger_OBJ.config.game_speed = 60
  }
- current_value = global_debugger_OBJ.cf_game_speed
+ current_value = global_debugger_OBJ.config.game_speed
  my_text.text = string(current_value)
  wait = 1
  audio_play_sound(woop3_SND,0,0)

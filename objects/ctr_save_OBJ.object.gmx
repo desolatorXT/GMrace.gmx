@@ -63,41 +63,8 @@
 ctr_main_OBJ.can_select = 0
 wait = 0
 counter = 0
-g = global_debugger_OBJ.id
-//---------------------------------------
-cf_fname = file_text_open_write(working_directory+"settings.txt");
 
-file_text_write_real(cf_fname,g.cf_game_speed)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_snd_volume)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_up_key)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_down_key)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_left_key )
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_right_key)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_fire_key)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_altfire_key)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_fullscreen)
-file_text_writeln(cf_fname);
-
-file_text_write_real(cf_fname,g.cf_wsize)
-file_text_writeln(cf_fname);
-
-file_text_close(cf_fname);
+global_debugger_OBJ.config.alarm[0] = 1
 </string>
           </argument>
         </arguments>

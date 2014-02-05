@@ -64,28 +64,24 @@ ctr_main_OBJ.can_select = 0
 wait = 0
 counter = 0
 
-global_debugger_OBJ.cf_up_key = 38
+global_debugger_OBJ.config.alarm[2] = 1
+
 ctr_up_OBJ.current_value = 38
 ctr_up_OBJ.my_text.text = string(ctr_up_OBJ.current_value)
 
-global_debugger_OBJ.cf_down_key = 40
 ctr_down_OBJ.current_value = 40
 ctr_down_OBJ.my_text.text = string(ctr_down_OBJ.current_value)
 
-global_debugger_OBJ.cf_left_key = 37
 ctr_left_OBJ.current_value = 37
 ctr_left_OBJ.my_text.text = string(ctr_left_OBJ.current_value)
 
-global_debugger_OBJ.cf_right_key = 39
 ctr_right_OBJ.current_value = 39
 ctr_right_OBJ.my_text.text = string(ctr_right_OBJ.current_value)
 
-global_debugger_OBJ.cf_fire_key = 162
-ctr_fire_OBJ.current_value = 162
+ctr_fire_OBJ.current_value = 90
 ctr_fire_OBJ.my_text.text = string(ctr_fire_OBJ.current_value)
 
-global_debugger_OBJ.cf_altfire_key = 164
-ctr_altfire_OBJ.current_value = 164
+ctr_altfire_OBJ.current_value = 88
 ctr_altfire_OBJ.my_text.text = string(ctr_altfire_OBJ.current_value)
 </string>
           </argument>
