@@ -25,13 +25,52 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>pow_timer = 0
-attspd_timer = 0
-spd_timer = 0
+            <string>//Create menu, selection init
 
-pow_orig = 0
-attspd_orig = 0
-spd_orig = 0
+if (not(audio_music_is_playing())) then {
+//dont play music - temp.
+//audio_play_music(narfy_fear_SND,1)
+//audio_music_gain(0.4,-1)
+}
+
+draw_set_font(retro_FN)
+
+if (not(instance_exists(global_debugger_OBJ))) then {
+instance_create(0,0,global_debugger_OBJ)
+}
+
+instance_create(0,room_height-32,menu_message_board_OBJ)
+instance_create(0,0,menu_draw_text_OBJ)
+menu_draw_text_OBJ.text_ver = 'Game Paused'
+
+//create menu buttons:
+instance_create(room_width/2 - 80,96,pause_restart_OBJ)
+instance_create(room_width/2 - 80,120,pause_main_menu_OBJ)
+instance_create(room_width/2 - 80,152,pause_exit_OBJ)
+
+
+//setup selections
+sel_len = 0
+sel_ids[sel_len] = pause_restart_OBJ.id
+sel_txt[sel_len] = "Restart game."
+sel_len += 1
+sel_ids[sel_len] = pause_main_menu_OBJ.id
+sel_txt[sel_len] = "Quit to main menu."
+sel_len += 1
+sel_ids[sel_len] = pause_exit_OBJ.id
+sel_txt[sel_len] = "Exit to windows."
+sel_len += 1
+
+//selection control
+selection = 0
+select_id = pause_restart_OBJ.id
+can_select = 1
+//temp vars
+counter = 0
+
+//cancelation
+cancel = pause_main_menu_OBJ.id
+  
 </string>
           </argument>
         </arguments>
@@ -54,28 +93,7 @@ spd_orig = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//pow buff ctrl
-if (pow_timer &gt; 0) then {
-    pow_timer--
-    owner.primary_weap.damage = 30
-} else {
-    owner.primary_weap.damage = 15
-}
-
-//attack speed buff ctrl
-if (attspd_timer &gt; 0) then {
-    attspd_timer--
-    owner.primary_weap.fire_rate = 4
-} else {
-    owner.primary_weap.fire_rate = 6
-}
-
-if (spd_timer &gt; 0) then {
-    spd_timer--
-    owner.spd = 5
-} else {
-    owner.spd = 3
-}
+            <string>menu_selections_SCR(self)
 </string>
           </argument>
         </arguments>
@@ -98,14 +116,11 @@ if (spd_timer &gt; 0) then {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (pow_timer &gt; 0)
-    draw_sprite(pow_aura_SPR,0,owner.x,owner.y)
+            <string>if (select_id &gt; 0) then {
+ draw_sprite(selection_SPR,-1,select_id.x,select_id.y)
+}
 
-if (attspd_timer &gt; 0)
-    draw_sprite(attspd_aura_SPR,0,owner.x,owner.y)
 
-if (spd_timer &gt; 0)
-    draw_sprite(spd_aura_SPR,0,owner.x,owner.y)
 </string>
           </argument>
         </arguments>

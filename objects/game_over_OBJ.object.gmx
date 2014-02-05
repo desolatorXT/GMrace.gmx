@@ -55,9 +55,8 @@ player_OBJ.y = -100
             <string>//go to pause menu
       global_debugger_OBJ.pause = 1
       instance_deactivate_all(global_debugger_OBJ.id)
-      instance_create(0,0,pause_OBJ)
-      pause_resume_OBJ.enabled = 0
-      menu_next_sel(pause_OBJ)
+      instance_create(0,0,menu_g_o_OBJ)
+      menu_next_sel(menu_g_o_OBJ)
       instance_destroy()
 </string>
           </argument>

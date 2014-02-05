@@ -3,6 +3,8 @@
 - Õew ¡… patterns
 - Credits room
 - Vertical scrolling test room.
-- Missile explosion range (circle object gives radius)
 - 2player co-op mode
-- Game over
+
+- IMPORTANT! I think there is a memory leak with the menus (the instances are not being consistently destroyed when the menu closes). Look into it.
+- Also make a sprite for the restart option in the game over menu.
+- Can we make the auras use the same sprite, just colorize it? This seems ridiculous... Also WTF are the _default sprites???
