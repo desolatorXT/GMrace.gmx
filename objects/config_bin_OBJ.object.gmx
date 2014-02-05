@@ -25,15 +25,50 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize()
+            <string>up_key = 38
+down_key = 40
+left_key = 37
+right_key = 39
+fire_key = 90
+altfire_key = 88
 
-key_var_init_SCR()
+game_speed = 30
+snd_volume = 100
+fullscreen = 0
+wsize_sel = 1
 
-config = instance_create(0,0,config_txt_OBJ)
+fname = working_directory+"/settings.cfg"
 
-room_current = 0 //0 = menu
-game_over = 0
-pause = 0
+// Window sizes
+wsize[0] = 640
+wsize[1] = 800
+wsize[2] = 1024
+/*
+if (not file_exists(fname)) {
+    alarm[0] = 1
+} else {
+*
+file = file_bin_open(fname, 0)
+
+up_key = file_bin_read_byte(file)
+down_key = file_bin_read_byte(file)
+left_key = file_bin_read_byte(file)
+right_key = file_bin_read_byte(file)
+fire_key = file_bin_read_byte(file)
+altfire_key = file_bin_read_byte(file)
+
+game_speed = file_bin_read_byte(file)
+snd_volume = file_bin_read_byte(file)
+fullscreen = file_bin_read_byte(file)
+wsize_sel = file_bin_read_byte(file)
+
+file_bin_close(file)
+/*
+}
+*/
+audio_master_gain(snd_volume/100)
+window_set_fullscreen(fullscreen)
+
 </string>
           </argument>
         </arguments>
@@ -56,15 +91,14 @@ pause = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//pause resume
-pause = 0
-instance_activate_all()
-with (pause_OBJ) instance_destroy()
-with (pause_resume_OBJ) instance_destroy()
-with (pause_main_menu_OBJ) instance_destroy()
-with (pause_exit_OBJ) instance_destroy()
-with (menu_message_board_OBJ) instance_destroy()
-with (menu_draw_text_OBJ) instance_destroy()
+            <string>// Default keys
+
+up_key = 38
+down_key = 40
+left_key = 37
+right_key = 39
+fire_key = 90
+altfire_key = 88
 
 </string>
           </argument>
@@ -88,9 +122,16 @@ with (menu_draw_text_OBJ) instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//refresh master sound volume
-audio_master_gain(config.snd_volume/100)
+            <string>// Default options
 
+game_speed = 30
+snd_volume = 100
+audio_master_gain(1)
+
+fullscreen = 0
+window_set_fullscreen(false)
+
+wsize_sel = 1
 
 </string>
           </argument>
@@ -114,90 +155,24 @@ audio_master_gain(config.snd_volume/100)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// initiate game room
-room_speed = config.game_speed
-g_score = 0
+            <string>// Save config
 
-instance_create(0,0,star_ctrl_OBJ)
-instance_create(0,0,enemy_ctrl_OBJ)
-instance_create(0,0,hud_OBJ)
+file = file_bin_open(fname, 1)
+//file_bin_rewrite(file)  // do I need this?
 
-instance_create(32,32,player_OBJ)
+file_bin_write_byte(file,up_key)
+file_bin_write_byte(file,down_key)
+file_bin_write_byte(file,left_key )
+file_bin_write_byte(file,right_key)
+file_bin_write_byte(file,fire_key)
+file_bin_write_byte(file,altfire_key)
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>key_control_SCR()
+file_bin_write_byte(file,game_speed)
+file_bin_write_byte(file,snd_volume)
+file_bin_write_byte(file,fullscreen)
+file_bin_write_byte(file,wsize_sel)
 
-if (room_current &gt; 0) then {
- if (instance_exists(player_OBJ)) then {
-  if (player_OBJ.hp &lt;= 0)&amp;&amp;(game_over = 0) then {
-    //game over
-    instance_create(room_width/2,room_height/2,game_over_OBJ)
-    game_over = 1
-  }
- }
-}
-
-if (os_is_paused() &amp;&amp; pause == 0) then {
- if (room_current &gt; 0) then {
-  pause = 1
-  instance_deactivate_all(self.id)
-  instance_create(0,0,pause_OBJ)
-  pause_resume_OBJ.enabled = 1
- }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="27">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (pause == 0) then {
- pause = 1
- instance_deactivate_all(self.id)
- instance_create(0,0,pause_OBJ)
- exit;
-}
-
-if (pause == 1) then {
-alarm[2] = 1
-}
+file_bin_close(file)
 </string>
           </argument>
         </arguments>

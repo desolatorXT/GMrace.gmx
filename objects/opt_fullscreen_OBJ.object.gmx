@@ -35,7 +35,7 @@ my_backdrop.creator = self.id
 my_text = instance_create(0,0,opt_value_draw_text_OBJ)
 my_text.creator = self.id
 
-if (current_value == 1) my_text.text = "OFF"
+if (current_value == 0) my_text.text = "OFF"
 else my_text.text = "ON"
 
 
@@ -62,15 +62,15 @@ else my_text.text = "ON"
           <argument>
             <kind>1</kind>
             <string>//toggle_fullscreen
-if (current_value == 1) then {
- current_value = 2
- global_debugger_OBJ.config.fullscreen = 2
+if (current_value == 0) then {
+ current_value = 1
+ global_debugger_OBJ.config.fullscreen = 1
  window_set_fullscreen(true)
  my_text.text = "ON"
 }
 else {
- current_value = 1
- global_debugger_OBJ.config.fullscreen = 1
+ current_value = 0
+ global_debugger_OBJ.config.fullscreen = 0
  window_set_fullscreen(false)
  my_text.text = "OFF"
 }

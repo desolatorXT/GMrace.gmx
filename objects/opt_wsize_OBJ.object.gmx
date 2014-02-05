@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>event_inherited()
 
-current_value = global_debugger_OBJ.config.wsize
+current_sel = global_debugger_OBJ.config.wsize_sel
+sel_size = array_length_1d(global_debugger_OBJ.config.wsize)
+current_value = global_debugger_OBJ.config.wsize[current_sel]
 
 my_backdrop = instance_create(0,0,opt_value_draw_OBJ)
 my_backdrop.creator = self.id
@@ -60,32 +62,16 @@ my_text.text = string(current_value)
           <argument>
             <kind>1</kind>
             <string>//circle w sizes
-if (current_value = 640) then {
- current_value = 800
- global_debugger_OBJ.config.wsize = 800
- wait = 0
- counter = 0
- my_text.text = string(current_value)
-  exit;
-}
-if (current_value = 800) then {
- current_value = 1024
- global_debugger_OBJ.config.wsize = 1024
- wait = 0
- counter = 0
- my_text.text = string(current_value)
- exit;
-}
+cfg = global_debugger_OBJ.config.id
+current_sel = (current_sel + 1) mod sel_size
 
-if (current_value = 1024) then {
- current_value = 640
- global_debugger_OBJ.config.wsize = 640
- wait = 0
- counter = 0
- my_text.text = string(current_value)
-  exit;
-}
+current_value = cfg.wsize[current_sel]
+cfg.wsize_sel = current_sel
 
+wait = 0
+counter = 0
+
+my_text.text = string(current_value)
 
 </string>
           </argument>

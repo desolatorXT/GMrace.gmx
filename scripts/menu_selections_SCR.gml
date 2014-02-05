@@ -29,10 +29,11 @@ if (movement != 0 && can_select == 1) {
         if (menu.selection >= menu.sel_len) menu.selection = 0
         menu.select_id = menu.sel_ids[menu.selection]
     } until (menu.select_id.enabled == 1)
-    drawer.text = menu.sel_txt[menu.selection]
     menu.can_select = 0
     audio_play_sound(ping2_SND,0,0)
 }
+
+drawer.text = menu.sel_txt[menu.selection]
 
 //everything considering selection and action button
 

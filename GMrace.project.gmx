@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
+  <datafiles number="4" name="datafiles">
     <datafile>
       <name>settings.txt</name>
       <exists>-1</exists>
@@ -37,6 +37,23 @@
         </Config>
       </ConfigOptions>
       <filename>todo.txt</filename>
+    </datafile>
+    <datafile>
+      <name>settings.cfg</name>
+      <exists>-1</exists>
+      <size>10</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>settings.cfg</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
@@ -205,7 +222,8 @@
     <object>objects\hud_OBJ</object>
     <object>objects\enemy_ctrl_OBJ</object>
     <object>objects\global_debugger_OBJ</object>
-    <object>objects\config_OBJ</object>
+    <object>objects\config_txt_OBJ</object>
+    <object>objects\config_bin_OBJ</object>
     <object>objects\star_ctrl_OBJ</object>
     <object>objects\star_OBJ</object>
     <objects name="menus">
