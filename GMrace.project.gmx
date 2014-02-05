@@ -179,6 +179,7 @@
       </sprites>
       <sprites name="pause_menu">
         <sprite>sprites\pause_resume_SPR</sprite>
+        <sprite>sprites\pause_restart_SPR</sprite>
         <sprite>sprites\pause_main_menu_SPR</sprite>
         <sprite>sprites\pause_exit_SPR</sprite>
       </sprites>
@@ -270,8 +271,8 @@
       </objects>
       <objects name="menu_game_over">
         <object>objects\game_over_OBJ</object>
-        <object>objects\menu_g_o_OBJ</object>
         <object>objects\pause_restart_OBJ</object>
+        <object>objects\menu_g_o_OBJ</object>
       </objects>
       <object>objects\menu_item_PAR</object>
     </objects>
