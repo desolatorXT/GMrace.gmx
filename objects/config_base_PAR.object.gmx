@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>config_base_PAR</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,37 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
+            <string>up_key = 38
+down_key = 40
+left_key = 37
+right_key = 39
+fire_key = 90
+altfire_key = 88
 
-fname = working_directory+"settings.ini"
+game_speed = 30
+snd_volume = 100
+fullscreen = 0
+wsize_sel = 1
 
-file = ini_open(fname)
+wsize[0] = 640
+wsize[1] = 800
+wsize[2] = 1024
 
-up_key = ini_read_real("keys","up",up_key)
-down_key = ini_read_real("keys","down",down_key)
-left_key = ini_read_real("keys","left",left_key)
-right_key = ini_read_real("keys","right",right_key)
-fire_key = ini_read_real("keys","fire",fire_key)
-altfire_key = ini_read_real("keys","altfire",altfire_key)
-
-game_speed = ini_read_real("general","speed",game_speed)
-snd_volume = ini_read_real("general","volume",snd_volume)
-fullscreen = ini_read_real("general","fullscreen",fullscreen)
-wsize_sel = ini_read_real("general","wsize",wsize_sel)
-
-ini_close()
-
-audio_master_gain(snd_volume/100)
-
-window_set_size(wsize[wsize_sel], hsize[wsize_sel])
-window_set_fullscreen(fullscreen == 1)
-
+hsize[0] = 480
+hsize[1] = 600
+hsize[2] = 768
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -72,23 +66,50 @@ window_set_fullscreen(fullscreen == 1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Save config
+            <string>// Default keys
 
-ini_open(fname)
+up_key = 38
+down_key = 40
+left_key = 37
+right_key = 39
+fire_key = 90
+altfire_key = 88
 
-ini_write_real("keys","up",up_key)
-ini_write_real("keys","down",down_key)
-ini_write_real("keys","left",left_key )
-ini_write_real("keys","right",right_key)
-ini_write_real("keys","fire",fire_key)
-ini_write_real("keys","altfire",altfire_key)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Default settings
 
-ini_write_real("general","speed",game_speed)
-ini_write_real("general","volume",snd_volume)
-ini_write_real("general","fullscreen",fullscreen)
-ini_write_real("general","wsize",wsize_sel)
+game_speed = 30
 
-ini_close()
+snd_volume = 100
+audio_master_gain(1)
+
+fullscreen = 0
+window_set_fullscreen(false)
+
+wsize_sel = 1
+window_set_size(wsize[1], hsize[1])
+
 </string>
           </argument>
         </arguments>

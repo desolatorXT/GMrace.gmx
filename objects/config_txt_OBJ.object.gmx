@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>config_base_PAR</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,125 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>up_key = 38
-down_key = 40
-left_key = 37
-right_key = 39
-fire_key = 90
-altfire_key = 88
-
-game_speed = 30
-snd_volume = 100
-fullscreen = 0
-wsize_sel = 1
+            <string>event_inherited()
 
 fname = working_directory+"settings.txt"
-
-wsize[0] = 640
-wsize[1] = 800
-wsize[2] = 1024
 
 file = file_text_open_read(fname);
 
 game_speed = file_text_read_real(file)
-//file_text_readln(file);
-
 snd_volume = file_text_read_real(file)
-//file_text_readln(file);
 
 up_key = file_text_read_real(file)
-//file_text_readln(file);
-
 down_key = file_text_read_real(file)
-//file_text_readln(file);
-
 left_key = file_text_read_real(file)
-//file_text_readln(file);
-
 right_key = file_text_read_real(file)
-//file_text_readln(file);
-
 fire_key = file_text_read_real(file)
-//file_text_readln(file);
-
 altfire_key = file_text_read_real(file)
-//file_text_readln(file);
 
 fullscreen = file_text_read_real(file) - 1
-//file_text_readln(file);
-
 wsize_sel = file_text_read_real(file) - 1
-//file_text_readln(file);
 
 file_text_close(file);
 
 audio_master_gain(snd_volume/100)
 
+window_set_size(wsize[wsize_sel], hsize[wsize_sel])
 window_set_fullscreen(fullscreen == 1)
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Default keys
-
-up_key = 38
-down_key = 40
-left_key = 37
-right_key = 39
-fire_key = 90
-altfire_key = 88
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Restore defaults
-
-game_speed = 30
-
-snd_volume = 100
-audio_master_gain(1)
-
-fullscreen = 0
-window_set_fullscreen(false)
-
-wsize_sel = 1
 
 </string>
           </argument>

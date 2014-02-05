@@ -225,6 +225,7 @@
     <object>objects\star_ctrl_OBJ</object>
     <object>objects\star_OBJ</object>
     <objects name="config">
+      <object>objects\config_base_PAR</object>
       <object>objects\config_txt_OBJ</object>
       <object>objects\config_ini_OBJ</object>
       <object>objects\config_bin_OBJ</object>

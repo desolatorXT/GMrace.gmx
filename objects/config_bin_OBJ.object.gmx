@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>config_base_PAR</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,29 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>up_key = 38
-down_key = 40
-left_key = 37
-right_key = 39
-fire_key = 90
-altfire_key = 88
-
-game_speed = 30
-snd_volume = 100
-fullscreen = 0
-wsize_sel = 1
+            <string>event_inherited()
 
 fname = working_directory+"/settings.cfg"
 
-// Window sizes
-wsize[0] = 640
-wsize[1] = 800
-wsize[2] = 1024
 /*
 if (not file_exists(fname)) {
     alarm[0] = 1
 } else {
-*
+*/
 file = file_bin_open(fname, 0)
 
 up_key = file_bin_read_byte(file)
@@ -67,71 +53,9 @@ file_bin_close(file)
 }
 */
 audio_master_gain(snd_volume/100)
+
+window_set_size(wsize[wsize_sel], hsize[wsize_sel])
 window_set_fullscreen(fullscreen)
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Default keys
-
-up_key = 38
-down_key = 40
-left_key = 37
-right_key = 39
-fire_key = 90
-altfire_key = 88
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>// Default options
-
-game_speed = 30
-snd_volume = 100
-audio_master_gain(1)
-
-fullscreen = 0
-window_set_fullscreen(false)
-
-wsize_sel = 1
 
 </string>
           </argument>
