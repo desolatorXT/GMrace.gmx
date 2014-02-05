@@ -114,12 +114,13 @@ pause = 0
             <string>//pause resume
 pause = 0
 instance_activate_all()
-instance_deactivate_object(pause_OBJ)
-instance_deactivate_object(pause_resume_OBJ)
-instance_deactivate_object(pause_main_menu_OBJ)
-instance_deactivate_object(pause_exit_OBJ)
-instance_deactivate_object(menu_message_board_OBJ)
-instance_deactivate_object(menu_draw_text_OBJ)
+with (pause_OBJ) instance_destroy()
+with (pause_resume_OBJ) instance_destroy()
+with (pause_main_menu_OBJ) instance_destroy()
+with (pause_exit_OBJ) instance_destroy()
+with (menu_message_board_OBJ) instance_destroy()
+with (menu_draw_text_OBJ) instance_destroy()
+
 </string>
           </argument>
         </arguments>
