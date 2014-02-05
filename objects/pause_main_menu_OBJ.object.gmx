@@ -60,7 +60,6 @@
           <argument>
             <kind>1</kind>
             <string>//back to main menu
-global_debugger_OBJ.ctrl_press = 0
 room_goto(menu_RM)
 
 

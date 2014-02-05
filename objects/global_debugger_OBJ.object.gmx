@@ -163,6 +163,7 @@ if (os_is_paused() &amp;&amp; pause == 0) then {
   pause = 1
   instance_deactivate_all(self.id)
   instance_create(0,0,pause_OBJ)
+  instance_activate_object(config)
   pause_resume_OBJ.enabled = 1
  }
 }
@@ -192,6 +193,7 @@ if (os_is_paused() &amp;&amp; pause == 0) then {
  pause = 1
  instance_deactivate_all(self.id)
  instance_create(0,0,pause_OBJ)
+ instance_activate_object(config)
  exit;
 }
 

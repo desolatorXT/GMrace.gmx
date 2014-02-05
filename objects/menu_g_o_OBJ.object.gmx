@@ -35,10 +35,6 @@ if (not(audio_music_is_playing())) then {
 
 draw_set_font(retro_FN)
 
-if (not(instance_exists(global_debugger_OBJ))) then {
-instance_create(0,0,global_debugger_OBJ)
-}
-
 instance_create(0,room_height-32,menu_message_board_OBJ)
 instance_create(0,0,menu_draw_text_OBJ)
 menu_draw_text_OBJ.text_ver = 'Game Paused'

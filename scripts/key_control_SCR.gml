@@ -1,5 +1,5 @@
-g = global_debugger_OBJ.id
-c = global_debugger_OBJ.config.id
+g = global_debugger_OBJ
+c = global_debugger_OBJ.config
 
 if (keyboard_check_pressed(c.up_key)) g.up_press = 1
 if (keyboard_check_released(c.up_key)) g.up_press = 0
