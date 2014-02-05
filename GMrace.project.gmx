@@ -222,10 +222,13 @@
     <object>objects\hud_OBJ</object>
     <object>objects\enemy_ctrl_OBJ</object>
     <object>objects\global_debugger_OBJ</object>
-    <object>objects\config_txt_OBJ</object>
-    <object>objects\config_bin_OBJ</object>
     <object>objects\star_ctrl_OBJ</object>
     <object>objects\star_OBJ</object>
+    <objects name="config">
+      <object>objects\config_txt_OBJ</object>
+      <object>objects\config_ini_OBJ</object>
+      <object>objects\config_bin_OBJ</object>
+    </objects>
     <objects name="menus">
       <objects name="menu_main">
         <object>objects\menu_main_OBJ</object>

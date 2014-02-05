@@ -46,34 +46,34 @@ wsize[2] = 1024
 file = file_text_open_read(fname);
 
 game_speed = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 snd_volume = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 up_key = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 down_key = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 left_key = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 right_key = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 fire_key = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 altfire_key = file_text_read_real(file)
-file_text_readln(file);
+//file_text_readln(file);
 
 fullscreen = file_text_read_real(file) - 1
-file_text_readln(file);
+//file_text_readln(file);
 
 wsize_sel = file_text_read_real(file) - 1
-file_text_readln(file);
+//file_text_readln(file);
 
 file_text_close(file);
 
