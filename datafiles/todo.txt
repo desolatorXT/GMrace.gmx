@@ -6,4 +6,3 @@
 - 2player co-op mode
 
 - Make a sprite for the restart option in the game over menu.
-- Can we make the auras use the same sprite, just colorize it? This seems ridiculous... Also WTF are the _default sprites???

@@ -84,6 +84,7 @@
   <sprites name="sprites">
     <sprites name="player">
       <sprite>sprites\player_SPR</sprite>
+      <sprite>sprites\aura_SPR</sprite>
       <sprite>sprites\fire_fx_SPR</sprite>
       <sprite>sprites\pl_bullet_SPR</sprite>
       <sprite>sprites\pl_bullet_simple_SPR</sprite>
@@ -91,7 +92,6 @@
       <sprite>sprites\pl_missile_expl_part_SPR</sprite>
       <sprite>sprites\pl_missile_target_SPR</sprite>
       <sprite>sprites\lasershot_SPR</sprite>
-      <sprite>sprites\aura_SPR</sprite>
     </sprites>
     <sprites name="stars">
       <sprites name="layer1">
@@ -201,7 +201,7 @@
       <script>scripts\en_spawn_SCR.gml</script>
       <script>scripts\powerup_drop_SCR.gml</script>
       <script>scripts\menu_selections_SCR.gml</script>
-      <script>scripts\menu_next_sel.gml</script>
+      <script>scripts\menu_next_sel_SCR.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\movement_SCR.gml</script>
