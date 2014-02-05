@@ -99,13 +99,13 @@ if (spd_timer &gt; 0) then {
           <argument>
             <kind>1</kind>
             <string>if (pow_timer &gt; 0)
-    draw_sprite(pow_aura_SPR,0,owner.x,owner.y)
+    draw_sprite_ext(aura_SPR,0,owner.x,owner.y,1,1,0,c_blue,1)
 
 if (attspd_timer &gt; 0)
-    draw_sprite(attspd_aura_SPR,0,owner.x,owner.y)
+    draw_sprite_ext(aura_SPR,0,owner.x,owner.y,1,1,0,c_orange,1)
 
 if (spd_timer &gt; 0)
-    draw_sprite(spd_aura_SPR,0,owner.x,owner.y)
+    draw_sprite_ext(aura_SPR,0,owner.x,owner.y,1,1,0,c_green,1)
 </string>
           </argument>
         </arguments>

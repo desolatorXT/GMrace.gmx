@@ -5,6 +5,5 @@
 - Vertical scrolling test room.
 - 2player co-op mode
 
-- IMPORTANT! I think there is a memory leak with the menus (the instances are not being consistently destroyed when the menu closes). Look into it.
-- Also make a sprite for the restart option in the game over menu.
+- Make a sprite for the restart option in the game over menu.
 - Can we make the auras use the same sprite, just colorize it? This seems ridiculous... Also WTF are the _default sprites???

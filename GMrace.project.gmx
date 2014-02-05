@@ -91,13 +91,7 @@
       <sprite>sprites\pl_missile_expl_part_SPR</sprite>
       <sprite>sprites\pl_missile_target_SPR</sprite>
       <sprite>sprites\lasershot_SPR</sprite>
-      <sprites name="auras">
-        <sprite>sprites\attspd_aura_SPR</sprite>
-        <sprite>sprites\attspd_aura_default</sprite>
-        <sprite>sprites\pow_aura_SPR</sprite>
-        <sprite>sprites\spd_aura_SPR</sprite>
-        <sprite>sprites\pow_aura_default</sprite>
-      </sprites>
+      <sprite>sprites\aura_SPR</sprite>
     </sprites>
     <sprites name="stars">
       <sprites name="layer1">
