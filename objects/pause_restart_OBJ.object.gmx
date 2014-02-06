@@ -29,7 +29,6 @@
 audio_stop_music()
 room_goto(test_RM)
 global_debugger_OBJ.alarm[0] = 1
-global_debugger_OBJ.game_over = 0
 global_debugger_OBJ.room_current = 1
 global_debugger_OBJ.game_over = 0
 </string>
