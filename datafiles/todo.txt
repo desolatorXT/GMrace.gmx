@@ -4,5 +4,3 @@
 - Credits room
 - Vertical scrolling test room.
 - 2player co-op mode
-
-- Make a sprite for the restart option in the game over menu.
