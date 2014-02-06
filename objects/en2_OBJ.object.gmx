@@ -89,8 +89,11 @@ direction = point_direction(x,y,target_x,target_y)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>m = instance_create(x,y,en_missile3_OBJ)
-m.direction = point_direction(x,y,player_OBJ.x,player_OBJ.y)
+            <string>tgt = instance_nearest(x,y,friendly_PAR)
+if (tgt != noone) {
+    m = instance_create(x,y,en_missile3_OBJ)
+    m.direction = point_direction(x,y,tgt.x,tgt.y)
+}
 </string>
           </argument>
         </arguments>

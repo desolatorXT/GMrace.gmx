@@ -138,6 +138,7 @@
       <sprite>sprites\pow_pickup_SPR</sprite>
       <sprite>sprites\attspd_pickup_SPR</sprite>
       <sprite>sprites\spd_pickup_SPR</sprite>
+      <sprite>sprites\life_pickup_SPR</sprite>
     </sprites>
     <sprites name="menu">
       <sprite>sprites\menu_button_default_SPR</sprite>
@@ -304,6 +305,7 @@
     </objects>
     <objects name="powerups">
       <object>objects\hp_pickup_OBJ</object>
+      <object>objects\life_pickup_OBJ</object>
       <object>objects\missile_pickup_OBJ</object>
       <object>objects\pow_pickup_OBJ</object>
       <object>objects\attspd_pickup_OBJ</object>

@@ -151,7 +151,7 @@ instance_create(0,0,star_ctrl_OBJ)
 instance_create(0,0,enemy_ctrl_OBJ)
 instance_create(0,0,hud_OBJ)
 
-instance_create(32,32,player_OBJ)
+instance_create(32,120,player_OBJ)
 
 </string>
           </argument>
