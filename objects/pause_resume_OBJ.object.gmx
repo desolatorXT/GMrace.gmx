@@ -80,18 +80,13 @@ else {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (enabled == 1) {
-    image_blend = c_white
-    if (wait = 1) then {
-        counter = counter + 1
-        if (counter &gt; 8) then {
-            alarm[1] = 1
-        }
+            <string>if (wait = 1) then {
+    counter = counter + 1
+    if (counter &gt; 8) then {
+        alarm[1] = 1
     }
 }
-else {
-    image_blend = c_dkgray
-}
+
 </string>
           </argument>
         </arguments>
