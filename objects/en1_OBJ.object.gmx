@@ -58,7 +58,14 @@ counter = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,en_missile1_OBJ)
+            <string>target = instance_nearest(x,y,friendly_PAR)
+
+if (target != noone) {
+    m = instance_create(x,y,en_missile1_OBJ)
+    m.direction = point_direction(x,y,target.x,target.y)
+    m.speed = 2
+}
+
 </string>
           </argument>
         </arguments>

@@ -58,8 +58,12 @@ stop = 0
           <argument>
             <kind>1</kind>
             <string>//3 quick shots towards player
-m = instance_create(x,y,en_missile3_OBJ)
-m.direction = point_direction(x,y,player_OBJ.x,player_OBJ.y)
+tgt = instance_nearest(x,y,friendly_PAR)
+if (tar != noone) {
+    m = instance_create(x,y,en_missile3_OBJ)
+    m.direction = point_direction(x,y,tar.x,tar.y)
+}
+
 </string>
           </argument>
         </arguments>

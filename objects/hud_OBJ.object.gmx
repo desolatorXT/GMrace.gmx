@@ -52,6 +52,10 @@ missile_subimage = 0
           <argument>
             <kind>1</kind>
             <string>//hp subimage control
+
+// temporary hack
+if (!instance_exists(player_OBJ)) exit
+
 if (player_OBJ.hp &gt; 95) then {
  hp_subimage = 0
 }
@@ -125,7 +129,10 @@ if (player_OBJ.missile_ammo &lt;= 0) then {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//HUD background
+            <string>// temporary hack
+if (!instance_exists(player_OBJ)) exit
+
+//HUD background
 draw_sprite(hud_bg_SPR,0,0,room_height-16)
 //HP bar
 draw_sprite(health_SPR,hp_subimage,8,room_height-15)

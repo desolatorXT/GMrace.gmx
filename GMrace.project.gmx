@@ -277,6 +277,7 @@
       <object>objects\menu_item_PAR</object>
     </objects>
     <objects name="enemies">
+      <object>objects\friendly_PAR</object>
       <object>objects\enemy_PAR</object>
       <object>objects\en1_OBJ</object>
       <object>objects\en2_OBJ</object>
