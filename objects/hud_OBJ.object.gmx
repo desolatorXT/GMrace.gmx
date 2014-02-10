@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp_subimage = 0
-pow_subimage = 1
-attspd_subimage = 1
-missile_subimage = 0
+            <string>hp_subimage = 12
+energy_subimage = 12
+secondary_ico = hud_hmissile_ico_SPR
+
 </string>
           </argument>
         </arguments>
@@ -54,58 +54,86 @@ missile_subimage = 0
             <string>//hp subimage control
 
 // temporary hack
-if (!instance_exists(player_OBJ)) exit
+if (!instance_exists(player_OBJ)) exit;
 
-if (player_OBJ.hp &gt; 95) then {
- hp_subimage = 0
+if (player_OBJ.hp &lt;= 0) then {
+ hp_subimage = 12
 }
-if (player_OBJ.hp &gt; 80)&amp;&amp;(player_OBJ.hp &lt;= 95) then {
- hp_subimage = 1
+if (player_OBJ.hp &gt; 0)&amp;&amp;(player_OBJ.hp &lt;= 8) then {
+ hp_subimage = 11
 }
-if (player_OBJ.hp &gt; 60)&amp;&amp;(player_OBJ.hp &lt;= 80) then {
- hp_subimage = 2
+if (player_OBJ.hp &gt; 8)&amp;&amp;(player_OBJ.hp &lt;= 16) then {
+ hp_subimage = 10
 }
-if (player_OBJ.hp &gt; 40)&amp;&amp;(player_OBJ.hp &lt;= 60) then {
- hp_subimage = 3
+if (player_OBJ.hp &gt; 16)&amp;&amp;(player_OBJ.hp &lt;= 24) then {
+ hp_subimage = 9
 }
-if (player_OBJ.hp &gt; 20)&amp;&amp;(player_OBJ.hp &lt;= 40) then {
- hp_subimage = 4
+if (player_OBJ.hp &gt; 24)&amp;&amp;(player_OBJ.hp &lt;= 32) then {
+ hp_subimage = 8
 }
-if (player_OBJ.hp &lt;= 20) then {
+if (player_OBJ.hp &gt; 32)&amp;&amp;(player_OBJ.hp &lt;= 40) then {
+ hp_subimage = 7
+}
+if (player_OBJ.hp &gt; 40)&amp;&amp;(player_OBJ.hp &lt;= 48) then {
+ hp_subimage = 6
+}
+if (player_OBJ.hp &gt; 48)&amp;&amp;(player_OBJ.hp &lt;= 56) then {
  hp_subimage = 5
 }
-//pow subimage control
-if (player_OBJ.pow_level == 1) then {
- pow_subimage = 1
+if (player_OBJ.hp &gt; 56)&amp;&amp;(player_OBJ.hp &lt;= 64) then {
+ hp_subimage = 4
 }
-if (player_OBJ.pow_level == 2) then {
- pow_subimage = 2
+if (player_OBJ.hp &gt; 64)&amp;&amp;(player_OBJ.hp &lt;= 72) then {
+ hp_subimage = 3
 }
-if (player_OBJ.pow_level == 3) then {
- pow_subimage = 3
+if (player_OBJ.hp &gt; 72)&amp;&amp;(player_OBJ.hp &lt;= 80) then {
+ hp_subimage = 2
 }
-if (player_OBJ.pow_level == 4) then {
- pow_subimage = 4
+if (player_OBJ.hp &gt; 88)&amp;&amp;(player_OBJ.hp &lt;= 96) then {
+ hp_subimage = 1
 }
-//attspd subimage control
-if (player_OBJ.attspd_level == 1) then {
- attspd_subimage = 1
+if (player_OBJ.hp &gt;= 96) then {
+ hp_subimage = 0
 }
-if (player_OBJ.attspd_level == 2) then {
- attspd_subimage = 2
+//energy subimage control
+if (player_OBJ.energy &lt;= 0) then {
+ energy_subimage = 12
 }
-if (player_OBJ.attspd_level == 3) then {
- attspd_subimage = 3
+if (player_OBJ.energy &gt; 0)&amp;&amp;(player_OBJ.energy &lt;= 8) then {
+ energy_subimage = 11
 }
-if (player_OBJ.attspd_level == 4) then {
- attspd_subimage = 4
+if (player_OBJ.energy &gt; 8)&amp;&amp;(player_OBJ.energy &lt;= 16) then {
+ energy_subimage = 10
 }
-//missile subimage control
-if (player_OBJ.missile_ammo &gt; 0) then {
- missile_subimage = 0
+if (player_OBJ.energy &gt; 16)&amp;&amp;(player_OBJ.energy &lt;= 24) then {
+ energy_subimage = 9
 }
-if (player_OBJ.missile_ammo &lt;= 0) then {
- missile_subimage = 1
+if (player_OBJ.energy &gt; 24)&amp;&amp;(player_OBJ.energy &lt;= 32) then {
+ energy_subimage = 8
+}
+if (player_OBJ.energy &gt; 32)&amp;&amp;(player_OBJ.energy &lt;= 40) then {
+ energy_subimage = 7
+}
+if (player_OBJ.energy &gt; 40)&amp;&amp;(player_OBJ.energy &lt;= 48) then {
+ energy_subimage = 6
+}
+if (player_OBJ.energy &gt; 48)&amp;&amp;(player_OBJ.energy &lt;= 56) then {
+ energy_subimage = 5
+}
+if (player_OBJ.energy &gt; 56)&amp;&amp;(player_OBJ.energy &lt;= 64) then {
+ energy_subimage = 4
+}
+if (player_OBJ.energy &gt; 64)&amp;&amp;(player_OBJ.energy &lt;= 72) then {
+ energy_subimage = 3
+}
+if (player_OBJ.energy &gt; 72)&amp;&amp;(player_OBJ.energy &lt;= 80) then {
+ energy_subimage = 2
+}
+if (player_OBJ.energy &gt; 88)&amp;&amp;(player_OBJ.energy &lt;= 96) then {
+ energy_subimage = 1
+}
+if (player_OBJ.energy &gt;= 96) then {
+ energy_subimage = 0
 }
 </string>
           </argument>
@@ -133,16 +161,28 @@ if (player_OBJ.missile_ammo &lt;= 0) then {
 if (!instance_exists(player_OBJ)) exit
 
 //HUD background
-draw_sprite(hud_bg_SPR,0,0,room_height-16)
+draw_sprite_ext(hud_bgn_SPR,0,0,room_height-16,1,1,0,c_green,196)
+//-------------------------------
+//lives
+draw_sprite(hud_lives_SPR,0,-2,room_height-14)
+//draw lives number
+draw_text_color(10,room_height-15,'x'+string(player_OBJ.extra_lives),c_white,c_white,c_white,c_white,255)
+//-------------------------------
+//HP ico
+draw_sprite(hud_hp_ico_SPR,0,31,room_height-15)
 //HP bar
-draw_sprite(health_SPR,hp_subimage,8,room_height-15)
-//POW bar
-draw_sprite(pow_level_SPR,pow_subimage,80,room_height-15)
-//ATT SPD bar
-draw_sprite(frate_level_SPR,attspd_subimage,120,room_height-15)
-//ALT WEAPON AMMO bar
-draw_sprite(missile_hud_SPR,missile_subimage,160,room_height-15)
-draw_text_color(179,room_height-15,string(player_OBJ.secondary_weap.ammo),c_white,c_white,c_white,c_white,0.5)
+draw_sprite(hud_hp_SPR,hp_subimage,47,room_height-15)
+//-------------------------------
+//energy ico
+draw_sprite(hud_energy_ico_SPR,0,76,room_height-15)
+//energy bar
+draw_sprite(hud_energy_SPR,energy_subimage,92,room_height-15)
+//-------------------------------
+//secondary weap ico
+draw_sprite(secondary_ico,0,121,room_height-15)
+//secondary weap ammo
+draw_text_color(139,room_height-15,'x'+string(player_OBJ.secondary_weap.ammo),c_white,c_white,c_white,c_white,255)
+
 
 //DRAW SCORE
 draw_text_color(2,2,'Score: '+string(global_debugger_OBJ.g_score),c_white,c_white,c_white,c_white,0.5)

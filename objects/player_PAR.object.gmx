@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>extra_lives = 0
+hp = 100
+energy = 100
 
 </string>
           </argument>
