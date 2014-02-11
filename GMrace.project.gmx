@@ -5,23 +5,6 @@
   </Configs>
   <datafiles number="4" name="datafiles">
     <datafile>
-      <name>settings.txt</name>
-      <exists>-1</exists>
-      <size>33</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>49402094</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>settings.txt</filename>
-    </datafile>
-    <datafile>
       <name>todo.txt</name>
       <exists>-1</exists>
       <size>833</size>
@@ -37,23 +20,6 @@
         </Config>
       </ConfigOptions>
       <filename>todo.txt</filename>
-    </datafile>
-    <datafile>
-      <name>settings.cfg</name>
-      <exists>-1</exists>
-      <size>10</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>settings.cfg</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
@@ -207,6 +173,7 @@
       <script>scripts\powerup_drop_SCR.gml</script>
       <script>scripts\menu_selections_SCR.gml</script>
       <script>scripts\menu_next_sel_SCR.gml</script>
+      <script>scripts\hud_SCR.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\movement_SCR.gml</script>

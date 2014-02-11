@@ -33,6 +33,7 @@ config = instance_create(0,0,config_ini_OBJ)
 
 room_current = 0 //0 = menu
 game_over = 0
+game_mode = 0
 pause = 0
 </string>
           </argument>
@@ -149,7 +150,13 @@ instance_create(0,0,star_ctrl_OBJ)
 instance_create(0,0,enemy_ctrl_OBJ)
 instance_create(0,0,hud_OBJ)
 
-instance_create(32,120,player_OBJ)
+if (game_mode == 2) then {
+ player[0] = instance_create(32,120,player_OBJ)
+ player[1] = instance_create(32,152,player_OBJ)
+} else {
+ player[0] = instance_create(32,136,player_OBJ)
+ player[1] = noone
+}
 
 </string>
           </argument>

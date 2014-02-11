@@ -37,13 +37,17 @@ snd_volume = 100
 fullscreen = 0
 wsize_sel = 1
 
-wsize[0] = 640
-wsize[1] = 800
-wsize[2] = 1024
+wsize[0] = 754
+wsize[1] = 1024
+wsize[2] = 1366
+wsize[3] = 1600
+wsize[4] = 1920
 
 hsize[0] = 480
-hsize[1] = 600
+hsize[1] = 576
 hsize[2] = 768
+hsize[3] = 900
+hsize[4] = 1080
 </string>
           </argument>
         </arguments>

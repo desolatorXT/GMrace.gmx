@@ -28,6 +28,7 @@
             <string>//launch multiplayer
 wait = 0
 counter = 0
+// global_debugger_OBJ.game_mode = 2
 
 </string>
           </argument>
