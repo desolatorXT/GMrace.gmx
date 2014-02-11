@@ -151,8 +151,6 @@
       <sprite>sprites\hud_bgn_SPR</sprite>
       <sprite>sprites\hud_hp_SPR</sprite>
       <sprite>sprites\hud_energy_SPR</sprite>
-      <sprite>sprites\hud_hp_ico_SPR</sprite>
-      <sprite>sprites\hud_energy_ico_SPR</sprite>
       <sprite>sprites\hud_hmissile_ico_SPR</sprite>
       <sprite>sprites\hud_laser_ico_SPR</sprite>
       <sprite>sprites\hud_lives_SPR</sprite>
@@ -174,6 +172,7 @@
       <script>scripts\menu_selections_SCR.gml</script>
       <script>scripts\menu_next_sel_SCR.gml</script>
       <script>scripts\hud_SCR.gml</script>
+      <script>scripts\hud_draw_SCR.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\movement_SCR.gml</script>

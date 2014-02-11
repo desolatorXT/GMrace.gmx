@@ -95,26 +95,10 @@ if (!instance_exists(player_OBJ)) exit
 //HUD background
 draw_sprite_ext(hud_bgn_SPR,0,0,room_height-16,1,1,0,make_color_rgb(0,80,0),196)
 //-------------------------------
-//lives
-draw_sprite(hud_lives_SPR,0,-2,room_height-14)
-//draw lives number
-draw_text_color(10,room_height-15,'x'+string(player_OBJ.extra_lives),c_white,c_white,c_white,c_white,255)
-//-------------------------------
-//HP ico
-draw_sprite(hud_hp_ico_SPR,0,31,room_height-15)
-//HP bar
-draw_sprite(hud_hp_SPR,hp_subimage,47,room_height-15)
-//-------------------------------
-//energy ico
-draw_sprite(hud_energy_ico_SPR,0,76,room_height-15)
-//energy bar
-draw_sprite(hud_energy_SPR,energy_subimage,92,room_height-15)
-//-------------------------------
-//secondary weap ico
-draw_sprite(secondary_ico,0,121,room_height-15)
-//secondary weap ammo
-draw_text_color(139,room_height-15,'x'+string(player_OBJ.secondary_weap.ammo),c_white,c_white,c_white,c_white,255)
-
+hud_draw_SCR(0)
+if (global_debugger_OBJ.game_mode == 2) then {
+hud_draw_SCR(1)
+}
 
 //DRAW SCORE
 draw_text_color(2,2,'Score: '+string(global_debugger_OBJ.g_score),c_white,c_white,c_white,c_white,0.5)
