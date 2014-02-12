@@ -28,6 +28,7 @@
             <string>owner = noone
 firing = 0
 ammo = -1
+show_debug_message("weapon_PAR(" + string(self.id) + ") create event called.")
 
 </string>
           </argument>
