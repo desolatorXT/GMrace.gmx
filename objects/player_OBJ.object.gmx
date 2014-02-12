@@ -116,6 +116,10 @@ if (godmode == 1) then {
 if (hp &gt; max_hp) hp = max_hp
 else if (hp &lt;= 0) alarm[1] = 1
 
+// temporary fix...
+primary_weap.owner = self.id
+secondary_weap.owner = self.id
+
 primary_weap.firing = global_debugger_OBJ.fire_press
 secondary_weap.firing = global_debugger_OBJ.altfire_press
 
