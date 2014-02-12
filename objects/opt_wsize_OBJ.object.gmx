@@ -29,14 +29,14 @@
 
 current_sel = global_debugger_OBJ.config.wsize_sel
 sel_size = array_length_1d(global_debugger_OBJ.config.wsize)
-current_value = global_debugger_OBJ.config.wsize[current_sel]
+current_value = global_debugger_OBJ.config.hsize[current_sel]
 
 my_backdrop = instance_create(0,0,opt_value_draw_OBJ)
 my_backdrop.creator = self.id
 
 my_text = instance_create(0,0,opt_value_draw_text_OBJ)
 my_text.creator = self.id
-my_text.text = string(current_value)
+my_text.text = string(current_value)+"p"
 
 
 </string>
@@ -65,7 +65,7 @@ my_text.text = string(current_value)
 cfg = global_debugger_OBJ.config.id
 current_sel = (current_sel + 1) mod sel_size
 
-current_value = cfg.wsize[current_sel]
+current_value = cfg.hsize[current_sel]
 cfg.wsize_sel = current_sel
 
 window_set_size(cfg.wsize[current_sel], cfg.hsize[current_sel])
@@ -73,7 +73,7 @@ window_set_size(cfg.wsize[current_sel], cfg.hsize[current_sel])
 wait = 0
 counter = 0
 
-my_text.text = string(current_value)
+my_text.text = string(current_value)+"p"
 
 </string>
           </argument>
