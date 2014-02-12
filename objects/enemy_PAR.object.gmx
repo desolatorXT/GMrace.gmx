@@ -81,7 +81,7 @@ powerup_drop_SCR(self.id)
  instance_destroy()
 }
 
-if (x &lt; -12)or(y&lt;-12)or(y&gt;room_height+12) then {
+if (x &lt; -12)or(y&lt;-12)or(y&gt;room_height+12-16) then {
  instance_destroy()
 }
 </string>
