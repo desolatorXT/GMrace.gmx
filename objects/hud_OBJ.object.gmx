@@ -33,9 +33,9 @@ secondary_ico[1] = hud_hmissile_ico_SPR
 hud_lives_ico_x[0] = 2
 hud_lives_txt_x[0] = 19
 hud_hp_ico_x[0] = 40
-hud_hp_bar_x[0] = 56
+hud_hp_bar_x[0] = 55
 hud_energy_ico_x[0] = 112
-hud_energy_bar_x[0] = 128
+hud_energy_bar_x[0] = 127
 hud_secondary_ico_x[0] = 184
 hud_secondary_txt_x[0] = 203
 
@@ -43,9 +43,9 @@ hud_secondary_txt_x[0] = 203
 hud_lives_ico_x[1] = 2+294
 hud_lives_txt_x[1] = 19+294
 hud_hp_ico_x[1] = 40+294
-hud_hp_bar_x[1] = 56+294
+hud_hp_bar_x[1] = 55+294
 hud_energy_ico_x[1] = 112+294
-hud_energy_bar_x[1] = 128+294
+hud_energy_bar_x[1] = 127+294
 hud_secondary_ico_x[1] = 184+294
 hud_secondary_txt_x[1] = 203+294
 

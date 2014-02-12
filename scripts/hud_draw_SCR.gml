@@ -11,26 +11,24 @@ draw_text_color(hud_lives_txt_x[pl],room_height-15,string(pl_obj.extra_lives),c_
 //-------------------------------
 
 //HP bar
-bar_width = sprite_get_width(hud_hp_SPR) - 16
+bar_width = sprite_get_width(hud_hp_bar_SPR)
 width = clamp(bar_width * (pl_obj.hp / pl_obj.max_hp), 0, bar_width)
-height = sprite_get_height(hud_hp_SPR)
+height = sprite_get_height(hud_hp_bar_SPR)
 
-// draw the "empty" sprite first
-draw_sprite(hud_hp_SPR, 1, hud_hp_ico_x[pl], room_height-15)
-// then cover it with the actual bar
-draw_sprite_part(hud_hp_SPR, 0, 16, 0, width, height, hud_hp_bar_x[pl], room_height-15)
+draw_sprite(hud_hp_ico_SPR, 0, hud_hp_ico_x[pl], room_height-15)
+draw_sprite(hud_empty_bar_SPR, 0, hud_hp_bar_x[pl], room_height-15)
+draw_sprite_part(hud_hp_bar_SPR, 0, 0, 0, width, height, hud_hp_bar_x[pl], room_height-15)
 
 //-------------------------------
 
 //energy bar
-bar_width = sprite_get_width(hud_energy_SPR) - 16
+bar_width = sprite_get_width(hud_energy_bar_SPR)
 width = clamp(bar_width * (pl_obj.energy / pl_obj.max_energy), 0, bar_width)
-height = sprite_get_height(hud_energy_SPR)
+height = sprite_get_height(hud_energy_bar_SPR)
 
-// draw the "empty sprite first
-draw_sprite(hud_energy_SPR, 1, hud_energy_ico_x[pl], room_height-15)
-// then cover it with the actual bar
-draw_sprite_part(hud_energy_SPR, 0, 16, 0, width, height, hud_energy_bar_x[pl], room_height-15)
+draw_sprite(hud_energy_ico_SPR, 0, hud_energy_ico_x[pl], room_height-15)
+draw_sprite(hud_empty_bar_SPR, 0, hud_energy_bar_x[pl], room_height-15)
+draw_sprite_part(hud_energy_bar_SPR, 0, 0, 0, width, height, hud_energy_bar_x[pl], room_height-15)
 //-------------------------------
 
 //secondary weap ico
