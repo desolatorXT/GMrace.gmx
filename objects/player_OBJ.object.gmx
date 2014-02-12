@@ -63,9 +63,17 @@ event_user(0)
 
 event_user(1)
 
-with (primary_weapon) instance_destroy()
-with (secondary_weapon) instance_destroy()
+with (primary_weap) instance_destroy()
+with (secondary_weap) instance_destroy()
 
+// remove ourselves from the global debugger's array.
+g = global_debugger_OBJ.id
+for (i = 0; i &lt; array_length_1d(g.player); i++) {
+    if (g.player[i].id == self.id) {
+        g.player[i] = noone
+        break
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -91,7 +99,7 @@ with (secondary_weapon) instance_destroy()
             <string>if (playable = 1) then {
     movement_SCR(self.id,spd)
     room_bound_SCR(self.id)
-    invincibility_effect_SCR(self.id,invincible)
+    invincibility_effect_SCR(self.id)
 
     if (godmode == 1) then {
         invincible = 1
@@ -173,7 +181,7 @@ y = 120
 // spawn with invincibility
 invincible = 1
 // but for half the duration
-invis_counter = 30
+inv_counter = 30
 
 buff_controller = instance_create(0,0,buff_ctrl_OBJ)
 buff_controller.owner = self.id
