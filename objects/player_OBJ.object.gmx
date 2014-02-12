@@ -151,6 +151,10 @@ godmode = 0
 
 max_hp = 100
 hp = 100
+
+max_energy = 100
+energy = 100
+
 spd = 3
 
 // set out position in left middle
