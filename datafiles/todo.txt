@@ -1,6 +1,5 @@
-- Upgrade HUD
-- New enemy projectiles, laset shot.
-- Õew ¡… patterns
-- Credits room
+- New enemy projectiles, laser shot.
+- Õew ¡… patterns.
+- Credits room.
 - Vertical scrolling test room.
-- 2player co-op mode
+- 2player co-op mode.
