@@ -171,7 +171,6 @@
       <script>scripts\powerup_drop_SCR.gml</script>
       <script>scripts\menu_selections_SCR.gml</script>
       <script>scripts\menu_next_sel_SCR.gml</script>
-      <script>scripts\hud_SCR.gml</script>
       <script>scripts\hud_draw_SCR.gml</script>
     </scripts>
     <scripts name="player">

@@ -25,47 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>g = global_debugger_OBJ.id
-
-hp_subimage[0] = 12
-energy_subimage[0] = 12
+            <string>// this should change according to the weapon...
 secondary_ico[0] = hud_hmissile_ico_SPR
-
-hp_subimage[1] = 12
-energy_subimage[1] = 12
 secondary_ico[1] = hud_hmissile_ico_SPR
 
+// setup layout for P1
+hud_lives_ico_x[0] = 2
+hud_lives_txt_x[0] = 19
+hud_hp_ico_x[0] = 40
+hud_hp_bar_x[0] = 56
+hud_energy_ico_x[0] = 112
+hud_energy_bar_x[0] = 128
+hud_secondary_ico_x[0] = 184
+hud_secondary_txt_x[0] = 203
 
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//hp subimage control
-
-// temporary hack
-if (!instance_exists(player_OBJ)) exit;
-
-hud_SCR(0);
-hud_SCR(1);
+// TODO: setup layout for P2
 
 </string>
           </argument>
@@ -89,15 +63,12 @@ hud_SCR(1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// temporary hack
-if (!instance_exists(player_OBJ)) exit
-
-//HUD background
+            <string>//HUD background
 draw_sprite_ext(hud_bgn_SPR,0,0,room_height-16,1,1,0,make_color_rgb(0,80,0),196)
 //-------------------------------
-hud_draw_SCR(0)
-if (global_debugger_OBJ.game_mode == 2) then {
-hud_draw_SCR(1)
+
+for (i = 0; i &lt; array_length_1d(global_debugger_OBJ.player); i++) {
+    hud_draw_SCR(i)
 }
 
 //DRAW SCORE
