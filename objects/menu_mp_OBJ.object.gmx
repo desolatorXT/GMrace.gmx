@@ -26,10 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>//launch multiplayer
-wait = 0
-counter = 0
-// global_debugger_OBJ.game_mode = 2
-
+audio_stop_music()
+room_goto(test_RM)
+global_debugger_OBJ.alarm[0] = 1
+global_debugger_OBJ.room_current = 1
+global_debugger_OBJ.game_mode = 2
 </string>
           </argument>
         </arguments>

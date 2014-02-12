@@ -45,7 +45,7 @@ instance_create(0,0,menu_draw_text_OBJ)
 //create menu buttons:
 instance_create(32,room_height - 360,menu_sp_OBJ)
 instance_create(32,room_height - 300,menu_mp_OBJ)
-menu_mp_OBJ.enabled = 0
+//menu_mp_OBJ.enabled = 0
 instance_create(32,room_height - 240,menu_options_OBJ)
 instance_create(32,room_height - 180,menu_controls_OBJ)
 instance_create(32,room_height - 120,menu_credits_OBJ)

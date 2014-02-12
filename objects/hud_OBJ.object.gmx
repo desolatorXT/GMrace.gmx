@@ -39,7 +39,15 @@ hud_energy_bar_x[0] = 128
 hud_secondary_ico_x[0] = 184
 hud_secondary_txt_x[0] = 203
 
-// TODO: setup layout for P2
+// TEMP: setup layout for P2
+hud_lives_ico_x[1] = 2 + 256
+hud_lives_txt_x[1] = 19 + 256
+hud_hp_ico_x[1] = 40 + 256
+hud_hp_bar_x[1] = 56 + 256
+hud_energy_ico_x[1] = 112 + 256
+hud_energy_bar_x[1] = 128 + 256
+hud_secondary_ico_x[1] = 184 + 256
+hud_secondary_txt_x[1] = 203 + 256
 
 </string>
           </argument>

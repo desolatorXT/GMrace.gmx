@@ -34,6 +34,10 @@ primary_weap.owner = self.id
 secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
 
+// remember our initial spawn point
+spawn_x = x
+spawn_y = y
+
 // initialize per spawn
 event_user(0)
 
@@ -96,25 +100,19 @@ for (i = 0; i &lt; array_length_1d(g.player); i++) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (playable = 1) then {
-    movement_SCR(self.id,spd)
-    room_bound_SCR(self.id)
-    invincibility_effect_SCR(self.id)
+            <string>movement_SCR(self.id,spd)
+room_bound_SCR(self.id)
+invincibility_effect_SCR(self.id)
 
-    if (godmode == 1) then {
-        invincible = 1
-    }
-
-    if (hp &gt; max_hp) hp = max_hp
-    else if (hp &lt;= 0) alarm[1] = 1
-    
-    primary_weap.firing = global_debugger_OBJ.fire_press
-    secondary_weap.firing = global_debugger_OBJ.altfire_press
-} else { 
-    visible = 0
-    primary_weap.firing = 0
-    secondary_weap.firing = 0
+if (godmode == 1) then {
+    invincible = 1
 }
+
+if (hp &gt; max_hp) hp = max_hp
+else if (hp &lt;= 0) alarm[1] = 1
+
+primary_weap.firing = global_debugger_OBJ.fire_press
+secondary_weap.firing = global_debugger_OBJ.altfire_press
 
 </string>
           </argument>
@@ -174,9 +172,9 @@ energy = 100
 
 spd = 3
 
-// set out position in left middle
-x = 32
-y = 120
+// move to our spawn point
+x = spawn_x
+y = spawn_y
 
 // spawn with invincibility
 invincible = 1
@@ -188,7 +186,7 @@ buff_controller.owner = self.id
 
 part_count = 64
 explosion_size = 32
-playable = 1
+//playable = 1
 
 
 </string>

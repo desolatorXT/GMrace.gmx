@@ -61,7 +61,8 @@ if (firing == 1) then {
         if (counter == 0) then {
         bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
         bullet.damage = damage
-        counter = fire_rate // "hack" to activate the loop below without losing 1 step
+        // "hack" to activate the loop below without losing 1 step
+        counter = fire_rate
         }
     }
 }
