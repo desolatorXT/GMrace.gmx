@@ -38,6 +38,8 @@ secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
 show_debug_message("(" + string(self.id) + ").secondary_weap.owner = " + string(secondary_weap.owner))
 
+my_shield = instance_create(0,0,pl_shield_OBJ)
+my_shield.owner = self.id
 
 // remember our initial spawn point
 spawn_x = x
@@ -74,6 +76,7 @@ event_user(1)
 
 with (primary_weap) instance_destroy()
 with (secondary_weap) instance_destroy()
+with (my_shield) instance_destroy()
 
 // remove ourselves from the global debugger's array.
 g = global_debugger_OBJ.id
@@ -109,6 +112,17 @@ for (i = 0; i &lt; array_length_1d(g.player); i++) {
 room_bound_SCR(self.id)
 invincibility_effect_SCR(self.id)
 
+if (global_debugger_OBJ.shield_press == 0) then {
+    if (energy &lt; 0) then {
+        energy = 0
+    }
+    energy = energy + 0.2
+    if (energy &gt; 100) then {
+        energy = 100
+    }
+}
+
+
 if (godmode == 1) then {
     invincible = 1
 }
@@ -122,6 +136,8 @@ secondary_weap.owner = self.id
 
 primary_weap.firing = global_debugger_OBJ.fire_press
 secondary_weap.firing = global_debugger_OBJ.altfire_press
+
+my_shield.shield_active = global_debugger_OBJ.shield_press
 
 </string>
           </argument>

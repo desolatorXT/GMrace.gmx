@@ -19,3 +19,5 @@ if (keyboard_check_released(c.fire_key)) g.fire_press = 0
 if (keyboard_check_pressed(c.altfire_key)) g.altfire_press = 1
 if (keyboard_check_released(c.altfire_key)) g.altfire_press = 0
 
+if (keyboard_check_pressed(c.shield_key)) g.shield_press = 1
+if (keyboard_check_released(c.shield_key)) g.shield_press = 0

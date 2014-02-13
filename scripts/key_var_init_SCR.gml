@@ -6,3 +6,4 @@ g.left_press = 0
 g.right_press = 0
 g.fire_press = 0
 g.altfire_press = 0
+g.shield_press = 0
