@@ -102,11 +102,6 @@
       <sprite>sprites\spd_pickup_SPR</sprite>
       <sprite>sprites\life_pickup_SPR</sprite>
     </sprites>
-    <sprites name="menu">
-      <sprite>sprites\menu_button_default_SPR</sprite>
-      <sprite>sprites\message_BG</sprite>
-      <sprite>sprites\options_message_bg_SPR</sprite>
-    </sprites>
     <sprites name="menu_new">
       <sprite>sprites\selection_SPR</sprite>
       <sprite>sprites\menu_message_board_SPR</sprite>
@@ -123,6 +118,7 @@
         <sprite>sprites\opt_left_SPR</sprite>
         <sprite>sprites\opt_fire_SPR</sprite>
         <sprite>sprites\opt_altfire_SPR</sprite>
+        <sprite>sprites\opt_shield_SPR</sprite>
         <sprite>sprites\opt_save_SPR</sprite>
         <sprite>sprites\opt_back_SPR</sprite>
       </sprites>
@@ -148,8 +144,6 @@
       </sprites>
       <sprite>sprites\game_over_SPR</sprite>
     </sprites>
-    <sprite>sprites\en_explosion_SPR</sprite>
-    <sprite>sprites\pl_explosion_SPR</sprite>
     <sprites name="hud_new">
       <sprite>sprites\hud_bgn_SPR</sprite>
       <sprite>sprites\hud_hp_bar_SPR</sprite>
@@ -161,6 +155,14 @@
       <sprite>sprites\hud_hp_ico_SPR</sprite>
       <sprite>sprites\hud_energy_ico_SPR</sprite>
     </sprites>
+    <sprites name="enemies_new">
+      <sprite>sprites\enx_1_SPR</sprite>
+      <sprite>sprites\enx_2_SPR</sprite>
+      <sprite>sprites\enx_3_SPR</sprite>
+      <sprite>sprites\enx32_4_SPR</sprite>
+    </sprites>
+    <sprite>sprites\en_explosion_SPR</sprite>
+    <sprite>sprites\pl_explosion_SPR</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\main_BG</background>
@@ -177,12 +179,12 @@
       <script>scripts\powerup_drop_SCR.gml</script>
       <script>scripts\menu_selections_SCR.gml</script>
       <script>scripts\menu_next_sel_SCR.gml</script>
-      <script>scripts\hud_draw_SCR.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\movement_SCR.gml</script>
       <script>scripts\room_bound_SCR.gml</script>
       <script>scripts\invincibility_effect_SCR.gml</script>
+      <script>scripts\hud_draw_SCR.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -232,6 +234,7 @@
         <object>objects\ctr_right_OBJ</object>
         <object>objects\ctr_fire_OBJ</object>
         <object>objects\ctr_altfire_OBJ</object>
+        <object>objects\ctr_shield_OBJ</object>
         <object>objects\ctr_default_OBJ</object>
         <object>objects\ctr_save_OBJ</object>
         <object>objects\ctr_back_OBJ</object>
