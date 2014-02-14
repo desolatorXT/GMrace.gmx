@@ -31,6 +31,7 @@ max_ammo = 5
 ammo = 5
 can_fire = 1
 bullet = noone
+icon = hud_hmissile_ico_SPR
 </string>
           </argument>
         </arguments>

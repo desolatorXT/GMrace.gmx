@@ -30,8 +30,8 @@ damage = 200
 bullet = noone
 counter = 0
 can_fire = 1
-
 part_count = 2
+icon = hud_laser_ico_SPR
 </string>
           </argument>
         </arguments>

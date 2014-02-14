@@ -25,11 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// this should change according to the weapon...
-secondary_ico[0] = hud_hmissile_ico_SPR
-secondary_ico[1] = hud_hmissile_ico_SPR
-
-// setup layout for P1
+            <string>// setup layout for P1
 hud_lives_ico_x[0] = 2
 hud_lives_txt_x[0] = 19
 hud_hp_ico_x[0] = 40
