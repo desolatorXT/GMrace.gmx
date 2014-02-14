@@ -163,6 +163,9 @@
     </sprites>
     <sprite>sprites\en_explosion_SPR</sprite>
     <sprite>sprites\pl_explosion_SPR</sprite>
+    <sprites name="sfx">
+      <sprite>sprites\explosion_fx_SPR</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\main_BG</background>
@@ -313,6 +316,9 @@
     </objects>
     <object>objects\en_explosion_radius_OBJ</object>
     <object>objects\pl_explosion_radius_OBJ</object>
+    <objects name="sfx">
+      <object>objects\explosion_fx_OBJ</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_RM</room>

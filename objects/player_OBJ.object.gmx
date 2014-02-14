@@ -72,6 +72,8 @@ event_user(0)
             <kind>1</kind>
             <string>event_inherited()
 
+instance_create(x,y,explosion_fx_OBJ)
+
 event_user(1)
 
 with (primary_weap) instance_destroy()
