@@ -30,6 +30,7 @@ damage = 200
 max_ammo = 5
 ammo = 5
 can_fire = 1
+bullet = noone
 </string>
           </argument>
         </arguments>
@@ -57,10 +58,12 @@ can_fire = 1
 if (firing == 1) then {
     if (can_fire == 1) then {
         if (ammo &gt; 0) then {
-            bullet = instance_create(owner.x,owner.y,pl_missile_OBJ)
-            bullet.damage = damage
-            ammo -= 1
-            can_fire = 0
+            if (!instance_exists(bullet)) then {
+                bullet = instance_create(owner.x,owner.y,pl_missile_OBJ)
+                bullet.damage = damage
+                ammo -= 1
+                can_fire = 0
+            }
         } else {/*play sound*/}
     }
 } else {can_fire = 1}

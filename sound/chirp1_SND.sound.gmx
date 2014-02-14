@@ -2,7 +2,7 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>E:\Project\Gmrace\GMrace.gmx\\sound\audio\ping2_SND.wav</origname>
+  <origname>E:\Project\Gmrace\GMrace.gmx\\sound\audio\chrip1_SND.wav</origname>
   <effects>0</effects>
   <volume>
     <volume>0.6</volume>
@@ -21,7 +21,7 @@
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>ping2_SND.wav</data>
+  <data>chirp1_SND.wav</data>
   <compressed>1</compressed>
   <streamed>0</streamed>
   <uncompressOnLoad>1</uncompressOnLoad>

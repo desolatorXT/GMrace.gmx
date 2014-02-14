@@ -50,7 +50,8 @@ direction = 180
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.buff_controller.attspd_timer = 30 * 8
+            <string>event_inherited()
+other.buff_controller.attspd_timer = 30 * 8
 instance_destroy()
 </string>
           </argument>

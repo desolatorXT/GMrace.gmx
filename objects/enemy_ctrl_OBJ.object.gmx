@@ -273,9 +273,6 @@ en1_nr = en1_nr + 1
           <argument>
             <kind>1</kind>
             <string>counter = counter + 1
-if ((counter mod 60)==0) then {
-randomize()
-}
 //en_spawn_data_SCR(level)
 en_spawn_SCR(level,counter,stop)
 

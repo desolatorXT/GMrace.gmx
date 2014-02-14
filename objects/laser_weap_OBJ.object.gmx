@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>event_inherited()
 damage = 200
-max_ammo = 30
-ammo = 30
+bullet = noone
+counter = 0
 can_fire = 1
+
+part_count = 2
 </string>
           </argument>
         </arguments>
@@ -52,22 +54,29 @@ can_fire = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (ammo &gt; max_ammo) ammo = max_ammo
-
-if (firing == 1) then {
-    if (can_fire == 1) then {
-        if (ammo &gt; 0) then {
-            bullet = instance_create(owner.x,owner.y,lasershot_OBJ)
-            bullet.damage = damage
-            bullet.creator = owner
-            ammo -= 1
-            can_fire = 0
-        } else {/*play sound*/}
+            <string>if (firing == 1)&amp;&amp;(!instance_exists(bullet))&amp;&amp;(owner.energy &gt; 3)&amp;&amp;(can_fire == 1) then {
+    counter++
+    owner.energy -= 8/3
+    //effect
+    for (i=0;i&lt;part_count;i++) {
+    temp_x = owner.x+16+random(24)
+    temp_y = owner.y+choose(-1,1)*random(16)
+    part_id = instance_create(temp_x,temp_y,laser_charge_part_OBJ)
+    part_id.direction = point_direction(temp_x,temp_y,owner.x+12,owner.y)
     }
-} else {can_fire = 1}
+    //----
+    if (counter &gt;= 30) then {
+        bullet = instance_create(owner.x+12,owner.y,lasershot_OBJ)
+        bullet.damage = damage
+        bullet.creator = owner
+        counter = 0
+        can_fire = 0
+    }
+} else {counter = 0}
 
-
-
+if (firing == 0) then {
+    can_fire = 1
+}
 
 
 </string>

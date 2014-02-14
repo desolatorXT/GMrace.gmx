@@ -33,12 +33,12 @@ instance_create(0,room_height-32,menu_message_board_OBJ)
 instance_create(0,0,menu_draw_text_OBJ)
 
 //create option buttons:
-instance_create(32,room_height - 420,opt_snd_volume_OBJ)
-instance_create(32,room_height - 360,opt_game_speed_OBJ)
-instance_create(32,room_height - 300,opt_fullscreen_OBJ)
-instance_create(32,room_height - 240,opt_wsize_OBJ)
-instance_create(32,room_height - 180,opt_default_OBJ)
-instance_create(32,room_height - 120,opt_save_OBJ)
+instance_create(32,room_height - 270,opt_snd_volume_OBJ)
+instance_create(32,room_height - 240,opt_game_speed_OBJ)
+instance_create(32,room_height - 210,opt_fullscreen_OBJ)
+instance_create(32,room_height - 180,opt_wsize_OBJ)
+instance_create(32,room_height - 120,opt_default_OBJ)
+instance_create(32,room_height - 90,opt_save_OBJ)
 instance_create(32,room_height - 60,opt_back_OBJ)
 
 //setup selections

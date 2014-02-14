@@ -51,7 +51,10 @@ direction = 180
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.secondary_weap.ammo += 1
+            <string>event_inherited()
+if (other.secondary_weap.ammo &gt;= 0) then {
+other.secondary_weap.ammo += 1
+}
 instance_destroy()
 </string>
           </argument>
