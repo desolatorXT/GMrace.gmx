@@ -199,6 +199,19 @@
     <object>objects\global_debugger_OBJ</object>
     <object>objects\star_ctrl_OBJ</object>
     <object>objects\star_OBJ</object>
+    <objects name="enemy_projectiles">
+      <object>objects\en_projectile_PAR</object>
+      <object>objects\en_missile3_OBJ</object>
+      <object>objects\en_missile2_OBJ</object>
+      <object>objects\en_missile2_trail_OBJ</object>
+      <object>objects\en_missile2_dummy_OBJ</object>
+      <object>objects\en_bullet_expl_part_OBJ</object>
+      <object>objects\en_expl_part_OBJ</object>
+      <object>objects\en_bullet1_OBJ</object>
+      <object>objects\en_missile1_OBJ</object>
+      <object>objects\en_missile_scatter1_OBJ</object>
+      <object>objects\en_scatter1_OBJ</object>
+    </objects>
     <objects name="config">
       <object>objects\config_base_PAR</object>
       <object>objects\config_txt_OBJ</object>
@@ -269,19 +282,6 @@
       <object>objects\en7_OBJ</object>
       <object>objects\en8_OBJ</object>
       <object>objects\dummy_OBJ</object>
-      <objects name="projectiles">
-        <object>objects\en_projectile_PAR</object>
-        <object>objects\en_missile3_OBJ</object>
-        <object>objects\en_missile2_OBJ</object>
-        <object>objects\en_missile2_trail_OBJ</object>
-        <object>objects\en_missile2_dummy_OBJ</object>
-        <object>objects\en_bullet_expl_part_OBJ</object>
-        <object>objects\en_expl_part_OBJ</object>
-        <object>objects\en_bullet1_OBJ</object>
-        <object>objects\en_missile1_OBJ</object>
-        <object>objects\en_missile_scatter1_OBJ</object>
-        <object>objects\en_scatter1_OBJ</object>
-      </objects>
     </objects>
     <objects name="powerups">
       <object>objects\hp_pickup_OBJ</object>
