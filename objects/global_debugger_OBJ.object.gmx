@@ -93,7 +93,12 @@ with (pause_main_menu_OBJ) instance_destroy()
 with (pause_exit_OBJ) instance_destroy()
 with (menu_message_board_OBJ) instance_destroy()
 with (menu_draw_text_OBJ) instance_destroy()
-
+if (instance_exists(pause_restart_OBJ)) then {
+    with (pause_restart_OBJ) instance_destroy()
+}
+if (instance_exists(menu_g_o_OBJ)) then {
+    with (menu_g_o_OBJ) instance_destroy()
+}
 </string>
           </argument>
         </arguments>
