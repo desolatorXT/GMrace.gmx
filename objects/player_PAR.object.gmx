@@ -77,7 +77,8 @@
           <argument>
             <kind>1</kind>
             <string>//destruction
-//play explosion sound here!
+//play explosion + death sound here!
+ship_explos_snd_select_SCR()
 audio_play_sound(pl_death_SND,0,0)
 xpl = instance_create(x,y,pl_explosion_radius_OBJ)
 xpl.image_xscale = 1

@@ -30,6 +30,8 @@ speed = 5
 direction = 180
 part_count = 10
 
+audio_play_sound(en_bullet1_SND,0,0)
+
 </string>
           </argument>
         </arguments>

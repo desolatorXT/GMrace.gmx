@@ -30,6 +30,7 @@ damage = 30
 explosive = 1
 
 //play shot sound here!
+audio_play_sound(en_shot1_SND,0,0)
 
 speed = 5
 </string>

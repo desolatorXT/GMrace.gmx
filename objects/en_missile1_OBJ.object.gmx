@@ -31,6 +31,7 @@ damage = 30
 explosive = 1
 
 //play shot sound here!
+audio_play_sound(en_missile1_SND,0,0)
 </string>
           </argument>
         </arguments>

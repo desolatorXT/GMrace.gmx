@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>30.wav</origname>
+  <origname>E:\Project\Gmrace\GMrace.gmx\\sound\audio\pl_low_hp_SND.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>1</volume>
+    <volume>0.32</volume>
   </volume>
   <pan>0</pan>
   <bitRates>

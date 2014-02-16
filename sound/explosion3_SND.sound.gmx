@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>06.wav</origname>
+  <origname>E:\Project\Gmrace\GMrace.gmx\\sound\audio\explosion3_SND.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>1</volume>
+    <volume>0.45</volume>
   </volume>
   <pan>0</pan>
   <bitRates>
@@ -22,7 +22,7 @@
   </bitDepths>
   <preload>-1</preload>
   <data>explosion3_SND.wav</data>
-  <compressed>0</compressed>
+  <compressed>1</compressed>
   <streamed>0</streamed>
-  <uncompressOnLoad>0</uncompressOnLoad>
+  <uncompressOnLoad>1</uncompressOnLoad>
 </sound>

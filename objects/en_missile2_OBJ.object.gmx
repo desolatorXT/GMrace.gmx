@@ -44,6 +44,7 @@ direction = dir_choice
 speed = 4
 
 //play shot sound here!
+audio_play_sound(en_shot1_SND,0,0)
 </string>
           </argument>
         </arguments>

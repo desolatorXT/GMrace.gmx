@@ -79,7 +79,7 @@ m5.speed = 3
 m5.direction = 200
 
 //play shot sound here!
-
+audio_play_sound(en_scatter1_SND,0,0)
 </string>
           </argument>
         </arguments>

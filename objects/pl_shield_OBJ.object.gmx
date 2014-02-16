@@ -52,6 +52,11 @@
 y = owner.y
 
 if (shield_active == 1) &amp;&amp; (owner.energy &gt; 0) then {
+    //shield initiate sound
+    if (owner.shield_snd_played == 0) then {
+        audio_play_sound(pl_shield_SND,0,0)
+        owner.shield_snd_played = 1
+    }    
     owner.energy = owner.energy - 2
     sprite_index = shield_SPR  
 } else {

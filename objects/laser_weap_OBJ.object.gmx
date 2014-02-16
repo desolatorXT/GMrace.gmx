@@ -60,8 +60,9 @@ snd_start = 0
     owner.energy -= 8/3
     //audio
     if (snd_start = 0) then {
-    audio_play_sound(pl_lasershot_SND,0,0)
-    snd_start = 1}
+        audio_play_sound(pl_lasershot_SND,0,0)
+        snd_start = 1
+    }
     //effect
     for (i=0;i&lt;part_count;i++) {
     temp_x = owner.x+16+random(24)

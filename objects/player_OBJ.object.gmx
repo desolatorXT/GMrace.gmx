@@ -41,6 +41,8 @@ show_debug_message("(" + string(self.id) + ").secondary_weap.owner = " + string(
 my_shield = instance_create(0,0,pl_shield_OBJ)
 my_shield.owner = self.id
 
+shield_snd_played = 0
+
 // remember our initial spawn point
 spawn_x = x
 spawn_y = y
@@ -122,6 +124,7 @@ if (global_debugger_OBJ.shield_press == 0) then {
     if (energy &gt; 100) then {
         energy = 100
     }
+    shield_snd_played = 0
 }
 
 
