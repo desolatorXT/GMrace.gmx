@@ -43,7 +43,7 @@ if (dir_choice = 210) then {
 direction = dir_choice
 speed = 4
 
-audio_play_sound(shot1_SND,0,0)
+//play shot sound here!
 </string>
           </argument>
         </arguments>
@@ -68,7 +68,7 @@ audio_play_sound(shot1_SND,0,0)
             <kind>1</kind>
             <string>event_inherited()
 
-instance_deactivate_object(trail)
+with (trail) instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -100,9 +100,6 @@ counter = counter + 1
 if (counter &lt;= 60) then {
  direction = direction + dir_step
 }
-/*if (counter &gt; 60) then {
- direction = direction - dir_step
-}*/
 
 
 if (direction &gt; 210) then {

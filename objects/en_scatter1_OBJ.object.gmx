@@ -33,7 +33,7 @@ explosive = 1
 
 part_count = 10
 
-audio_play_sound(bloop1_SND,0,0)
+//play shot sound here!
 </string>
           </argument>
         </arguments>
@@ -78,7 +78,7 @@ m5 = instance_create(x,y,en_missile_scatter1_OBJ)
 m5.speed = 3
 m5.direction = 200
 
-audio_play_sound(bloop1_SND,0,0)
+//play shot sound here!
 
 </string>
           </argument>

@@ -29,7 +29,8 @@
 direction = 0
 part_count = 10
 
-audio_play_sound(shot1_SND,0,0)
+//play pl shot sound here!
+audio_play_sound(pl_shot_primary_SND,0,0)
 </string>
           </argument>
         </arguments>
@@ -58,7 +59,8 @@ if (other.hp &lt; 0) then {
 }
 global_debugger_OBJ.g_score = global_debugger_OBJ.g_score + 5
 
-audio_play_sound(twop1_SND,0,0)
+//play bullet hit sound here!
+audio_play_sound(pl_bullet_hit_SND,0,0)
 
 
 for (i=0; i&lt;part_count;i=i+1) {

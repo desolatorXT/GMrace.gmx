@@ -53,7 +53,7 @@ explosive = 0
           <argument>
             <kind>1</kind>
             <string>//destruction
-audio_play_sound(explos1_SND,0,0)
+//play explosion sound here!
 if (explosive = 1) then {
  instance_create(x,y,explosion_fx_OBJ)
  xpl = instance_create(x,y,en_explosion_radius_OBJ)

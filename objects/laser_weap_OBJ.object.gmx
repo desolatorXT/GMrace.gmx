@@ -32,6 +32,7 @@ counter = 0
 can_fire = 1
 part_count = 2
 icon = hud_laser_ico_SPR
+snd_start = 0
 </string>
           </argument>
         </arguments>
@@ -57,6 +58,10 @@ icon = hud_laser_ico_SPR
             <string>if (firing == 1)&amp;&amp;(!instance_exists(bullet))&amp;&amp;(owner.energy &gt; 3)&amp;&amp;(can_fire == 1) then {
     counter++
     owner.energy -= 8/3
+    //audio
+    if (snd_start = 0) then {
+    audio_play_sound(pl_lasershot_SND,0,0)
+    snd_start = 1}
     //effect
     for (i=0;i&lt;part_count;i++) {
     temp_x = owner.x+16+random(24)
@@ -76,6 +81,8 @@ icon = hud_laser_ico_SPR
 
 if (firing == 0) then {
     can_fire = 1
+    snd_start = 0
+    audio_stop_sound(pl_lasershot_SND)
 }
 
 

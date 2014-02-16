@@ -119,7 +119,8 @@ my_text.text = ''
           <argument>
             <kind>1</kind>
             <string>wait = 1
-audio_play_sound(woop3_SND,0,0)
+//play menu selection sound here!
+audio_play_sound(activate_SND,0,0)
 </string>
           </argument>
         </arguments>

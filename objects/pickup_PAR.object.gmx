@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//play sound
-audio_play_sound(ping1_SND,0,0)
+            <string>//play pickup sound
+
 </string>
           </argument>
         </arguments>

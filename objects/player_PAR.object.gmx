@@ -77,7 +77,8 @@
           <argument>
             <kind>1</kind>
             <string>//destruction
-audio_play_sound(explos1_SND,0,0)
+//play explosion sound here!
+audio_play_sound(pl_death_SND,0,0)
 xpl = instance_create(x,y,pl_explosion_radius_OBJ)
 xpl.image_xscale = 1
 xpl.image_yscale = 1
@@ -145,7 +146,7 @@ else {
 alarm[0] = 1
 hp = hp - 59
 }
-audio_play_sound(shot2_SND,0,0)
+//play explosion sound here!
 
 other.hp = -1
 </string>

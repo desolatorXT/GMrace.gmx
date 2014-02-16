@@ -29,7 +29,7 @@
 damage = 30
 explosive = 1
 
-audio_play_sound(shot1_SND,0,0)
+//play shot sound here!
 
 speed = 5
 </string>
@@ -56,7 +56,7 @@ speed = 5
             <kind>1</kind>
             <string>event_inherited()
 
-instance_deactivate_object(trail)
+with (trail) instance_destroy()
 </string>
           </argument>
         </arguments>

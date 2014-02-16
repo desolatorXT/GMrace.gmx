@@ -55,10 +55,11 @@ global_debugger_OBJ.game_over = 0
             <kind>1</kind>
             <string>if (enabled == 1) {
     wait = 1
-    audio_play_sound(woop3_SND,0,0)
+    //play menu selection sound here!
+    audio_play_sound(activate_SND,0,0)
 }
 else {
-    audio_play_sound(dong1_SND,0,0)
+    //play menu selection sound here! (disabled)
 }
 
 

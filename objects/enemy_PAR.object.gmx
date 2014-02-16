@@ -56,7 +56,7 @@ x_mod = choose(1,-1)
 y_mod = choose(1,-1)
 instance_create(x+x_mod*random(12),y+y_mod*random(12),en_expl_part_OBJ)
 }
-
+//play explosion sound here!
 instance_create(x,y,explosion_fx_OBJ)
 
 powerup_drop_SCR(self.id)

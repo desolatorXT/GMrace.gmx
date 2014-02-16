@@ -38,6 +38,9 @@ target = -1
 target_effect_ctrl = instance_create(-100,-100,pl_missile_target_draw_OBJ)
 target_effect_ctrl.owner = self.id
 
+//play shot sound here!
+audio_play_sound(pl_missile_fire_SND,0,0)
+
 </string>
           </argument>
         </arguments>
@@ -60,7 +63,7 @@ target_effect_ctrl.owner = self.id
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(explos1_SND,0,0)
+            <string>//play explosion sound here!
 instance_create(x,y,explosion_fx_OBJ)
 xpl = instance_create(x,y,pl_explosion_radius_OBJ)
 xpl.image_xscale = 1
@@ -110,7 +113,7 @@ if (counter &gt; 10 &amp;&amp; target &lt; 0) then {
  if (target &gt; 0) then {
    detect = 1
    if (detect = 1) then {
-    audio_play_sound(pong1_SND,0,0)
+    //play detect sound here!
     detect = 2
    }
  }

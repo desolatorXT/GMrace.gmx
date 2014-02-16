@@ -30,7 +30,7 @@
 damage = 30
 explosive = 1
 
-audio_play_sound(bloop1_SND,0,0)
+//play shot sound here!
 </string>
           </argument>
         </arguments>

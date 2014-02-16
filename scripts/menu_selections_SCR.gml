@@ -30,7 +30,8 @@ if (movement != 0 && can_select == 1) {
         menu.select_id = menu.sel_ids[menu.selection]
     } until (menu.select_id.enabled == 1)
     menu.can_select = 0
-    audio_play_sound(ping2_SND,0,0)
+    //play menu selection sound here!
+    audio_play_sound(selection_SND,0,0)
 }
 
 drawer.text = menu.sel_txt[menu.selection]

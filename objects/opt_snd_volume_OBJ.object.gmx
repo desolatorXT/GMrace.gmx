@@ -95,7 +95,8 @@ my_text.text = string(current_value)
  audio_master_gain(current_value/100)
  my_text.text = string(current_value)
  wait = 1
- audio_play_sound(woop3_SND,0,0)
+ //play menu selection sound here!
+ audio_play_sound(t2_button_SND,0,0)
 }
 if (global_debugger_OBJ.right_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
  global_debugger_OBJ.config.snd_volume = global_debugger_OBJ.config.snd_volume + 5
@@ -106,7 +107,8 @@ if (global_debugger_OBJ.right_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main
  audio_master_gain(current_value/100)
  my_text.text = string(current_value)
  wait = 1
- audio_play_sound(woop3_SND,0,0)
+ //play menu selection sound here!
+ audio_play_sound(t2_button_SND,0,0)
 }
 
 
