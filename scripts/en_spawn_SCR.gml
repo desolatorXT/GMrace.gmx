@@ -1,6 +1,7 @@
 level = argument0
 counter = argument1
 stop = argument2
+level_boss = argument3
 
 g = enemy_ctrl_OBJ.id
 
@@ -9,38 +10,41 @@ exit;
 }
 
 if (level = 1) then  {
-if (counter == 120) then {
-  g.alarm[0] = 1
+ if (level_boss = 0) then {
+    if (counter == 120) then {
+        instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
+    }
+    if ((counter mod 500)==0) then {
+        instance_create(room_width+32,random_range(32,room_height-32),en8_OBJ)
+        instance_create(room_width+52,random_range(32,room_height-32),en8_OBJ)
+        instance_create(room_width+72,random_range(32,room_height-32),en8_OBJ)
+    }
+    if ((counter mod 300)==0) then {
+        instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
+    }
+    if ((counter mod 450)==0) then {
+        instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
+    }
+    if ((counter mod 610)==0) then {
+        instance_create(room_width+8+irandom(32),random(room_height),en5_OBJ)
+        instance_create(room_width+8+irandom(32),random(room_height),en5_OBJ)
+    }
+    if ((counter mod 750)==0) then {
+        instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
+    }
+    if ((counter mod 600)==0) then {
+        instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en4_OBJ)
+    }
+    if ((counter mod 850)==0) then {
+        instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en6_OBJ)
+    }
+    if ((counter mod 800)==0) then {
+        instance_create(room_width+8+irandom(32),random(room_height),en2_OBJ)
+    }
+    if (counter == 2499) or (counter == 4999) then {
+        instance_create(room_width+16,120,en3_OBJ)
+    }
+ } else {
+ //spawn boss, do crap
  }
-if ((counter mod 500)==0) then {
-  g.alarm[7] = 1
- }
-if ((counter mod 300)==0) then {
-  g.alarm[0] = 1
- }
-if ((counter mod 450)==0) then {
-  g.alarm[0] = 1
- }
-if ((counter mod 610)==0) then {
-  g.alarm[1] = 1
- }
-if ((counter mod 750)==0) then {
-  g.alarm[0] = 1
- }
-if ((counter mod 600)==0) then {
-  g.alarm[2] = 1
- }
-if ((counter mod 850)==0) then {
-  g.alarm[4] = 1
- }
-if ((counter mod 800)==0) then {
-  g.alarm[3] = 1
- }
-if (counter == 2499) or (counter == 4999) then {
-  g.alarm[5] = 1
- }
-/* if ((counter mod 999)==0) then {
-  g.alarm[6] = 1
- } */
- 
 }

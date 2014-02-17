@@ -120,6 +120,7 @@
       <sprite>sprites\attspd_pickup_SPR</sprite>
       <sprite>sprites\spd_pickup_SPR</sprite>
       <sprite>sprites\life_pickup_SPR</sprite>
+      <sprite>sprites\energy_pickup_SPR</sprite>
     </sprites>
     <sprites name="menu_new">
       <sprite>sprites\selection_SPR</sprite>
@@ -303,12 +304,12 @@
       <object>objects\en4_OBJ</object>
       <object>objects\en5_OBJ</object>
       <object>objects\en6_OBJ</object>
-      <object>objects\en7_OBJ</object>
       <object>objects\en8_OBJ</object>
       <object>objects\dummy_OBJ</object>
     </objects>
     <objects name="powerups">
       <object>objects\hp_pickup_OBJ</object>
+      <object>objects\energy_pickup_OBJ</object>
       <object>objects\life_pickup_OBJ</object>
       <object>objects\missile_pickup_OBJ</object>
       <object>objects\pow_pickup_OBJ</object>
