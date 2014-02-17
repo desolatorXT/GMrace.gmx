@@ -1,18 +1,6 @@
-chance = choose(1,2,3,4)
+sound[0] = explosion2_SND
+sound[1] = explosion1_SND
+sound[2] = explosion6_SND
+sound[3] = explosion8_SND
 
-if (chance == 1) then {
-    audio_play_sound(explosion2_SND,0,0)
-    exit;
-}
-if (chance == 2) then {
-    audio_play_sound(explosion1_SND,0,0)
-    exit;
-}
-if (chance == 3) then {
-    audio_play_sound(explosion6_SND,0,0)
-    exit;
-}
-if (chance == 4) then {
-    audio_play_sound(explosion8_SND,0,0)
-    exit;
-}
+audio_play_sound(sound[irandom(array_length_1d(sound)-1)],0,0)
