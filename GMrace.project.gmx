@@ -112,6 +112,7 @@
       <sprite>sprites\en_scatter_SPR</sprite>
       <sprite>sprites\en_missile2_SPR</sprite>
       <sprite>sprites\en_bullet1_SPR</sprite>
+      <sprite>sprites\en_wave1_SPR</sprite>
     </sprites>
     <sprites name="powerups">
       <sprite>sprites\hp_pickup_SPR</sprite>
@@ -236,6 +237,7 @@
       <object>objects\en_scatter1_OBJ</object>
       <object>objects\en_bullet_expl_part_OBJ</object>
       <object>objects\en_expl_part_OBJ</object>
+      <object>objects\en_wave1_OBJ</object>
     </objects>
     <objects name="config">
       <object>objects\config_base_PAR</object>
