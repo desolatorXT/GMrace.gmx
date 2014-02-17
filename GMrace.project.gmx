@@ -345,6 +345,9 @@
     <objects name="sfx">
       <object>objects\explosion_fx_OBJ</object>
     </objects>
+    <objects name="bosses">
+      <object>objects\boss_lv1_OBJ</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_RM</room>

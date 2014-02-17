@@ -44,7 +44,9 @@ if (level = 1) then  {
     if (counter == 2499) or (counter == 4999) or (counter == 8000) then {
         instance_create(room_width+16,120,en3_OBJ)
     }
- } else {
+ } else if (level_boss == 1) then {
  //spawn boss, do crap
+ instance_create(room_width-48,room_height/2,boss_lv1_OBJ)
+ enemy_ctrl_OBJ.level_boss = 2
  }
 }
