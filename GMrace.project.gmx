@@ -57,6 +57,11 @@
       <sound>sound\en_shot1_SND</sound>
       <sound>sound\en_bullet1_SND</sound>
     </sounds>
+    <sounds name="pickups_powerups">
+      <sound>sound\extra_life_SND</sound>
+      <sound>sound\power_up_SND</sound>
+      <sound>sound\hp_pickup_SND</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="player">
@@ -194,13 +199,16 @@
       <script>scripts\menu_selections_SCR.gml</script>
       <script>scripts\menu_next_sel_SCR.gml</script>
       <script>scripts\hud_draw_SCR.gml</script>
-      <script>scripts\ship_explos_snd_select_SCR.gml</script>
-      <script>scripts\projectile_explos_snd_select_SCR.gml</script>
     </scripts>
     <scripts name="player">
       <script>scripts\movement_SCR.gml</script>
       <script>scripts\room_bound_SCR.gml</script>
       <script>scripts\invincibility_effect_SCR.gml</script>
+    </scripts>
+    <scripts name="sound">
+      <script>scripts\projectile_explos_snd_select_SCR.gml</script>
+      <script>scripts\ship_explos_snd_select_SCR.gml</script>
+      <script>scripts\pickup_sound_SCR.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

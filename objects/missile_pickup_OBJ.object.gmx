@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 1
+            <string>event_inherited()
+speed = 1
 direction = 180
 
 
