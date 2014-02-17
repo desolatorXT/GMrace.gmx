@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>laser2.wav</origname>
+  <origname>laser_charge2_short.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>0.83</volume>
+    <volume>0.79</volume>
   </volume>
   <pan>0</pan>
   <bitRates>
@@ -21,7 +21,7 @@
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>pl_lasershot_SND.wav</data>
+  <data>pl_laser_charge_SND.wav</data>
   <compressed>1</compressed>
   <streamed>0</streamed>
   <uncompressOnLoad>1</uncompressOnLoad>

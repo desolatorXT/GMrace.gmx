@@ -29,10 +29,13 @@
       <sound>sound\pl_missile_fire_SND</sound>
       <sound>sound\pl_low_hp_SND</sound>
       <sound>sound\pl_shield_SND</sound>
-      <sound>sound\pl_lasershot_SND</sound>
       <sound>sound\pl_bullet_hit_SND</sound>
       <sound>sound\pl_death_SND</sound>
       <sound>sound\pl_missile_target_detect_SND</sound>
+      <sounds name="laser weapon">
+        <sound>sound\pl_lasershot_SND</sound>
+        <sound>sound\pl_laser_charge_SND</sound>
+      </sounds>
     </sounds>
     <sounds name="menu">
       <sound>sound\selection_SND</sound>
