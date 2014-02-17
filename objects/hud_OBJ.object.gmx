@@ -45,6 +45,40 @@ hud_energy_bar_x[1] = 127+294
 hud_secondary_ico_x[1] = 184+294
 hud_secondary_txt_x[1] = 203+294
 
+//sound variables
+low_hp_warning_played[0] = 0
+low_hp_warning_played[1] = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for (i = 0; i &lt; array_length_1d(global_debugger_OBJ.player); i++) {
+    if (instance_exists(global_debugger_OBJ.player[i]))&amp;&amp;(global_debugger_OBJ.player[i].hp &lt; 30)&amp;&amp;(low_hp_warning_played[i]==0) then {
+        audio_play_sound(pl_low_hp_SND,0,0)
+        low_hp_warning_played[i] = 1
+    }
+    if (global_debugger_OBJ.player[i].hp &gt;=30) then {
+        low_hp_warning_played[i] = 0
+    }
+}
 </string>
           </argument>
         </arguments>
