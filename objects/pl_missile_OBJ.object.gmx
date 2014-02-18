@@ -104,7 +104,7 @@ if (speed &gt; 5) then {
  speed = 5
 }
 //DETECT ENEMY
-if (counter &gt; 10 &amp;&amp; target &lt; 0) then {
+if (counter &gt; 15 &amp;&amp; target &lt; 0) then {
  if (instance_exists(enemy_PAR)) then {
   target = instance_nearest(x,y,enemy_PAR)
  } else {target = -1}
@@ -114,6 +114,7 @@ if (counter &gt; 10 &amp;&amp; target &lt; 0) then {
    detect = 1
    if (detect = 1) then {
     //play detect sound here!
+    audio_play_sound(pl_missile_target_detect_SND,0,0)
     detect = 2
    }
  }

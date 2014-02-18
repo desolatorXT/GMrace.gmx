@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>MM_Shot_Blocked.wav</origname>
+  <origname>E:\Project\Gmrace\GMrace.gmx\\sound\audio\pl_missile_target_detect_SND.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>1</volume>
+    <volume>0.8</volume>
   </volume>
   <pan>0</pan>
   <bitRates>
