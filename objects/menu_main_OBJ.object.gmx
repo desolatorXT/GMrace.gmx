@@ -49,7 +49,7 @@ menu_mp_OBJ.enabled = 0
 instance_create(32,room_height - 240,menu_options_OBJ)
 instance_create(32,room_height - 180,menu_controls_OBJ)
 instance_create(32,room_height - 120,menu_credits_OBJ)
-menu_credits_OBJ.enabled = 0
+//menu_credits_OBJ.enabled = 0
 instance_create(32,room_height - 60,menu_exit_OBJ)
 
 //setup selections

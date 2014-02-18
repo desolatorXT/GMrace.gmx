@@ -28,6 +28,7 @@
             <string>//launch credits
 wait = 0
 counter = 0
+room_goto(credits_RM)
 
 </string>
           </argument>

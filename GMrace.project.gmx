@@ -286,6 +286,7 @@
         <object>objects\menu_g_o_OBJ</object>
       </objects>
       <object>objects\menu_item_PAR</object>
+      <object>objects\credits_OBJ</object>
     </objects>
     <objects name="config">
       <object>objects\config_base_PAR</object>
