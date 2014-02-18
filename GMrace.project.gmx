@@ -102,6 +102,7 @@
       <sprite>sprites\enemy4_SPR</sprite>
       <sprite>sprites\enemy5_SPR</sprite>
       <sprite>sprites\enemy6_SPR</sprite>
+      <sprite>sprites\enemy7_SPR</sprite>
       <sprite>sprites\enemy8_SPR</sprite>
       <sprite>sprites\en_expl_part_SPR</sprite>
       <sprite>sprites\en_expl_partb_SPR</sprite>
@@ -180,7 +181,6 @@
     <sprites name="enemies_new">
       <sprite>sprites\enx_1_SPR</sprite>
       <sprite>sprites\enx_2_SPR</sprite>
-      <sprite>sprites\enx_3_SPR</sprite>
     </sprites>
     <sprite>sprites\en_explosion_SPR</sprite>
     <sprite>sprites\pl_explosion_SPR</sprite>
