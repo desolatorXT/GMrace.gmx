@@ -72,7 +72,7 @@
     <option_changeresolution>false</option_changeresolution>
     <option_closeesc>true</option_closeesc>
     <option_colordepth>0</option_colordepth>
-    <option_display_name>Random Retro Space Shooter v0.4</option_display_name>
+    <option_display_name>Random Retro Space Shooter v0.5</option_display_name>
     <option_displayerrors>True</option_displayerrors>
     <option_facebook_appid></option_facebook_appid>
     <option_facebook_enable>0</option_facebook_enable>
@@ -116,7 +116,7 @@
     <option_in_app_purchase_sandbox_mode>0</option_in_app_purchase_sandbox_mode>
     <option_in_app_purchase_server_url></option_in_app_purchase_server_url>
     <option_information>Random Retro Space Shooter 
-Version 0.4</option_information>
+Version 0.5</option_information>
     <option_interpolate>False</option_interpolate>
     <option_ios_adcolony_enable_V4VC>0</option_ios_adcolony_enable_V4VC>
     <option_ios_advertising_enable>0</option_ios_advertising_enable>
@@ -239,13 +239,13 @@ Version 0.4</option_information>
     <option_tizen_usesplash>False</option_tizen_usesplash>
     <option_use_new_audio>True</option_use_new_audio>
     <option_variableerrors>False</option_variableerrors>
-    <option_version>0.4</option_version>
+    <option_version>0.5</option_version>
     <option_version_build>0</option_version_build>
     <option_version_company>FSteam</option_version_company>
     <option_version_copyright>FSteam (c) 2013-2014</option_version_copyright>
     <option_version_description>A random 2D horizontal space shooter</option_version_description>
     <option_version_major>0</option_version_major>
-    <option_version_minor>4</option_version_minor>
+    <option_version_minor>5</option_version_minor>
     <option_version_product>Random Retro Space Shooter</option_version_product>
     <option_version_release>0</option_version_release>
     <option_win8_advertising_appid></option_win8_advertising_appid>
@@ -291,7 +291,7 @@ Version 0.4</option_information>
     <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
-    <option_windows_mainor_version>4</option_windows_mainor_version>
+    <option_windows_mainor_version>5</option_windows_mainor_version>
     <option_windows_major_version>0</option_windows_major_version>
     <option_windows_nsis_file>Configs\Default\windows\RunnerInstaller.nsi</option_windows_nsis_file>
     <option_windows_product_info>Random Retro Space Shooter</option_windows_product_info>
