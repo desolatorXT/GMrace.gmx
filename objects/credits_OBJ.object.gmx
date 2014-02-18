@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>counter = 0
 init_y = 32
+init_x = 32
+
+newline = 12
+chapter = 24
 </string>
           </argument>
         </arguments>
@@ -49,23 +53,23 @@ init_y = 32
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_color(32,init_y,"Random Retro Space Shooter v0.5",c_white,c_white,c_white,c_white,1)
+            <string>draw_text_color(init_x,init_y,"Random Retro Space Shooter v0.5",c_white,c_white,c_white,c_white,1)
 
-draw_text_color(32,init_y+32,"Programming:",c_white,c_white,c_white,c_white,1)
-draw_text_color(32,init_y+32+12,"- desolatorXT",c_white,c_white,c_white,c_white,1)
-draw_text_color(32,init_y+32+24,"- SZDarkhack",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter,"Programming:",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline,"- desolatorXT",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline,"- SZDarkhack",c_white,c_white,c_white,c_white,1)
 
-draw_text_color(32,init_y+32+36+16,"Test Graphics:",c_white,c_white,c_white,c_white,1)
-draw_text_color(32,init_y+48+36+12,"-desolatorXT",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter,"Test Graphics:",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline,"-desolatorXT",c_white,c_white,c_white,c_white,1)
 
-draw_text_color(32,init_y+112,"8bit sound effects created with as3sfxr",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter,"8bit sound effects created with as3sfxr",c_white,c_white,c_white,c_white,1)
 
 
-draw_text_color(32,init_y+112+16,"Boss A.I.:",c_white,c_white,c_white,c_white,1)
-draw_text_color(32,init_y+128+12,"-SZDarkhack",c_white,c_white,c_white,c_white,1)
-draw_text_color(32,init_y+128+12+12,"(WOW!, Such code, Indie levl over 9000, so kewl!!!)",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter,"Boss A.I.:",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline,"-SZDarkhack",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline+newline,"(WOW!, Such code, Indie levl over 9000, so kewl!!!)",c_white,c_white,c_white,c_white,1)
 
-draw_text_color(32,init_y+168+32,"Press ESC to go back to the main menu.",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline+newline+chapter,"Press ESC to go back to the main menu.",c_white,c_white,c_white,c_white,1)
 
 </string>
           </argument>
