@@ -151,7 +151,9 @@ audio_master_gain(config.snd_volume/100)
 room_speed = config.game_speed
 g_score = 0
 
+if (config.bg_effects == 1) then {
 instance_create(0,0,star_ctrl_OBJ)
+}
 instance_create(0,0,enemy_ctrl_OBJ)
 instance_create(0,0,hud_OBJ)
 

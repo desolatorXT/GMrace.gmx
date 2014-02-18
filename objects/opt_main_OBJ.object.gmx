@@ -33,10 +33,11 @@ instance_create(0,room_height-32,menu_message_board_OBJ)
 instance_create(0,0,menu_draw_text_OBJ)
 
 //create option buttons:
-instance_create(32,room_height - 270,opt_snd_volume_OBJ)
-instance_create(32,room_height - 240,opt_game_speed_OBJ)
-instance_create(32,room_height - 210,opt_fullscreen_OBJ)
-instance_create(32,room_height - 180,opt_wsize_OBJ)
+instance_create(32,room_height - 300,opt_snd_volume_OBJ)
+instance_create(32,room_height - 270,opt_game_speed_OBJ)
+instance_create(32,room_height - 240,opt_fullscreen_OBJ)
+instance_create(32,room_height - 210,opt_wsize_OBJ)
+instance_create(32,room_height - 180,opt_bg_OBJ)
 instance_create(32,room_height - 120,opt_default_OBJ)
 instance_create(32,room_height - 90,opt_save_OBJ)
 instance_create(32,room_height - 60,opt_back_OBJ)
@@ -54,6 +55,9 @@ sel_txt[sel_len] = "Toggle fullscreen."
 sel_len += 1
 sel_ids[sel_len] = opt_wsize_OBJ.id
 sel_txt[sel_len] = "Select window size (width)."
+sel_len += 1
+sel_ids[sel_len] = opt_bg_OBJ.id
+sel_txt[sel_len] = "Enable/disable star movement effect on background."
 sel_len += 1
 sel_ids[sel_len] = opt_default_OBJ.id
 sel_txt[sel_len] = "Restore default settings."

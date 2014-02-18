@@ -43,6 +43,7 @@ game_speed = ini_read_real("general","speed",game_speed)
 snd_volume = ini_read_real("general","volume",snd_volume)
 fullscreen = ini_read_real("general","fullscreen",fullscreen)
 wsize_sel = ini_read_real("general","wsize",wsize_sel)
+bg_effects = ini_read_real("general","bg_effects",bg_effects)
 
 ini_close()
 
@@ -89,6 +90,7 @@ ini_write_real("general","speed",game_speed)
 ini_write_real("general","volume",snd_volume)
 ini_write_real("general","fullscreen",fullscreen)
 ini_write_real("general","wsize",wsize_sel)
+ini_write_real("general","bg_effects",bg_effects)
 
 ini_close()
 </string>

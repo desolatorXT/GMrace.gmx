@@ -74,8 +74,11 @@ opt_snd_volume_OBJ.my_text.text = string(opt_snd_volume_OBJ.current_value)
 opt_fullscreen_OBJ.current_value = 1
 opt_fullscreen_OBJ.my_text.text = "OFF"
 
-opt_wsize_OBJ.current_value = 800
-opt_wsize_OBJ.my_text.text = string(opt_wsize_OBJ.current_value)
+opt_wsize_OBJ.current_value = 576
+opt_wsize_OBJ.my_text.text = string(opt_wsize_OBJ.current_value)+"p"
+
+opt_bg_OBJ.current_value = 1
+opt_bg_OBJ.my_text.text = "ON"
 
 </string>
           </argument>
