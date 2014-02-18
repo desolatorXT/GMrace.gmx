@@ -7,7 +7,95 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>counter = 0
+init_y = 32
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text_color(32,init_y,"Random Retro Space Shooter v0.5",c_white,c_white,c_white,c_white,1)
+
+draw_text_color(32,init_y+32,"Programming:",c_white,c_white,c_white,c_white,1)
+draw_text_color(32,init_y+32+12,"- desolatorXT",c_white,c_white,c_white,c_white,1)
+draw_text_color(32,init_y+32+24,"- SZDarkhack",c_white,c_white,c_white,c_white,1)
+
+draw_text_color(32,init_y+32+36+16,"Test Graphics:",c_white,c_white,c_white,c_white,1)
+draw_text_color(32,init_y+48+36+12,"-desolatorXT",c_white,c_white,c_white,c_white,1)
+
+draw_text_color(32,init_y+112,"8bit sound effects created with as3sfxr",c_white,c_white,c_white,c_white,1)
+
+
+draw_text_color(32,init_y+112+16,"Boss A.I.:",c_white,c_white,c_white,c_white,1)
+draw_text_color(32,init_y+128+12,"-SZDarkhack",c_white,c_white,c_white,c_white,1)
+draw_text_color(32,init_y+128+12+12,"(WOW!, Such code, Indie levl over 9000, so kewl!!!)",c_white,c_white,c_white,c_white,1)
+
+draw_text_color(32,init_y+168+32,"Press ESC to go back to the main menu.",c_white,c_white,c_white,c_white,1)
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(menu_RM)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
