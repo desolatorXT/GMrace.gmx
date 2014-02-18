@@ -41,6 +41,9 @@ if (level = 1) then  {
     if ((counter mod 800)==0) then {
         instance_create(room_width+8+irandom(32),random(room_height),en2_OBJ)
     }
+    if ((counter mod 900)==0) then {
+        instance_create(room_width+8+irandom(32),random(room_height),en7_OBJ)
+    }
     if (counter == 2499) or (counter == 4999) or (counter == 8000) then {
         instance_create(room_width+16,120,en3_OBJ)
     }
