@@ -29,7 +29,8 @@
 
 hp = 100
 
-spd = 2
+spd = -2
+dst = 32
 </string>
           </argument>
         </arguments>
@@ -53,6 +54,9 @@ spd = 2
           <argument>
             <kind>1</kind>
             <string>event_inherited()
+
+owner.orbs--
+if (instance_exists(partner)) partner.partner = noone
 
 </string>
           </argument>
@@ -80,6 +84,7 @@ spd = 2
 
 // rotate
 angle += spd
+if (angle &lt; 0) angle += 360
 local_x = dst*cos(degtorad(angle))
 local_y = dst*sin(degtorad(angle))
 
@@ -103,5 +108,8 @@ y = owner.y + local_y
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>6,6</point>
+    <point>6,6</point>
+  </PhysicsShapePoints>
 </object>
