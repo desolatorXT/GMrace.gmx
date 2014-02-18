@@ -26,8 +26,8 @@ if (level = 1) then  {
         instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
     }
     if ((counter mod 610)==0) then {
-        instance_create(room_width+8+irandom(32),random(room_height),en5_OBJ)
-        instance_create(room_width+8+irandom(32),random(room_height),en5_OBJ)
+        instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en5_OBJ)
+        instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en5_OBJ)
     }
     if ((counter mod 750)==0) then {
         instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
@@ -39,10 +39,10 @@ if (level = 1) then  {
         instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en6_OBJ)
     }
     if ((counter mod 800)==0) then {
-        instance_create(room_width+8+irandom(32),random(room_height),en2_OBJ)
+        instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en2_OBJ)
     }
-    if ((counter mod 900)==0) then {
-        instance_create(room_width+8+irandom(32),random(room_height),en7_OBJ)
+    if ((counter mod 910)==0) then {
+        instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en7_OBJ)
     }
     if (counter == 2499) or (counter == 4999) or (counter == 8000) then {
         instance_create(room_width+16,120,en3_OBJ)

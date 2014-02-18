@@ -62,14 +62,16 @@ draw_text_color(init_x,init_y+chapter+newline+newline,"- SZDarkhack",c_white,c_w
 draw_text_color(init_x,init_y+chapter+newline+newline+chapter,"Test Graphics:",c_white,c_white,c_white,c_white,1)
 draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline,"-desolatorXT",c_white,c_white,c_white,c_white,1)
 
-draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter,"8bit sound effects created with as3sfxr",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter,"8bit sound effects created with as3sfxr.",c_white,c_white,c_white,c_white,1)
 
 
 draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter,"Boss A.I.:",c_white,c_white,c_white,c_white,1)
 draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline,"-SZDarkhack",c_white,c_white,c_white,c_white,1)
 draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline+newline,"(WOW!, Such code, Indie levl over 9000, so kewl!!!)",c_white,c_white,c_white,c_white,1)
 
-draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline+newline+chapter,"Press ESC to go back to the main menu.",c_white,c_white,c_white,c_white,1)
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline+newline+chapter,"Created with Game Maker Studio.",c_white,c_white,c_white,c_white,1)
+
+draw_text_color(init_x,init_y+chapter+newline+newline+chapter+newline+chapter+chapter+newline+newline+chapter+chapter,"Press ESC to go back to the main menu.",c_white,c_white,c_white,c_white,1)
 
 </string>
           </argument>
