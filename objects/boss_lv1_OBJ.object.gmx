@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-max_hp = 1000
-hp = 1000
+max_hp = 1600
+hp = 1600
 
 // temp
 speed = 0.5

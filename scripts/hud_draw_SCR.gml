@@ -3,6 +3,19 @@ pl_obj = global_debugger_OBJ.player[pl]
 
 if (pl_obj == noone) exit
 
+if (instance_exists(boss_PAR)) {
+    boss = instance_nearest(0,0,boss_PAR)
+    // outline
+    x0 = room_width/4
+    x1 = x0*3
+    y0 = 8
+    y1 = y0 + 8
+    
+    draw_rectangle_color(x0,y0,x1,y1,c_black,c_black,c_black,c_black,true)
+    x1h = x0 + 1 + (boss.hp / boss.max_hp) * (x1 - x0 - 2)
+    draw_rectangle_color(x0+1,y0+1,x1h,y1-1,c_red,c_red,c_red,c_red,false)
+}
+
 with (hud_OBJ) {
 //lives
 draw_sprite(hud_lives_SPR,0,hud_lives_ico_x[pl],room_height-15)
