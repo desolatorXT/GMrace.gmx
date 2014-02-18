@@ -29,12 +29,22 @@
 max_hp = 1000
 hp = 1000
 
-behaviors[0] = behavior_hm
-behaviors[1] = behavior_xs
-behaviors[2] = behavior_ls
-beh_inits[0] = behavior_hm_init
-beh_inits[1] = behavior_xs_init
-beh_inits[2] = behavior_ls_init
+// temp
+speed = 0.5
+direction = 180
+
+active = 0
+
+angle = 0
+rot_spd = 2
+rotating = 1
+
+behavior[0] = behavior_hm
+behavior[1] = behavior_xs
+behavior[2] = behavior_ls
+behavior_init[0] = behavior_hm_init
+behavior_init[1] = behavior_xs_init
+behavior_init[2] = behavior_ls_init
 
 // create orbs in pairs
 orbs = 6
@@ -43,8 +53,8 @@ for (i = 0; i &lt; orbs; i++) {
     orb[i] = instance_create(0,0,boss_1_orb_OBJ)
     orb[i].owner = self.id
     orb[i].angle = (90 + i*60) mod 360
-    orb[i].behavior = behaviors[i mod 3]
-    orb[i].behavior_init = beh_inits[i mod 3]
+    orb[i].behavior = behavior[i mod 3]
+    orb[i].behavior_init = behavior_init[i mod 3]
     if (i &gt;= orbs/2) {
         orb[i].partner = orb[i-orbs/2]
         orb[i-orbs/2].partner = orb[i]
@@ -100,32 +110,40 @@ for (i = 0; i &lt; orbs; i++) {
             <kind>1</kind>
             <string>event_inherited()
 
-if (orbs &gt; 0) hp = max_hp
+if (active == 0) {
+    if (x &lt;= room_width - 48) {
+        direction = 90
+        active = 1
+    }
+}
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>for (i = 0; i &lt; 6; i++) {
-    if (instance_exists(orb[i])) orb[i].rotating = 1
+if (orbs &gt; 0) {
+    // phase 1
+    hp = 1000
+    for (var i = 0; i &lt; 6; i++) {
+        if (instance_exists(orb[i])) hp += orb[i].hp
+    }
+    
+    if (y &lt; 48) direction = 270
+    else if (y &gt; room_height - 48 - 16) direction = 90
+    
+    if (rotating == 1) {
+        angle = (angle+rot_spd) mod 360
+        for (var i = 0; i &lt; 6; i++) {
+            orb[i].angle = (angle + 90 + i*60) mod 360
+        }
+    }
+    
+    if (active) {
+        if (rotating == 1 &amp;&amp; (angle mod 60) == 0) {
+            rotating = 0
+            cur = angle / 60
+            script_execute(behavior_init[cur mod 3], orb[cur], orb[(cur+3) mod 6])
+        }
+        
+        if (rotating == 0) script_execute(behavior[cur mod 3], orb[cur], orb[(cur+3) mod 6])
+    }
+
 }
 </string>
           </argument>
