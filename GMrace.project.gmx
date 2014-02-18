@@ -180,12 +180,15 @@
       <sprite>sprites\enx_1_SPR</sprite>
       <sprite>sprites\enx_2_SPR</sprite>
       <sprite>sprites\enx_3_SPR</sprite>
-      <sprite>sprites\enx32_4_SPR</sprite>
     </sprites>
     <sprite>sprites\en_explosion_SPR</sprite>
     <sprite>sprites\pl_explosion_SPR</sprite>
     <sprites name="sfx">
       <sprite>sprites\explosion_fx_SPR</sprite>
+    </sprites>
+    <sprites name="boss">
+      <sprite>sprites\boss1_SPR</sprite>
+      <sprite>sprites\orb1_SPR</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -346,7 +349,9 @@
       <object>objects\explosion_fx_OBJ</object>
     </objects>
     <objects name="bosses">
-      <object>objects\boss_lv1_OBJ</object>
+      <objects name="boss_1">
+        <object>objects\boss_lv1_OBJ</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
