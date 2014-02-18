@@ -59,6 +59,7 @@
       <sound>sound\en_scatter1_SND</sound>
       <sound>sound\en_shot1_SND</sound>
       <sound>sound\en_bullet1_SND</sound>
+      <sound>sound\en_wave1_SND</sound>
     </sounds>
     <sounds name="pickups_powerups">
       <sound>sound\extra_life_SND</sound>
