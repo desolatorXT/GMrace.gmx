@@ -129,7 +129,7 @@ if (orbs &gt; 0) {
     
     if (rotating == 1) {
         angle = (angle+rot_spd) mod 360
-        for (var i = 0; i &lt; 6; i++) {
+        for (var i = 0; i &lt; 6; i++) if (instance_exists(orb[i])) {
             orb[i].angle = (angle + 90 - i*60) mod 360
             if (orb[i].angle &lt; 0) orb[i].angle += 360
         }

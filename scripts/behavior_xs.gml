@@ -15,6 +15,8 @@ for (i = 0; i < 2; i++) if (instance_exists(orb[(cur+i*3) mod 6])) {
             done[i] = 1
         }
     }
+} else {
+    done[i] = 2
 }
 
 if (done[0] > 0 && done[1] > 0) {
@@ -42,6 +44,7 @@ if (done[0] > 0 && done[1] > 0) {
             orb0.direction = point_direction(orb0.x,orb0.y,x,y-orb0.dst)
             if (point_distance(orb0.x,orb0.y,x,y-orb0.dst) <= orb0.speed) {
                 orb0.speed = 0
+                orb0.angle = (orb0.angle + 180) mod 360
                 orb0.step_enabled = 1
                 done[0] = 2
             }
@@ -51,6 +54,7 @@ if (done[0] > 0 && done[1] > 0) {
             orb1.direction = point_direction(orb1.x,orb1.y,x,y+orb1.dst)
             if (point_distance(orb1.x,orb1.y,x,y+orb1.dst) <= orb1.speed) {
                 orb1.speed = 0
+                orb1.angle = (orb1.angle + 180) mod 360
                 orb1.step_enabled = 1
                 done[1] = 2
             }
