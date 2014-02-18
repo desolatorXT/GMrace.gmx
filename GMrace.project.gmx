@@ -313,7 +313,6 @@
       <object>objects\menu_item_PAR</object>
     </objects>
     <objects name="enemies">
-      <object>objects\friendly_PAR</object>
       <object>objects\enemy_PAR</object>
       <object>objects\en1_OBJ</object>
       <object>objects\en2_OBJ</object>
@@ -321,6 +320,7 @@
       <object>objects\en4_OBJ</object>
       <object>objects\en5_OBJ</object>
       <object>objects\en6_OBJ</object>
+      <object>objects\en7_OBJ</object>
       <object>objects\en8_OBJ</object>
       <object>objects\dummy_OBJ</object>
     </objects>
@@ -335,6 +335,7 @@
       <object>objects\pickup_PAR</object>
     </objects>
     <objects name="player">
+      <object>objects\friendly_PAR</object>
       <object>objects\player_PAR</object>
       <object>objects\buff_ctrl_OBJ</object>
       <object>objects\player_OBJ</object>
@@ -355,17 +356,17 @@
       </objects>
       <object>objects\pl_shield_OBJ</object>
     </objects>
-    <object>objects\en_explosion_radius_OBJ</object>
-    <object>objects\pl_explosion_radius_OBJ</object>
     <objects name="sfx">
       <object>objects\explosion_fx_OBJ</object>
+      <object>objects\pl_explosion_radius_OBJ</object>
+      <object>objects\en_explosion_radius_OBJ</object>
     </objects>
     <objects name="bosses">
+      <object>objects\boss_PAR</object>
       <objects name="boss_1">
         <object>objects\boss_lv1_OBJ</object>
         <object>objects\boss_1_orb_OBJ</object>
       </objects>
-      <object>objects\boss_PAR</object>
     </objects>
   </objects>
   <rooms name="rooms">
