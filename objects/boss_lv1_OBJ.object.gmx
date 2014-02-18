@@ -130,7 +130,8 @@ if (orbs &gt; 0) {
     if (rotating == 1) {
         angle = (angle+rot_spd) mod 360
         for (var i = 0; i &lt; 6; i++) {
-            orb[i].angle = (angle + 90 + i*60) mod 360
+            orb[i].angle = (angle + 90 - i*60) mod 360
+            if (orb[i].angle &lt; 0) orb[i].angle += 360
         }
     }
     
@@ -138,10 +139,10 @@ if (orbs &gt; 0) {
         if (rotating == 1 &amp;&amp; (angle mod 60) == 0) {
             rotating = 0
             cur = angle / 60
-            script_execute(behavior_init[cur mod 3], orb[cur], orb[(cur+3) mod 6])
+            script_execute(behavior_init[cur mod 3])
         }
         
-        if (rotating == 0) script_execute(behavior[cur mod 3], orb[cur], orb[(cur+3) mod 6])
+        if (rotating == 0) script_execute(behavior[cur mod 3])
     }
 
 }

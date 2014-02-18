@@ -29,9 +29,9 @@
 
 hp = 100
 
-//spd = -2
+step_enabled = 1
 dst = 32
-//rotating = 1
+
 </string>
           </argument>
         </arguments>
@@ -83,14 +83,15 @@ if (instance_exists(partner)) partner.partner = noone
             <kind>1</kind>
             <string>event_inherited()
 
-angle = angle mod 360
-if (angle &lt; 0) angle += 360
-local_x = dst*cos(degtorad(angle))
-local_y = -dst*sin(degtorad(angle))
+if (step_enabled == 1) {
+    angle = angle mod 360
+    if (angle &lt; 0) angle += 360
+    local_x = dst*cos(degtorad(angle))
+    local_y = -dst*sin(degtorad(angle))
 
-x = owner.x + local_x
-y = owner.y + local_y
-
+    x = owner.x + local_x
+    y = owner.y + local_y
+}
 </string>
           </argument>
         </arguments>
