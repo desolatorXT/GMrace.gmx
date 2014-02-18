@@ -70,8 +70,6 @@
     <sprites name="player">
       <sprite>sprites\player_SPR</sprite>
       <sprite>sprites\aura_SPR</sprite>
-      <sprite>sprites\fire_fx_SPR</sprite>
-      <sprite>sprites\pl_bullet_SPR</sprite>
       <sprite>sprites\pl_bullet_simple_SPR</sprite>
       <sprite>sprites\pl_missile_SPR</sprite>
       <sprite>sprites\pl_missile_expl_part_SPR</sprite>
