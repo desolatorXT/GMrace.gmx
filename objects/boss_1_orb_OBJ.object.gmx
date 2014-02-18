@@ -31,6 +31,7 @@ hp = 100
 
 spd = -2
 dst = 32
+rotating = 1
 </string>
           </argument>
         </arguments>
@@ -83,10 +84,18 @@ if (instance_exists(partner)) partner.partner = noone
             <string>event_inherited()
 
 // rotate
-angle += spd
-if (angle &lt; 0) angle += 360
-local_x = dst*cos(degtorad(angle))
-local_y = dst*sin(degtorad(angle))
+if (rotating == 1) {
+    angle += spd
+    if (angle &lt; 0) angle += 360
+    local_x = dst*cos(degtorad(angle))
+    local_y = dst*sin(degtorad(angle))
+    if (angle == 90 || angle == 270) script_execute(behavior_init)
+}
+
+if ((angle+30) mod 60 == 0) {
+    rotating = 0
+    if (angle == 90 || angle == 270) script_execute(behavior)
+}
 
 x = owner.x + local_x
 y = owner.y + local_y

@@ -223,6 +223,9 @@
         <script>scripts\behavior_hm.gml</script>
         <script>scripts\behavior_xs.gml</script>
         <script>scripts\behavior_ls.gml</script>
+        <script>scripts\behavior_hm_init.gml</script>
+        <script>scripts\behavior_xs_init.gml</script>
+        <script>scripts\behavior_ls_init.gml</script>
       </scripts>
     </scripts>
   </scripts>

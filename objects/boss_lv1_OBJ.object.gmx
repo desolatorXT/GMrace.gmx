@@ -32,6 +32,9 @@ hp = 1000
 behaviors[0] = behavior_hm
 behaviors[1] = behavior_xs
 behaviors[2] = behavior_ls
+beh_inits[0] = behavior_hm_init
+beh_inits[1] = behavior_xs_init
+beh_inits[2] = behavior_ls_init
 
 // create orbs in pairs
 orbs = 6
@@ -41,6 +44,7 @@ for (i = 0; i &lt; orbs; i++) {
     orb[i].owner = self.id
     orb[i].angle = (90 + i*60) mod 360
     orb[i].behavior = behaviors[i mod 3]
+    orb[i].behavior_init = beh_inits[i mod 3]
     if (i &gt;= orbs/2) {
         orb[i].partner = orb[i-orbs/2]
         orb[i-orbs/2].partner = orb[i]
@@ -98,6 +102,31 @@ for (i = 0; i &lt; orbs; i++) {
 
 if (orbs &gt; 0) hp = max_hp
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for (i = 0; i &lt; 6; i++) {
+    if (instance_exists(orb[i])) orb[i].rotating = 1
+}
 </string>
           </argument>
         </arguments>
