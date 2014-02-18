@@ -17,17 +17,43 @@ for (i = 0; i < 2; i++) if (instance_exists(orb[(cur+i*3) mod 6])) {
     }
 }
 
-if (done[0] == 1 && done[1] == 1) {
+if (done[0] > 0 && done[1] > 0) {
     if (orb_firing == 0) {
         // switcheroo
         temp = orb[cur]
         orb[cur] = orb[(cur+3) mod 6]
         orb[(cur+3) mod 6] = temp
         behavior_xs_init()
+        orb[cur].speed = 5
+        orb[(cur+3) mod 6].speed = 5
         orb_firing = 1
-        counter = 5
+        // counter to 1 to instafire next step
+        counter = 1
     }
     else {
-        // return to base
+        orb0 = orb[cur]
+        orb1 = orb[(cur+3) mod 6]
+        if (done[0] == 2 && done[1] == 2) {
+            rotating = 1
+            exit
+        }
+        if (done[0] != 2) {
+            orb0.speed = 2.5
+            orb0.direction = point_direction(orb0.x,orb0.y,x,y-orb0.dst)
+            if (point_distance(orb0.x,orb0.y,x,y-orb0.dst) <= orb0.speed) {
+                orb0.speed = 0
+                orb0.step_enabled = 1
+                done[0] = 2
+            }
+        }
+        if (done[1] != 2) {
+            orb1.speed = 2.5
+            orb1.direction = point_direction(orb1.x,orb1.y,x,y+orb1.dst)
+            if (point_distance(orb1.x,orb1.y,x,y+orb1.dst) <= orb1.speed) {
+                orb1.speed = 0
+                orb1.step_enabled = 1
+                done[1] = 2
+            }
+        }
     }
 }
