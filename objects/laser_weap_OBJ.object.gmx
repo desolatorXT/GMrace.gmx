@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-damage = 200
+damage = 15
 bullet = noone
 counter = 0
 can_fire = 1
