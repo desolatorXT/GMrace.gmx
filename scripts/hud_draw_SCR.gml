@@ -12,7 +12,7 @@ if (instance_exists(boss_PAR)) {
     y1 = y0 + 8
     
     draw_rectangle_color(x0,y0,x1,y1,c_black,c_black,c_black,c_black,true)
-    x1h = x0 + 1 + (boss.hp / boss.max_hp) * (x1 - x0 - 2)
+    x1h = x0 + 1 + clamp(boss.hp / boss.max_hp, 0, 1) * (x1 - x0 - 2)
     draw_rectangle_color(x0+1,y0+1,x1h,y1-1,c_red,c_red,c_red,c_red,false)
 }
 

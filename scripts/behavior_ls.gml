@@ -1,9 +1,14 @@
+if (orbs_missing == 2) {
+    rotating = 1
+    exit
+}
+
 if (done == 0) {
     orb_angle += 8
     if (abs(orb_angle - 180) < 8) {
         orb_angle = 180
-        // fire shot
-        instance_create(x+orb_center_x-orb_radius,y,boss1_wave_OBJ)
+        // fire shot if we have both orbs
+        if (orbs_missing == 0) instance_create(x+orb_center_x-orb_radius,y,boss1_wave_OBJ)
         done = 1
     }
 } else if (done == 1) {
@@ -12,6 +17,8 @@ if (done == 0) {
         done = 2
     }
 }
+
+orbs_missing = 0
 for (var i = 0; i < 2; i++) if (instance_exists(orb[(cur+i*3) mod 6])) {
     cur_orb = orb[(cur+i*3) mod 6]
     if (done != 2) {
@@ -23,5 +30,7 @@ for (var i = 0; i < 2; i++) if (instance_exists(orb[(cur+i*3) mod 6])) {
         cur_orb.external_locals = 0
         rotating = 1
     }
+} else {
+    orbs_missing++
 }
 
