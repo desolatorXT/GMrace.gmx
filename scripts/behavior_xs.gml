@@ -40,23 +40,25 @@ if (done[0] > 0 && done[1] > 0) {
             exit
         }
         if (done[0] != 2) {
-            orb0.speed = 4
-            orb0.direction = point_direction(orb0.x,orb0.y,x,y-orb0.dst)
             if (point_distance(orb0.x,orb0.y,x,y-orb0.dst) <= orb0.speed) {
                 orb0.speed = 0
                 orb0.angle = (orb0.angle + 180) mod 360
                 orb0.step_enabled = 1
                 done[0] = 2
+            } else {
+                orb0.speed = 4
+                orb0.direction = point_direction(orb0.x,orb0.y,x,y-orb0.dst)
             }
         }
         if (done[1] != 2) {
-            orb1.speed = 4
-            orb1.direction = point_direction(orb1.x,orb1.y,x,y+orb1.dst)
             if (point_distance(orb1.x,orb1.y,x,y+orb1.dst) <= orb1.speed) {
                 orb1.speed = 0
                 orb1.angle = (orb1.angle + 180) mod 360
                 orb1.step_enabled = 1
                 done[1] = 2
+            } else {
+                orb1.speed = 4
+                orb1.direction = point_direction(orb1.x,orb1.y,x,y+orb1.dst)
             }
         }
     }
