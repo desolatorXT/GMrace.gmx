@@ -36,15 +36,15 @@ direction = 180
 active = 0
 
 angle = 0
-rot_spd = 2
+rot_spd = 4
 rotating = 1
 
-behavior[0] = behavior_ls
-behavior[1] = behavior_hm
-behavior[2] = behavior_xs
-behavior_init[0] = behavior_ls_init
-behavior_init[1] = behavior_hm_init
-behavior_init[2] = behavior_xs_init
+behavior[0] = behavior_xs
+behavior[1] = behavior_ls
+behavior[2] = behavior_hm
+behavior_init[0] = behavior_xs_init
+behavior_init[1] = behavior_ls_init
+behavior_init[2] = behavior_hm_init
 
 // create orbs in pairs
 orbs = 6

@@ -7,6 +7,8 @@ if (counter == 13 || counter == 8 || counter == 2) {
             target = instance_nearest(x,y,friendly_PAR)
             if (target != noone) {
                 bullet = instance_create(x,y,en_missile3_OBJ)
+                bullet.speed = 8
+                bullet.damage = 30
                 bullet.direction = point_direction(x,y,target.x,target.y)
             }
         }

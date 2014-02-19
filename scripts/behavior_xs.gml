@@ -4,7 +4,8 @@ for (i = 0; i < 2; i++) if (instance_exists(orb[(cur+i*3) mod 6])) {
         if (orb_firing == 1) {
             counter--
             if (counter == 0) {
-                instance_create(cur_orb.x-4,cur_orb.y,en_bullet1_OBJ)
+                bullet = instance_create(cur_orb.x-4,cur_orb.y,en_bullet1_OBJ)
+                bullet.damage = 30
                 counter = 5
             }
         }
@@ -46,7 +47,7 @@ if (done[0] > 0 && done[1] > 0) {
                 orb0.step_enabled = 1
                 done[0] = 2
             } else {
-                orb0.speed = 4
+                orb0.speed = 5
                 orb0.direction = point_direction(orb0.x,orb0.y,x,y-orb0.dst)
             }
         }
@@ -57,7 +58,7 @@ if (done[0] > 0 && done[1] > 0) {
                 orb1.step_enabled = 1
                 done[1] = 2
             } else {
-                orb1.speed = 4
+                orb1.speed = 5
                 orb1.direction = point_direction(orb1.x,orb1.y,x,y+orb1.dst)
             }
         }
