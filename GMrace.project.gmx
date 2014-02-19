@@ -191,6 +191,7 @@
     <sprites name="boss">
       <sprite>sprites\boss1_SPR</sprite>
       <sprite>sprites\orb1_SPR</sprite>
+      <sprite>sprites\boss_wave_SPR</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -367,6 +368,7 @@
       <objects name="boss_1">
         <object>objects\boss_lv1_OBJ</object>
         <object>objects\boss_1_orb_OBJ</object>
+        <object>objects\boss1_wave_OBJ</object>
       </objects>
     </objects>
     <objects name="credits">

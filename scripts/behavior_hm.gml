@@ -1,6 +1,6 @@
 counter--
 
-if (counter == 13 || counter == 2) {
+if (counter == 13 || counter == 8 || counter == 2) {
     // spawn missile
     for (var i = 0; i < 2; i++)
         if (instance_exists(orb[(cur+i*3) mod 6])) with (orb[(cur+i*3) mod 6]) {

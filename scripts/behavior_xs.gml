@@ -40,7 +40,7 @@ if (done[0] > 0 && done[1] > 0) {
             exit
         }
         if (done[0] != 2) {
-            orb0.speed = 2.5
+            orb0.speed = 4
             orb0.direction = point_direction(orb0.x,orb0.y,x,y-orb0.dst)
             if (point_distance(orb0.x,orb0.y,x,y-orb0.dst) <= orb0.speed) {
                 orb0.speed = 0
@@ -50,7 +50,7 @@ if (done[0] > 0 && done[1] > 0) {
             }
         }
         if (done[1] != 2) {
-            orb1.speed = 2.5
+            orb1.speed = 4
             orb1.direction = point_direction(orb1.x,orb1.y,x,y+orb1.dst)
             if (point_distance(orb1.x,orb1.y,x,y+orb1.dst) <= orb1.speed) {
                 orb1.speed = 0

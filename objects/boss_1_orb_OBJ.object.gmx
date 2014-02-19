@@ -30,6 +30,7 @@
 hp = 100
 
 step_enabled = 1
+external_locals = 0
 dst = 32
 
 </string>
@@ -86,8 +87,10 @@ if (instance_exists(partner)) partner.partner = noone
 if (step_enabled == 1) {
     angle = angle mod 360
     if (angle &lt; 0) angle += 360
-    local_x = dst*cos(degtorad(angle))
-    local_y = -dst*sin(degtorad(angle))
+    if (external_locals == 0) {
+        local_x = dst*cos(degtorad(angle))
+        local_y = -dst*sin(degtorad(angle))
+    }
 
     x = owner.x + local_x
     y = owner.y + local_y

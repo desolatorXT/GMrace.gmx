@@ -39,12 +39,12 @@ angle = 0
 rot_spd = 2
 rotating = 1
 
-behavior[0] = behavior_hm
-behavior[1] = behavior_xs
-behavior[2] = behavior_ls
-behavior_init[0] = behavior_hm_init
-behavior_init[1] = behavior_xs_init
-behavior_init[2] = behavior_ls_init
+behavior[0] = behavior_ls
+behavior[1] = behavior_hm
+behavior[2] = behavior_xs
+behavior_init[0] = behavior_ls_init
+behavior_init[1] = behavior_hm_init
+behavior_init[2] = behavior_xs_init
 
 // create orbs in pairs
 orbs = 6
@@ -145,7 +145,12 @@ if (orbs &gt; 0) {
         if (rotating == 0) script_execute(behavior[cur mod 3])
     }
 
+} else {
+    // phase 2, no orbs
+    // temp
+    speed = 0
 }
+
 </string>
           </argument>
         </arguments>
