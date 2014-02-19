@@ -4,8 +4,9 @@ if (orbs_missing == 2) {
 }
 
 if (done == 0) {
-    orb_angle += 8
-    if (abs(orb_angle - 180) < 8) {
+    orb_angle += orb_rot_spd
+    orb_rot_spd++
+    if (abs(orb_angle - 180) < orb_rot_spd) {
         orb_angle = 180
         // fire shot if we have both orbs
         if (orbs_missing == 0) instance_create(x+orb_center_x-orb_radius,y,boss1_wave_OBJ)
