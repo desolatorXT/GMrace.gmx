@@ -149,7 +149,8 @@ hp = hp - 59
 }
 //play explosion sound here!
 
-other.hp = -1
+// this is per-frame, i.e. ridiculous...
+other.hp -= 100
 </string>
           </argument>
         </arguments>

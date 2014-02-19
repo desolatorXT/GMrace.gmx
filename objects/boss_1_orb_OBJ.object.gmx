@@ -58,7 +58,6 @@ dst = 32
             <string>event_inherited()
 
 owner.orbs--
-if (instance_exists(partner)) partner.partner = noone
 
 </string>
           </argument>

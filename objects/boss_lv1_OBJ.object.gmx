@@ -52,13 +52,6 @@ orbs = 6
 for (i = 0; i &lt; orbs; i++) {
     orb[i] = instance_create(0,0,boss_1_orb_OBJ)
     orb[i].owner = self.id
-    orb[i].angle = (90 + i*60) mod 360
-    orb[i].behavior = behavior[i mod 3]
-    orb[i].behavior_init = behavior_init[i mod 3]
-    if (i &gt;= orbs/2) {
-        orb[i].partner = orb[i-orbs/2]
-        orb[i-orbs/2].partner = orb[i]
-    }
 }
 
 
