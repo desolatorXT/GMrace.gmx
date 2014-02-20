@@ -58,8 +58,8 @@ direction = 180
 instance_create(x,y+choose(1,-1)*random(sprite_height/2),boss_wave_part_OBJ)
 }
 
-image_yscale += 0.05
-image_xscale += 0.05
+image_yscale += 0.03
+image_xscale += 0.03
 </string>
           </argument>
         </arguments>
