@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-speed = 5
+speed = 8
 direction = 180
 part_count = 10
 

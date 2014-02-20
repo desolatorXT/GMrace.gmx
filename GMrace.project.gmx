@@ -193,6 +193,8 @@
     </sprites>
     <sprites name="boss">
       <sprite>sprites\orb1_SPR</sprite>
+      <sprite>sprites\orb2_SPR</sprite>
+      <sprite>sprites\orb3_SPR</sprite>
       <sprite>sprites\boss_wave_SPR</sprite>
       <sprite>sprites\boss_wave_part_SPR</sprite>
       <sprite>sprites\boss1_x_SPR</sprite>
