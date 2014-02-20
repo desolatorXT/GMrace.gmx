@@ -115,7 +115,9 @@
       <sprite>sprites\en_scatter_SPR</sprite>
       <sprite>sprites\en_missile2_SPR</sprite>
       <sprite>sprites\en_bullet1_SPR</sprite>
+      <sprite>sprites\en_chaingun_bullet_SPR</sprite>
       <sprite>sprites\en_wave1_SPR</sprite>
+      <sprite>sprites\en_missile4_SPR</sprite>
     </sprites>
     <sprites name="powerups">
       <sprite>sprites\hp_pickup_SPR</sprite>
@@ -190,12 +192,14 @@
       <sprite>sprites\explosion_fx_SPR</sprite>
     </sprites>
     <sprites name="boss">
-      <sprite>sprites\boss1_SPR</sprite>
       <sprite>sprites\orb1_SPR</sprite>
       <sprite>sprites\boss_wave_SPR</sprite>
       <sprite>sprites\boss_wave_part_SPR</sprite>
       <sprite>sprites\boss1_x_SPR</sprite>
       <sprite>sprites\boss1_spin_SPR</sprite>
+    </sprites>
+    <sprites name="minibosses">
+      <sprite>sprites\miniboss1_SPR</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -341,16 +345,20 @@
     <objects name="enemy_projectiles">
       <object>objects\en_projectile_PAR</object>
       <object>objects\en_missile3_OBJ</object>
-      <object>objects\en_missile2_OBJ</object>
-      <object>objects\en_missile2_trail_OBJ</object>
-      <object>objects\en_missile2_dummy_OBJ</object>
-      <object>objects\en_bullet1_OBJ</object>
+      <objects name="en_missile2">
+        <object>objects\en_missile2_dummy_OBJ</object>
+        <object>objects\en_missile2_OBJ</object>
+        <object>objects\en_missile2_trail_OBJ</object>
+      </objects>
       <object>objects\en_missile1_OBJ</object>
+      <object>objects\en_bullet1_OBJ</object>
+      <object>objects\en_chaingun_bullet_OBJ</object>
       <object>objects\en_missile_scatter1_OBJ</object>
       <object>objects\en_scatter1_OBJ</object>
       <object>objects\en_bullet_expl_part_OBJ</object>
       <object>objects\en_expl_part_OBJ</object>
       <object>objects\en_wave1_OBJ</object>
+      <object>objects\en_missile4_OBJ</object>
     </objects>
     <objects name="powerups">
       <object>objects\hp_pickup_OBJ</object>
@@ -378,6 +386,9 @@
     </objects>
     <objects name="credits">
       <object>objects\credits_OBJ</object>
+    </objects>
+    <objects name="minibosses">
+      <object>objects\miniboss1_OBJ</object>
     </objects>
   </objects>
   <rooms name="rooms">
