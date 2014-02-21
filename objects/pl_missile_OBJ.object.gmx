@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 
-damage = 120
+damage = 1
 
 speed = 3.5
 direction = 0
@@ -73,7 +73,7 @@ xpl = instance_create(x,y,pl_explosion_radius_OBJ)
 xpl.image_xscale = 1
 xpl.image_yscale = 1
 xpl.radius = 1
-xpl.damage = 200
+xpl.damage = 120
 for (i=0; i&lt;part_count;i=i+1) {
 x_mod = choose(1,-1)
 y_mod = choose(1,-1)

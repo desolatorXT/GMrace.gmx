@@ -300,7 +300,7 @@ if (orbs &gt; 0) {
             <string>draw_sprite(sprite_index,image_index,x,y)
 if (invincible == 1) {
     // draw shield sprite
-    draw_sprite_ext(shield_SPR,shield_frm,x,y,1.2,1.2,0,c_white,1)
+    draw_sprite_ext(boss_shield_SPR,shield_frm,x,y,1.2,1.2,0,c_white,1)
     shield_frm = (shield_frm + 1) mod 8
 }
 </string>

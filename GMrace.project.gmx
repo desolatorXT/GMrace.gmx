@@ -200,6 +200,7 @@
       <sprite>sprites\boss1_x_SPR</sprite>
       <sprite>sprites\boss1_spin_SPR</sprite>
       <sprite>sprites\en_lasershot_SPR</sprite>
+      <sprite>sprites\boss_shield_SPR</sprite>
     </sprites>
     <sprites name="minibosses">
       <sprite>sprites\miniboss1_SPR</sprite>
@@ -329,8 +330,8 @@
         <object>objects\pl_bullet_expl_part_OBJ</object>
         <object>objects\pl_missile_expl_part_OBJ</object>
         <object>objects\pl_missile_OBJ</object>
-        <object>objects\lasershot_OBJ</object>
         <object>objects\pl_missile_target_draw_OBJ</object>
+        <object>objects\lasershot_OBJ</object>
       </objects>
       <object>objects\pl_shield_OBJ</object>
     </objects>
