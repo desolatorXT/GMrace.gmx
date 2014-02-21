@@ -29,7 +29,7 @@
 counter = 15
 damage = 20
 
-audio_play_sound(pl_lasershot_SND,0,0)
+audio_play_sound(pl_laser_shot_SND,0,0)
 </string>
           </argument>
         </arguments>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>counter = 15
 
-audio_play_sound(pl_lasershot_SND,0,0)
+//audio_play_sound(pl_laser_shot_SND,0,0)
 
 </string>
           </argument>

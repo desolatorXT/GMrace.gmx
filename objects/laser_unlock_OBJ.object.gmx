@@ -2,10 +2,10 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
-  <depth>0</depth>
+  <visible>-1</visible>
+  <depth>-99</depth>
   <persistent>0</persistent>
-  <parentName>weapon_PAR</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,15 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
-damage = 15
-bullet = noone
-counter = 0
-can_fire = 1
-part_count = 2
-icon = hud_laser_ico_SPR
-
-snd_start = 0
+            <string>counter = 30
 </string>
           </argument>
         </arguments>
@@ -56,37 +48,30 @@ snd_start = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (firing == 1)&amp;&amp;(!instance_exists(bullet))&amp;&amp;(owner.energy &gt; 3)&amp;&amp;(can_fire == 1) then {
-    counter++
-    owner.energy -= 8/3
-    //laser charge audio
-    audio_sound_pitch(pl_laser_charge_SND,0.05*counter)
-    audio_play_sound(pl_laser_charge_SND,0,0)
-    //effect
-    for (i=0;i&lt;part_count;i++) {
-    temp_x = owner.x+16+random(24)
-    temp_y = owner.y+choose(-1,1)*random(16)
-    part_id = instance_create(temp_x,temp_y,laser_charge_part_OBJ)
-    part_id.direction = point_direction(temp_x,temp_y,owner.x+12,owner.y)
-    }
-    //----
-    if (counter &gt;= 30) then {
-        bullet = instance_create(owner.x+12,owner.y,lasershot_OBJ)
-        //audio_play_sound(pl_laser_shot_SND,0,0)
-        bullet.damage = damage
-        bullet.creator = owner
-        counter = 0
-        can_fire = 0
-    }
-} else {counter = 0}
-
-if (firing == 0) then {
-    can_fire = 1
-    snd_start = 0
-    audio_stop_sound(pl_laser_shot_SND)
+            <string>if (counter &gt; 0) then {
+counter --
 }
 
-
+if (counter == 0) then {
+    sprite_index = laser_unlock_SPR
+    if (global_debugger_OBJ.fire_press = 1) then {
+        //needs multiplayer fix
+        temp = player_OBJ.secondary_weap
+        player_OBJ.secondary_weap = instance_create(0,0,laser_weap_OBJ)
+        player_OBJ.secondary_weap.owner = player_OBJ.id
+        with (temp) instance_destroy()
+        enemy_ctrl_OBJ.level_boss = 0
+        enemy_ctrl_OBJ.counter = 0
+        instance_destroy()
+        exit;
+    }
+    if (global_debugger_OBJ.altfire_press = 1) then {
+        enemy_ctrl_OBJ.level_boss = 0
+        enemy_ctrl_OBJ.counter = 0
+        instance_destroy()
+        exit;
+    }
+}
 </string>
           </argument>
         </arguments>

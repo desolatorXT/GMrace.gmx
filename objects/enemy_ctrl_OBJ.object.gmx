@@ -29,7 +29,7 @@
 level = 1
 stop = 0
 //to spawn boss inastantly make this crap equal to 3
-level_boss = 3
+level_boss = 0
 
 
 
@@ -63,7 +63,14 @@ en_spawn_SCR(level,counter,stop,level_boss)
 
 if (counter == 2000) then {
  counter = 2001
- if (level = 1) then {level_boss = 1}
+ if (level = 1) then {
+    if (level_boss == 0) then {
+        level_boss = 1
+    }
+    if (level_boss = 3) then {
+        level_boss = 4
+    }
+ }
 }
 
 </string>

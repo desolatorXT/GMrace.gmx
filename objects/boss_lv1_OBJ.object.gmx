@@ -95,6 +95,10 @@ for (i = 0; i &lt; orbs; i++) {
             <kind>1</kind>
             <string>event_inherited()
 
+enemy_ctrl_OBJ.level_boss = 6
+
+instance_create(room_width/2,room_height/2,laser_unlock_OBJ)
+
 </string>
           </argument>
         </arguments>
@@ -234,6 +238,7 @@ if (orbs &gt; 0) {
             image_index = image_number-1
             projectile_ls = instance_create(x-16,y,boss_lasershot_OBJ)
             projectile_ls.creator = self.id
+            audio_play_sound(boss_wave_SND,0,0)
             counter_ls += 5
         }
         else if (instance_exists(projectile_ls)) {

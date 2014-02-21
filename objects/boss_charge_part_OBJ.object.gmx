@@ -62,7 +62,11 @@ if (instance_exists(boss_lv1_OBJ)) then {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed += 0.1
+            <string>if (!instance_exists(boss_lv1_OBJ)) then {
+    instance_destroy()
+}
+
+speed += 0.1
 
 image_xscale = image_xscale*1.1
 if (image_xscale &gt; 2) then {image_xscale = 2}

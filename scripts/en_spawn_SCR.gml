@@ -10,7 +10,7 @@ exit;
 }
 
 if (level = 1) then  {
- if (level_boss = 0) then {
+ if (level_boss = 0)or (level_boss = 3) then {
     if (counter == 120) then {
         instance_create(room_width+16,random_range(32,room_height-32),en1_OBJ)
     }
@@ -48,14 +48,13 @@ if (level = 1) then  {
         instance_create(room_width+16,120,en3_OBJ)
     }
  } else if (level_boss == 1) then {
- //spawn boss, do crap
- if (!instance_exists(enemy_PAR)) then {
- instance_create(room_width+48,room_height/2,miniboss1_OBJ)
- //instance_create(room_width+96,room_height/2,boss_lv1_OBJ)
- enemy_ctrl_OBJ.level_boss = 2
- }
- } else if (level_boss == 3) then {
- instance_create(room_width+96,room_height/2,boss_lv1_OBJ)
- enemy_ctrl_OBJ.level_boss = 4
- }
+ //spawn miniboss, do crap
+    if (!instance_exists(enemy_PAR)) then {
+        instance_create(room_width+48,room_height/2,miniboss1_OBJ)
+        enemy_ctrl_OBJ.level_boss = 2
+    }
+    } else if (level_boss == 4) then {
+        instance_create(room_width+96,room_height/2,boss_lv1_OBJ)
+        enemy_ctrl_OBJ.level_boss = 5
+    }
 }

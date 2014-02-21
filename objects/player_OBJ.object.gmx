@@ -34,7 +34,7 @@ primary_weap = instance_create(0,0,default_weapon_OBJ)
 primary_weap.owner = self.id
 show_debug_message("(" + string(self.id) + ").primary_weap.owner = " + string(primary_weap.owner))
 
-secondary_weap = instance_create(0,0,laser_weap_OBJ)
+secondary_weap = instance_create(0,0,homing_missile_weap_OBJ)
 secondary_weap.owner = self.id
 show_debug_message("(" + string(self.id) + ").secondary_weap.owner = " + string(secondary_weap.owner))
 
