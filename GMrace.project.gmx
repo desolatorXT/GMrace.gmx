@@ -198,6 +198,7 @@
       <sprite>sprites\orb3_SPR</sprite>
       <sprite>sprites\boss_wave_SPR</sprite>
       <sprite>sprites\boss_wave_part_SPR</sprite>
+      <sprite>sprites\boss_charge_part_SPR</sprite>
       <sprite>sprites\boss1_x_SPR</sprite>
       <sprite>sprites\boss1_spin_SPR</sprite>
       <sprite>sprites\en_lasershot_SPR</sprite>
@@ -389,6 +390,7 @@
         <object>objects\boss1_wave_OBJ</object>
         <object>objects\boss_wave_part_OBJ</object>
         <object>objects\boss_lasershot_OBJ</object>
+        <object>objects\boss_charge_part_OBJ</object>
       </objects>
     </objects>
     <objects name="credits">

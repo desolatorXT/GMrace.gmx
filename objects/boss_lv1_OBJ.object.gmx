@@ -218,17 +218,22 @@ if (orbs &gt; 0) {
     else if (state == 2) {
         // lasershot
         
-        if (counter_ls &lt; 4*image_number) {
+        if (counter_ls &lt; 5*image_number) {
             // opening laser hatch
-            image_index = floor(counter_ls/4)
+            image_index = floor(counter_ls/5)
             counter_ls++
+            //laser charge particle creation
+            instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
+            instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
+            instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
+            audio_play_sound(pl_laser_charge_SND,0,0)
         }
-        else if (counter_ls == 4*image_number) {
+        else if (counter_ls == 5*image_number) {
             // fire laser
             image_index = image_number-1
             projectile_ls = instance_create(x-16,y,boss_lasershot_OBJ)
             projectile_ls.creator = self.id
-            counter_ls += 4
+            counter_ls += 5
         }
         else if (instance_exists(projectile_ls)) {
             // firing, keep hatch open
@@ -236,7 +241,7 @@ if (orbs &gt; 0) {
         }
         else {
             // close the hatch
-            image_index = floor((2*(4*image_number) - counter_ls)/4)
+            image_index = floor((2*(5*image_number) - counter_ls)/5)
             if (image_index == 0) {
                 // back to state 1 (spinshot)
                 counter_ls = 0
