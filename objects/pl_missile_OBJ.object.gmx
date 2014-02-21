@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>pl_projectile_PAR</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 3.5
+            <string>event_inherited()
+
+damage = 120
+
+speed = 3.5
 direction = 0
 counter = 0
 
@@ -160,7 +164,8 @@ if (counter &gt; 120) then {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (other.invincible == 0) other.hp = other.hp - 200
+            <string>event_inherited()
+
 alarm[0] = 1
 global_debugger_OBJ.g_score = global_debugger_OBJ.g_score + 45
 </string>

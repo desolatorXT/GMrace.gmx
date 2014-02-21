@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>pl_projectile_PAR</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 6
+            <string>event_inherited()
+damage = 15
+
+speed = 6
 direction = 0
 part_count = 10
 
@@ -53,7 +56,8 @@ audio_play_sound(pl_shot_primary_SND,0,0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (other.invincible == 0) other.hp = other.hp - damage
+            <string>event_inherited()
+
 if (other.hp &lt; 0) then {
  global_debugger_OBJ.g_score = global_debugger_OBJ.g_score + 45
 }
