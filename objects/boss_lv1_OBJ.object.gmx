@@ -29,15 +29,24 @@
 max_hp = 1600
 hp = 1600
 
-// temp
 speed = 0.5
 direction = 180
 
 active = 0
+invincible = 1
 
 angle = 0
 rot_spd = 4
 rotating = 1
+
+state = 0
+counter_ss = 0
+counter_ls = 0
+
+projectile_ls = noone
+
+target_x = 0
+target_y = 0
 
 behavior[0] = behavior_xs
 behavior[1] = behavior_ls
@@ -46,12 +55,17 @@ behavior_init[0] = behavior_xs_init
 behavior_init[1] = behavior_ls_init
 behavior_init[2] = behavior_hm_init
 
+orb_sprite[0] = orb1_SPR
+orb_sprite[1] = orb2_SPR
+orb_sprite[2] = orb3_SPR
+
 // create orbs in pairs
 orbs = 6
 
 for (i = 0; i &lt; orbs; i++) {
     orb[i] = instance_create(0,0,boss_1_orb_OBJ)
     orb[i].owner = self.id
+    orb[i].sprite_index = orb_sprite[i mod 3]
 }
 
 
@@ -109,6 +123,7 @@ if (active == 0) {
     if (x &lt;= room_width - 48) {
         direction = 90
         active = 1
+        for (var i = 0; i &lt; 6; i++) orb[i].invincible = 0
     }
 }
 
@@ -142,10 +157,149 @@ if (orbs &gt; 0) {
 
 } else {
     // phase 2, no orbs
-    // temp
-    speed = 0
+    invincible = 0
+    if (target_x == 0 &amp;&amp; target_y == 0) {
+        // select a target
+        do {
+            target_x = room_width/2 + 32 + irandom(room_width/2 - 2*32)
+            target_y = 32 + irandom(room_height - 16 - 2*32)
+        } until (point_distance(x,y,target_x,target_y) &gt; 15*4)
+        direction = point_direction(x,y,target_x,target_y)
+    } 
+    
+    // AI state machine
+    if (state == 0) {
+        // tracking to a point
+        // speed up as we lose health (from 1 to 4)
+        speed = ((1000 - hp) / 1000)*3 + 1
+        
+        // check for line of sight with a friendly
+        friendly = instance_nearest(x,y,friendly_PAR)
+        if (friendly != noone) {
+            if (abs(friendly.y - y) &lt; 4) {
+                // We got it, lasershot!
+                speed = 0
+                state = 2
+            }
+        }
+        // if we didn't get LoS
+        if (state == 0) {
+            if (point_distance(x,y,target_x,target_y) &lt; speed) {
+                // we got to our target point
+                x = target_x
+                y = target_y
+                
+                // now spinfire
+                speed = 0
+                state = 1
+            }
+        }
+    }
+    else if (state == 1) {
+        // TODO: spinfire
+        
+        for (var i = 0; i &lt; 360; i += 10) {
+            bx = 32*cos(degtorad(i))
+            by = -32*sin(degtorad(i))
+            b = instance_create(x+bx,y+by,en_missile1_OBJ)
+            b.speed = 5
+            b.direction = i
+        }
+        audio_play_sound(en_missile1_SND,0,0)
+        
+        // Back to state 0
+        state = 0
+        // Also reset our target
+        target_x = 0
+        target_y = 0
+    }
+    else if (state == 2) {
+        // lasershot
+        
+        if (counter_ls &lt; 4*image_number) {
+            // opening laser hatch
+            image_index = floor(counter_ls/4)
+            counter_ls++
+        }
+        else if (counter_ls == 4*image_number) {
+            // fire laser
+            image_index = image_number-1
+            projectile_ls = instance_create(x-16,y,boss_lasershot_OBJ)
+            projectile_ls.creator = self.id
+            counter_ls += 4
+        }
+        else if (instance_exists(projectile_ls)) {
+            // firing, keep hatch open
+            image_index = image_number-1
+        }
+        else {
+            // close the hatch
+            image_index = floor((2*(4*image_number) - counter_ls)/4)
+            if (image_index == 0) {
+                // back to state 1 (spinshot)
+                counter_ls = 0
+                state = 1
+            }
+            else {
+                counter_ls++
+            }
+        }
+    }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite(sprite_index,image_index,x,y)
+if (invincible == 1) {
+    // draw shield sprite
+    draw_sprite_ext(shield_SPR,0,x,y,1.2,1.2,0,c_white,1)
+}
 </string>
           </argument>
         </arguments>

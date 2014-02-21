@@ -62,6 +62,7 @@ counter = 0
 
 if (target != noone) {
     m = instance_create(x,y,en_missile1_OBJ)
+    audio_play_sound(en_missile1_SND,0,0)
     m.direction = point_direction(x,y,target.x,target.y)
     m.speed = 2
 }

@@ -53,7 +53,7 @@ audio_play_sound(pl_shot_primary_SND,0,0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.hp = other.hp - damage
+            <string>if (other.invincible == 0) other.hp = other.hp - damage
 if (other.hp &lt; 0) then {
  global_debugger_OBJ.g_score = global_debugger_OBJ.g_score + 45
 }
