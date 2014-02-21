@@ -61,8 +61,8 @@ level_boss = 0
 //en_spawn_data_SCR(level)
 en_spawn_SCR(level,counter,stop,level_boss)
 
-if (counter == 2000) then {
- counter = 2001
+if (counter == 5100) then {
+ counter = 5101
  if (level = 1) then {
     if (level_boss == 0) then {
         level_boss = 1

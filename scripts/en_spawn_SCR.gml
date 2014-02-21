@@ -44,7 +44,7 @@ if (level = 1) then  {
     if ((counter mod 910)==0) then {
         instance_create(room_width+8+irandom(32),random_range(32,room_height-32),en7_OBJ)
     }
-    if (counter == 2499) or (counter == 4999) or (counter == 8000) then {
+    if (counter == 2499) or (counter == 4999) then {
         instance_create(room_width+16,120,en3_OBJ)
     }
  } else if (level_boss == 1) then {

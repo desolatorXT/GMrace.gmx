@@ -68,6 +68,7 @@ audio_play_sound(pl_missile_fire_SND,0,0)
           <argument>
             <kind>1</kind>
             <string>//play explosion sound here!
+projectile_explos_snd_select_SCR()
 instance_create(x,y,explosion_fx_OBJ)
 xpl = instance_create(x,y,pl_explosion_radius_OBJ)
 xpl.image_xscale = 1
