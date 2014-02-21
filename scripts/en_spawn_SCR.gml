@@ -54,7 +54,9 @@ if (level = 1) then  {
         enemy_ctrl_OBJ.level_boss = 2
     }
     } else if (level_boss == 4) then {
+    if (!instance_exists(enemy_PAR)) then {
         instance_create(room_width+96,room_height/2,boss_lv1_OBJ)
         enemy_ctrl_OBJ.level_boss = 5
+    }
     }
 }
