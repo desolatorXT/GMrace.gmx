@@ -63,6 +63,9 @@ fire = 0
             <string>event_inherited()
 
 enemy_ctrl_OBJ.level_boss = 3
+
+instance_create(x-8,y+4,hp_pickup_OBJ)
+instance_create(x-8,y-4,hp_pickup_OBJ)
 </string>
           </argument>
         </arguments>
