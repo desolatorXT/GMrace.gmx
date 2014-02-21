@@ -226,7 +226,8 @@ if (orbs &gt; 0) {
             instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
             instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
             instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
-            audio_play_sound(pl_laser_charge_SND,0,0)
+            audio_sound_pitch(pl_laser_charge_SND,0.05*counter_ls)
+            audio_play_sound(pl_laser_charge_SND,0,0)   
         }
         else if (counter_ls == 5*image_number) {
             // fire laser
