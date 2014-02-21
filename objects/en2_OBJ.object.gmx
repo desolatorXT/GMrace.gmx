@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 hp = 150
+
 counter = 0
 
 target_x = x-48

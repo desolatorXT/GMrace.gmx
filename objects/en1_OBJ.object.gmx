@@ -28,6 +28,7 @@
             <string>event_inherited()
 hp = 60
 
+
 speed = 1
 dir_fix = irandom(100)
 if (dir_fix &lt;50) then {

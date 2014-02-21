@@ -308,7 +308,9 @@ if (orbs &gt; 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprite_index,image_index,x,y)
+            <string>//draw_sprite(sprite_index,image_index,x,y)
+event_inherited()
+
 if (invincible == 1) {
     // draw shield sprite
     draw_sprite_ext(boss_shield_SPR,shield_frm,x,y,1.2,1.2,0,c_white,1)

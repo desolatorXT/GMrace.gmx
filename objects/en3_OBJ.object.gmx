@@ -28,6 +28,7 @@
             <string>event_inherited()
 hp = 120
 
+
 xpos = room_width - 48
 ypos = 120
 
