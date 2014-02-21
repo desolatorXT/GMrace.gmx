@@ -61,6 +61,9 @@ if (firing == 1) then {
         if (counter == 0) then {
         bullet = instance_create(owner.x,owner.y,pl_bullet_OBJ)
         bullet.damage = damage
+        if (owner.buff_controller.pow_timer &gt; 0) then {
+            bullet.sprite_index = pl_bullet_pow_SPR
+        }
         // "hack" to activate the loop below without losing 1 step
         counter = fire_rate
         }
