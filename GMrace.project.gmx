@@ -39,6 +39,7 @@
     </sounds>
     <sounds name="menu">
       <sound>sound\selection_SND</sound>
+      <sound>sound\fail_SND</sound>
       <sound>sound\activate_SND</sound>
       <sound>sound\t2_button_SND</sound>
     </sounds>
@@ -303,6 +304,7 @@
         <object>objects\menu_g_o_OBJ</object>
       </objects>
       <object>objects\menu_item_PAR</object>
+      <object>objects\draw_test_stuff_OBJ</object>
     </objects>
     <objects name="config">
       <object>objects\config_base_PAR</object>

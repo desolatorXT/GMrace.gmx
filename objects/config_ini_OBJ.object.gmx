@@ -52,6 +52,7 @@ audio_master_gain(snd_volume/100)
 window_set_size(wsize[wsize_sel], hsize[wsize_sel])
 window_set_fullscreen(fullscreen == 1)
 
+
 </string>
           </argument>
         </arguments>

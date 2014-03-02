@@ -50,6 +50,45 @@ hsize[1] = 576
 hsize[2] = 768
 hsize[3] = 900
 hsize[4] = 1080
+
+key_map = ds_map_create()
+ds_map_add(key_map,8,"Backspace")
+ds_map_add(key_map,13,"Enter")
+ds_map_add(key_map,16,"Shift")
+ds_map_add(key_map,17,"Control")
+ds_map_add(key_map,18,"Alt")
+ds_map_add(key_map,32,"Space")
+ds_map_add(key_map,37,"Left")
+ds_map_add(key_map,38,"Up")
+ds_map_add(key_map,39,"Right")
+ds_map_add(key_map,40,"Down")
+ds_map_add(key_map,46,"Delete")
+for (var i=ord('0'); i&lt;=ord('9'); i++;) {
+    ds_map_add(key_map,i,chr(i))
+}
+for (var i=ord('A'); i&lt;=ord('Z'); i++;) {
+    ds_map_add(key_map,i,chr(i))
+}
+for (var i=96; i&lt;106; i++;) {
+    ds_map_add(key_map,i,"Num"+string(i-96))
+}
+ds_map_add(key_map,106,"Num*")
+ds_map_add(key_map,107,"Num+")
+ds_map_add(key_map,109,"Num-")
+ds_map_add(key_map,110,"Num.")
+ds_map_add(key_map,111,"Num/")
+ds_map_add(key_map,186,";")
+ds_map_add(key_map,187,"=")
+ds_map_add(key_map,188,",")
+ds_map_add(key_map,189,"-")
+ds_map_add(key_map,190,".")
+ds_map_add(key_map,191,"/")
+ds_map_add(key_map,192,"`")
+ds_map_add(key_map,219,"[")
+ds_map_add(key_map,221,"]")
+ds_map_add(key_map,220,"\")
+ds_map_add(key_map,222,"'")
+
 </string>
           </argument>
         </arguments>
