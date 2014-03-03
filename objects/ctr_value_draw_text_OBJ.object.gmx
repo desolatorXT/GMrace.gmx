@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_color(creator.x+196+2,creator.y,text,c_white,c_white,c_white,c_white,255)
+            <string>draw_text_color(creator.x+196+2,creator.y+1,text,c_white,c_white,c_white,c_white,255)
 </string>
           </argument>
         </arguments>
