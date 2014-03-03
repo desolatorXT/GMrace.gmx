@@ -41,7 +41,12 @@ instance_create(0,0,global_debugger_OBJ)
 
 instance_create(0,room_height-32,menu_message_board_OBJ)
 instance_create(0,0,menu_draw_text_OBJ)
-menu_draw_text_OBJ.text_ver = 'Game Paused'
+//check who the fuck paused the game.
+if (instance_exists(global_debugger_OBJ.input[0])) then {
+menu_draw_text_OBJ.text_ver = 'Game Paused (P1)'
+} else {
+menu_draw_text_OBJ.text_ver = 'Game Paused (P2)'
+}
 
 //create menu buttons:
 instance_create(room_width/2 - 80,96,pause_resume_OBJ)

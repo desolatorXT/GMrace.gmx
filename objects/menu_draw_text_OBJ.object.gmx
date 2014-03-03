@@ -50,7 +50,7 @@ text_ver = 'Version 0.5'
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_color(room_width-128,16,text_ver,c_white,c_white,c_white,c_white,1)
+            <string>draw_text_color(room_width-160,16,text_ver,c_white,c_white,c_white,c_white,1)
 
 //line 1
 draw_text_color(menu_message_board_OBJ.x+2,menu_message_board_OBJ.y+1,text,c_white,c_white,c_white,c_white,1)
