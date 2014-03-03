@@ -66,9 +66,9 @@ shield_press = 0
         if (g.pause == 0) then {
             g.pause = 1
             instance_deactivate_all(true)
-            instance_create(0,0,pause_OBJ)
             instance_activate_object(g)
             instance_activate_object(c)
+            instance_create(0,0,pause_OBJ)
             exit;
         } else {
             g.alarm[2] = 1

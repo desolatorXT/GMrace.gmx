@@ -43,14 +43,14 @@ keys[0,5] = ord('X')
 keys[0,6] = ord('C')
 keys[0,7] = vk_escape
 
-keys[1,0] = 0
-keys[1,1] = 0
-keys[1,2] = 0
-keys[1,3] = 0
-keys[1,4] = 0
-keys[1,5] = 0
-keys[1,6] = 0
-keys[1,7] = 0
+keys[1,0] = ord('W')
+keys[1,1] = ord('S')
+keys[1,2] = ord('A')
+keys[1,3] = ord('D')
+keys[1,4] = vk_rcontrol
+keys[1,5] = vk_ralt
+keys[1,6] = vk_rshift
+keys[1,7] = ord('P')
 
 game_speed = 30
 snd_volume = 100
@@ -142,6 +142,15 @@ keys[0,4] = ord('Z')
 keys[0,5] = ord('X')
 keys[0,6] = ord('C')
 keys[0,7] = vk_escape
+
+keys[1,0] = ord('W')
+keys[1,1] = ord('S')
+keys[1,2] = ord('A')
+keys[1,3] = ord('D')
+keys[1,4] = vk_rcontrol
+keys[1,5] = vk_ralt
+keys[1,6] = vk_rshift
+keys[1,7] = ord('P')
 
 </string>
           </argument>
