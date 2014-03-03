@@ -82,6 +82,9 @@ with (primary_weap) instance_destroy()
 with (secondary_weap) instance_destroy()
 with (my_shield) instance_destroy()
 
+// remove our ability to pause
+controller.ingame = 0
+
 // remove ourselves from the global debugger's array.
 g = global_debugger_OBJ.id
 for (i = 0; i &lt; array_length_1d(g.player); i++) {

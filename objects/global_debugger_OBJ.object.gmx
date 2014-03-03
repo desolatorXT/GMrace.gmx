@@ -163,11 +163,14 @@ instance_create(0,0,hud_OBJ)
 if (game_mode == 2) then {
  player[0] = instance_create(32,120,player_OBJ)
  player[0].controller = input[0]
+ input[0].ingame = 1
  player[1] = instance_create(32,152,player_OBJ)
  player[1].controller = input[1]
+ input[1].ingame = 1
 } else {
  player[0] = instance_create(32,136,player_OBJ)
  player[0].controller = input[0]
+ input[0].ingame = 1
  player[1] = noone
 }
 
@@ -202,44 +205,6 @@ if (game_mode == 2) then {
   instance_activate_object(input[0])
   pause_resume_OBJ.enabled = 1
  }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="27">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (room == test_RM) then {
-
-if (pause == 0) then {
- pause = 1
- instance_deactivate_all(true)
- instance_create(0,0,pause_OBJ)
- instance_activate_object(config)
- instance_activate_object(input[0])
- exit;
-}
-
-if (pause == 1) then {
-alarm[2] = 1
-}
-
 }
 </string>
           </argument>

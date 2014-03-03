@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>counter = 0
-player_OBJ.playable = 0
 player_OBJ.alarm[1] = 1
 player_OBJ.x = -100
 player_OBJ.y = -100
@@ -53,10 +52,10 @@ player_OBJ.y = -100
           <argument>
             <kind>1</kind>
             <string>//go to pause menu
-      global_debugger_OBJ.pause = 1
       with (global_debugger_OBJ) instance_deactivate_all(true)
       instance_create(0,0,menu_g_o_OBJ)
       instance_activate_object(global_debugger_OBJ.config)
+      instance_activate_object(global_debugger_OBJ.input[0])
       menu_next_sel_SCR(menu_g_o_OBJ)
       instance_destroy()
 </string>
