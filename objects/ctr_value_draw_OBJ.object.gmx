@@ -91,7 +91,7 @@ draw_sprite(opt_key_select_SPR,-1,creator.x+196,creator.y)
         creator.alarm[2] = 1
         exit;
     }
-    creator.alarm[2] = 1
+    creator.alarm[2] = 2
     audio_play_sound(hp_pickup_SND,0,0)
 }
 </string>

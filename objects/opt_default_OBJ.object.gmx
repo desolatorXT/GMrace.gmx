@@ -63,7 +63,7 @@
 wait = 0
 counter = 0
 
-global_debugger_OBJ.config.alarm[1] = 1
+with (global_debugger_OBJ.config) event_user(1)
 
 opt_game_speed_OBJ.current_value = 30
 opt_game_speed_OBJ.my_text.text = string(opt_game_speed_OBJ.current_value)

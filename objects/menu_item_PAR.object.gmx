@@ -29,6 +29,8 @@
 counter = 0
 enabled = 1
 alarm[11] = 1
+
+c = global_debugger_OBJ.config
 </string>
           </argument>
         </arguments>

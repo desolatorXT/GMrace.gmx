@@ -63,8 +63,7 @@
 wait = 0
 counter = 0
 
-global_debugger_OBJ.config.alarm[0] = 1
-
+with (global_debugger_OBJ.config) event_user(0)
 </string>
           </argument>
         </arguments>
