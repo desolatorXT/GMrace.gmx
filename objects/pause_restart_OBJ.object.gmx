@@ -28,6 +28,7 @@
             <string>//launch single player
 audio_stop_music()
 room_goto(test_RM)
+instance_activate_all()
 global_debugger_OBJ.alarm[0] = 1
 global_debugger_OBJ.room_current = 1
 global_debugger_OBJ.game_over = 0

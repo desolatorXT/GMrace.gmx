@@ -131,7 +131,7 @@ can_select = 1
 counter = 0
 
 //cancelation
-cancel = ctr_back_OBJ.id
+cancel = noone
 
 </string>
           </argument>
