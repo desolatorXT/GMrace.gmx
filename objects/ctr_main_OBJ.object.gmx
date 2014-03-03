@@ -32,7 +32,8 @@ draw_set_font(retro_FN)
 instance_create(0,room_height-32,menu_message_board_OBJ)
 instance_create(0,0,menu_draw_text_OBJ)
 
-//create option buttons:
+//create option buttons player 1:
+instance_create(32,room_height - 450,p1_controls_OBJ)
 instance_create(32,room_height - 390,ctr_up_OBJ)
 instance_create(32,room_height - 360,ctr_down_OBJ)
 instance_create(32,room_height - 330,ctr_left_OBJ)
@@ -44,6 +45,17 @@ instance_create(32,room_height - 180,ctr_pause_OBJ)
 instance_create(32,room_height - 120,ctr_default_OBJ)
 instance_create(32,room_height - 90,ctr_save_OBJ)
 instance_create(32,room_height - 60,ctr_back_OBJ)
+//create option buttons player 2:
+instance_create(452,room_height - 450,p2_controls_OBJ)
+instance_create(452,room_height - 390,p2_up_OBJ)
+instance_create(452,room_height - 360,p2_down_OBJ)
+instance_create(452,room_height - 330,p2_left_OBJ)
+instance_create(452,room_height - 300,p2_right_OBJ)
+instance_create(452,room_height - 270,p2_fire_OBJ)
+instance_create(452,room_height - 240,p2_altfire_OBJ)
+instance_create(452,room_height - 210,p2_shield_OBJ)
+instance_create(452,room_height - 180,p2_pause_OBJ)
+
 
 //setup selections
 sel_len = 0
