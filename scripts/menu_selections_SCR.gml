@@ -27,15 +27,7 @@ if (my_input.fire_press = 1)&&(menu.select_id.wait == 0) then {
 
 if ((my_input.altfire_press == 1) && (menu.cancel != noone)) then {
     if (menu.cancel.wait == 0) then {
-        if (menu.select_id == ctr_altfire_OBJ.id) then {
-            if (ctr_altfire_OBJ.my_backdrop.state == 0) then {
-                menu.cancel.alarm[0] = 1
-            } else {
-                my_input.altfire_press = 0
-            }
-        } else {
-            menu.cancel.alarm[0] = 1
-        }
+        menu.cancel.alarm[0] = 1
     }
 }
 

@@ -61,6 +61,8 @@
             <kind>1</kind>
             <string>//back to main menu
 global_debugger_OBJ.pause = 0
+global_debugger_OBJ.input[0].ingame = 0
+global_debugger_OBJ.input[1].ingame = 0
 instance_activate_all()
 room_goto(menu_RM)
 
