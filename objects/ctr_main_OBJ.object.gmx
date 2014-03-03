@@ -33,13 +33,14 @@ instance_create(0,room_height-32,menu_message_board_OBJ)
 instance_create(0,0,menu_draw_text_OBJ)
 
 //create option buttons:
-instance_create(32,room_height - 360,ctr_up_OBJ)
-instance_create(32,room_height - 330,ctr_down_OBJ)
-instance_create(32,room_height - 300,ctr_left_OBJ)
-instance_create(32,room_height - 270,ctr_right_OBJ)
-instance_create(32,room_height - 240,ctr_fire_OBJ)
-instance_create(32,room_height - 210,ctr_altfire_OBJ)
-instance_create(32,room_height - 180,ctr_shield_OBJ)
+instance_create(32,room_height - 390,ctr_up_OBJ)
+instance_create(32,room_height - 360,ctr_down_OBJ)
+instance_create(32,room_height - 330,ctr_left_OBJ)
+instance_create(32,room_height - 300,ctr_right_OBJ)
+instance_create(32,room_height - 270,ctr_fire_OBJ)
+instance_create(32,room_height - 240,ctr_altfire_OBJ)
+instance_create(32,room_height - 210,ctr_shield_OBJ)
+instance_create(32,room_height - 180,ctr_pause_OBJ)
 instance_create(32,room_height - 120,ctr_default_OBJ)
 instance_create(32,room_height - 90,ctr_save_OBJ)
 instance_create(32,room_height - 60,ctr_back_OBJ)
@@ -66,6 +67,9 @@ sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pre
 sel_len += 1
 sel_ids[sel_len] = ctr_shield_OBJ.id
 sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the shield key."
+sel_len += 1
+sel_ids[sel_len] = ctr_pause_OBJ.id
+sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the pause key."
 sel_len += 1
 sel_ids[sel_len] = ctr_default_OBJ.id
 sel_txt[sel_len] = "Restore default control scheme."
