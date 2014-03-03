@@ -112,11 +112,11 @@ for (i = 0; i &lt; array_length_1d(g.player); i++) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movement_SCR(self.id,spd)
+            <string>movement_SCR()
 room_bound_SCR(self.id)
 invincibility_effect_SCR(self.id)
 
-if (global_debugger_OBJ.shield_press == 0) then {
+if (controller.shield_press == 0) then {
     if (energy &lt; 0) then {
         energy = 0
     }
@@ -141,10 +141,10 @@ else if (hp &lt;= 0) alarm[1] = 1
 primary_weap.owner = self.id
 secondary_weap.owner = self.id
 
-primary_weap.firing = global_debugger_OBJ.fire_press
-secondary_weap.firing = global_debugger_OBJ.altfire_press
+primary_weap.firing = controller.fire_press
+secondary_weap.firing = controller.altfire_press
 
-my_shield.shield_active = global_debugger_OBJ.shield_press
+my_shield.shield_active = controller.shield_press
 
 </string>
           </argument>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited()
 
-current_value = global_debugger_OBJ.config.right_key
+current_value = global_debugger_OBJ.config.keys[0,3]
 
 my_backdrop = instance_create(0,0,ctr_value_draw_OBJ)
 my_backdrop.creator = self.id
@@ -61,8 +61,8 @@ my_text.text = ds_map_find_value(global_debugger_OBJ.config.key_map,current_valu
             <kind>1</kind>
             <string>wait = 0
 counter = 0
-global_debugger_OBJ.config.right_key = my_backdrop.new_key
-current_value = global_debugger_OBJ.config.right_key
+global_debugger_OBJ.config.keys[0,3] = my_backdrop.new_key
+current_value = my_backdrop.new_key
 my_text.text = ds_map_find_value(global_debugger_OBJ.config.key_map,current_value)
 my_backdrop.state = 0
 my_backdrop.new_key = 0

@@ -25,13 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>up_key = 38
-down_key = 40
-left_key = 37
-right_key = 39
-fire_key = 90
-altfire_key = 88
-shield_key = 67
+            <string>//up_key = 38
+//down_key = 40
+//left_key = 37
+//right_key = 39
+//fire_key = 90
+//altfire_key = 88
+//shield_key = 67
+
+keys[0,0] = 38
+keys[0,1] = 40
+keys[0,2] = 37
+keys[0,3] = 39
+keys[0,4] = 90
+keys[0,5] = 88
+keys[0,6] = 67
+
+keys[1,0] = 0
+keys[1,1] = 0
+keys[1,2] = 0
+keys[1,3] = 0
+keys[1,4] = 0
+keys[1,5] = 0
+keys[1,6] = 0
 
 game_speed = 30
 snd_volume = 100
@@ -72,14 +88,14 @@ for (var i=ord('0'); i&lt;=ord('9'); i++;) {
 for (var i=ord('A'); i&lt;=ord('Z'); i++;) {
     ds_map_add(key_map,i,chr(i))
 }
-for (var i=96; i&lt;106; i++;) {
-    ds_map_add(key_map,i,"Num"+string(i-96))
+for (var i=vk_numpad0; i&lt;=vk_numpad9; i++;) {
+    ds_map_add(key_map,i,"Num"+string(i-vk_numpad0))
 }
-ds_map_add(key_map,106,"Num*")
-ds_map_add(key_map,107,"Num+")
-ds_map_add(key_map,109,"Num-")
-ds_map_add(key_map,110,"Num.")
-ds_map_add(key_map,111,"Num/")
+ds_map_add(key_map,vk_multiply,"Num*")
+ds_map_add(key_map,vk_add,"Num+")
+ds_map_add(key_map,vk_subtract,"Num-")
+ds_map_add(key_map,vk_decimal,"Num.")
+ds_map_add(key_map,vk_divide,"Num/")
 ds_map_add(key_map,186,";")
 ds_map_add(key_map,187,"=")
 ds_map_add(key_map,188,",")
@@ -116,13 +132,21 @@ ds_map_add(key_map,222,"'")
             <kind>1</kind>
             <string>// Default keys
 
-up_key = 38
-down_key = 40
-left_key = 37
-right_key = 39
-fire_key = 90
-altfire_key = 88
-shield_key = 67
+//up_key = 38
+//down_key = 40
+//left_key = 37
+//right_key = 39
+//fire_key = 90
+//altfire_key = 88
+//shield_key = 67
+
+keys[0,0] = 38
+keys[0,1] = 40
+keys[0,2] = 37
+keys[0,3] = 39
+keys[0,4] = 90
+keys[0,5] = 88
+keys[0,6] = 67
 
 </string>
           </argument>

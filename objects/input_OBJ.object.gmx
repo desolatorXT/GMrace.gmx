@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>config_base_PAR</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,41 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited()
+            <string>c = global_debugger_OBJ.config
+pid = 0
 
-fname = working_directory+"settings.ini"
-
-file = ini_open(fname)
-
-for (var i = 0; i &lt; 2; i++) {
-keys[i,0] = ini_read_real("keys"+string(i),"up",keys[i,0])
-keys[i,1] = ini_read_real("keys"+string(i),"down",keys[i,1])
-keys[i,2] = ini_read_real("keys"+string(i),"left",keys[i,2])
-keys[i,3] = ini_read_real("keys"+string(i),"right",keys[i,3])
-keys[i,4] = ini_read_real("keys"+string(i),"fire",keys[i,4])
-keys[i,5] = ini_read_real("keys"+string(i),"altfire",keys[i,5])
-keys[i,6] = ini_read_real("keys"+string(i),"shield",keys[i,6])
-}
-game_speed = ini_read_real("general","speed",game_speed)
-snd_volume = ini_read_real("general","volume",snd_volume)
-fullscreen = ini_read_real("general","fullscreen",fullscreen)
-wsize_sel = ini_read_real("general","wsize",wsize_sel)
-bg_effects = ini_read_real("general","bg_effects",bg_effects)
-
-ini_close()
-
-audio_master_gain(snd_volume/100)
-
-window_set_size(wsize[wsize_sel], hsize[wsize_sel])
-window_set_fullscreen(fullscreen == 1)
-
-
+up_press = 0
+down_press = 0
+left_press = 0
+right_press = 0
+fire_press = 0
+altfire_press = 0
+shield_press = 0
+  
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -76,26 +58,32 @@ window_set_fullscreen(fullscreen == 1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Save config
+            <string>if (keyboard_check_pressed(c.keys[pid,0])) up_press = 1
+if (keyboard_check_released(c.keys[pid,0])) up_press = 0
 
-ini_open(fname)
+if (keyboard_check_pressed(c.keys[pid,1])) down_press = 1
+if (keyboard_check_released(c.keys[pid,1])) down_press = 0
 
-for (var i = 0; i &lt; 2; i++) {
-ini_write_real("keys"+string(i),"up",keys[i,0])
-ini_write_real("keys"+string(i),"down",keys[i,1])
-ini_write_real("keys"+string(i),"left",keys[i,2])
-ini_write_real("keys"+string(i),"right",keys[i,3])
-ini_write_real("keys"+string(i),"fire",keys[i,4])
-ini_write_real("keys"+string(i),"altfire",keys[i,5])
-ini_write_real("keys"+string(i),"shield",keys[i,6])
+if (keyboard_check_pressed(c.keys[pid,2])) left_press = 1
+if (keyboard_check_released(c.keys[pid,2])) left_press = 0
+
+if (keyboard_check_pressed(c.keys[pid,3])) right_press = 1
+if (keyboard_check_released(c.keys[pid,3])) right_press = 0
+
+if (keyboard_check_pressed(c.keys[pid,4])) then {
+    if (pid == 0 &amp;&amp; instance_exists(ctr_fire_OBJ)) then {
+        if (ctr_fire_OBJ.my_backdrop.state == 0) then {
+        fire_press = 1
+        }
+    } else {fire_press = 1}
 }
-ini_write_real("general","speed",game_speed)
-ini_write_real("general","volume",snd_volume)
-ini_write_real("general","fullscreen",fullscreen)
-ini_write_real("general","wsize",wsize_sel)
-ini_write_real("general","bg_effects",bg_effects)
+if (keyboard_check_released(c.keys[pid,4])) fire_press = 0
 
-ini_close()
+if (keyboard_check_pressed(c.keys[pid,5])) altfire_press = 1
+if (keyboard_check_released(c.keys[pid,5])) altfire_press = 0
+
+if (keyboard_check_pressed(c.keys[pid,6])) shield_press = 1
+if (keyboard_check_released(c.keys[pid,6])) shield_press = 0
 </string>
           </argument>
         </arguments>

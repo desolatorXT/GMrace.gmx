@@ -86,7 +86,7 @@ my_text.text = string(current_value)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global_debugger_OBJ.left_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
+            <string>if (global_debugger_OBJ.input[0].left_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
  global_debugger_OBJ.config.snd_volume = global_debugger_OBJ.config.snd_volume - 5
  if (global_debugger_OBJ.config.snd_volume &lt; 0) then {
   global_debugger_OBJ.config.snd_volume = 0
@@ -98,7 +98,7 @@ my_text.text = string(current_value)
  //play menu selection sound here!
  audio_play_sound(t2_button_SND,0,0)
 }
-if (global_debugger_OBJ.right_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
+if (global_debugger_OBJ.input[0].right_press = 1)&amp;&amp; (wait = 0)&amp;&amp;(opt_main_OBJ.select_id = self.id) then {
  global_debugger_OBJ.config.snd_volume = global_debugger_OBJ.config.snd_volume + 5
  if (global_debugger_OBJ.config.snd_volume &gt; 100) then {
   global_debugger_OBJ.config.snd_volume = 100

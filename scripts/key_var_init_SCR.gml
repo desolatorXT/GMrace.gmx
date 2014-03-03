@@ -1,9 +1,8 @@
-g = global_debugger_OBJ.id
+up_press = 0
+down_press = 0
+left_press = 0
+right_press = 0
+fire_press = 0
+altfire_press = 0
+shield_press = 0
 
-g.up_press = 0
-g.down_press = 0
-g.left_press = 0
-g.right_press = 0
-g.fire_press = 0
-g.altfire_press = 0
-g.shield_press = 0
