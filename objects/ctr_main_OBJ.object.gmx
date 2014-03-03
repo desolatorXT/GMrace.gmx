@@ -58,40 +58,70 @@ instance_create(452,room_height - 180,p2_pause_OBJ)
 
 
 //setup selections
-sel_len = 0
-sel_ids[sel_len] = ctr_up_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the up key."
-sel_len += 1
-sel_ids[sel_len] = ctr_down_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the down key."
-sel_len += 1
-sel_ids[sel_len] = ctr_left_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the left key."
-sel_len += 1
-sel_ids[sel_len] = ctr_right_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the right key."
-sel_len += 1
-sel_ids[sel_len] = ctr_fire_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the fire key."
-sel_len += 1
-sel_ids[sel_len] = ctr_altfire_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the alt-fire key."
-sel_len += 1
-sel_ids[sel_len] = ctr_shield_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the shield key."
-sel_len += 1
-sel_ids[sel_len] = ctr_pause_OBJ.id
-sel_txt[sel_len] = "Press the fire key to initiate the process. The next key pressed will be assigned as the pause key."
-sel_len += 1
-sel_ids[sel_len] = ctr_default_OBJ.id
-sel_txt[sel_len] = "Restore default control scheme."
-sel_len += 1
-sel_ids[sel_len] = ctr_save_OBJ.id
-sel_txt[sel_len] = "Save changes."
-sel_len += 1
-sel_ids[sel_len] = ctr_back_OBJ.id
-sel_txt[sel_len] = "Go back to main menu. Unsaved changes will remain in effect until the game is closed."
-sel_len += 1
+sel_len0 = 0
+sel_ids0[sel_len0] = ctr_up_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the up key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_down_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the down key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_left_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the left key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_right_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the right key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_fire_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the fire key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_altfire_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the alt-fire key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_shield_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the shield key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_pause_OBJ.id
+sel_txt0[sel_len0] = "Press the fire key to initiate the process. The next key pressed will be assigned as the pause key."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_default_OBJ.id
+sel_txt0[sel_len0] = "Restore default control scheme."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_save_OBJ.id
+sel_txt0[sel_len0] = "Save changes."
+sel_len0 += 1
+sel_ids0[sel_len0] = ctr_back_OBJ.id
+sel_txt0[sel_len0] = "Go back to main menu. Unsaved changes will remain in effect until the game is closed."
+sel_len0 += 1
+
+sel_len1 = 0
+sel_ids1[sel_len1] = p2_up_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_down_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_left_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_right_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_fire_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_altfire_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_shield_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+sel_ids1[sel_len1] = p2_pause_OBJ.id
+sel_txt1[sel_len1] = sel_txt0[sel_len1]
+sel_len1++
+
+sel_len = sel_len0
+sel_ids = sel_ids0
+sel_txt = sel_txt0
 
 //selection control
 selection = 0
@@ -126,6 +156,21 @@ cancel = ctr_back_OBJ.id
           <argument>
             <kind>1</kind>
             <string>menu_selections_SCR(self)
+
+if (my_input.right_press == 1 &amp;&amp; sel_len == sel_len0 &amp;&amp; selection &lt; sel_len1) {
+    sel_len = sel_len1
+    sel_ids = sel_ids1
+    sel_txt = sel_txt1
+    select_id = sel_ids[selection]
+    audio_play_sound(selection_SND,0,0)
+}
+else if (my_input.left_press == 1 &amp;&amp; sel_len == sel_len1 &amp;&amp; selection &lt; sel_len0) {
+    sel_len = sel_len0
+    sel_ids = sel_ids0
+    sel_txt = sel_txt0
+    select_id = sel_ids[selection]
+    audio_play_sound(selection_SND,0,0)
+}
 </string>
           </argument>
         </arguments>
