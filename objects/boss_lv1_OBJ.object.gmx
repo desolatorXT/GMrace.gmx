@@ -45,6 +45,8 @@ state = 0
 counter_ss = 0
 counter_ls = 0
 
+charge_part_counter = -1
+charge_part_index[0] = noone
 projectile_ls = noone
 
 target_x = 0
@@ -94,6 +96,15 @@ for (i = 0; i &lt; orbs; i++) {
           <argument>
             <kind>1</kind>
             <string>event_inherited()
+
+for (z = 0; z == charge_part_counter; z++) {
+ if (instance_exists(charge_part_index[charge_part_counter])) then {
+  with (charge_part_index[charge_part_counter]) 
+   {
+    instance_destroy();
+   }
+ }
+}
 
 enemy_ctrl_OBJ.level_boss = 6
 
@@ -227,9 +238,12 @@ if (orbs &gt; 0) {
             image_index = floor(counter_ls/5)
             counter_ls++
             //laser charge particle creation
-            instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
-            instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
-            instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
+            charge_part_counter = charge_part_counter + 1
+            charge_part_index[charge_part_counter] = instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
+            charge_part_counter = charge_part_counter + 1
+            charge_part_index[charge_part_counter] = instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
+            charge_part_counter = charge_part_counter + 1
+            charge_part_index[charge_part_counter] = instance_create(x+choose(1,-1)*(random(48)),y+choose(1,-1)*(random(48)),boss_charge_part_OBJ)
             audio_sound_pitch(pl_laser_charge_SND,0.05*counter_ls)
             audio_play_sound(pl_laser_charge_SND,0,0)   
         }
@@ -240,6 +254,7 @@ if (orbs &gt; 0) {
             projectile_ls.creator = self.id
             audio_play_sound(boss_wave_SND,0,0)
             counter_ls += 5
+            charge_part_counter = -1
         }
         else if (instance_exists(projectile_ls)) {
             // firing, keep hatch open

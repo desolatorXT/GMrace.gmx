@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited()
-hp = 520
+hp = 1020
 
 xpos = room_width - 48
 ypos = 120
@@ -35,9 +35,16 @@ counter = 0
 counter_x = 0
 counter_z = 0
 
+
 stop = 0
 
 fire = 0
+//new fire timings
+charging = 0
+start_firing = choose(240,270,320,350,380,440)
+stop_firing = start_firing + choose(150,180,210,240,270)
+counter_f = 0 //increases over time, stops at stop_firing -&gt; resets at alarm1
+
 </string>
           </argument>
         </arguments>
@@ -68,6 +75,31 @@ enemy_ctrl_OBJ.counter = 0
 instance_create(x-8,y+4,hp_pickup_OBJ)
 instance_create(x-8,y-4,hp_pickup_OBJ)
 instance_create(x+8,y,life_pickup_OBJ)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>start_firing = choose(180,240,320,210,350,380)
+stop_firing = start_firing + choose(150,180,210,240,270)
+counter_f = 0 
 </string>
           </argument>
         </arguments>
@@ -114,18 +146,43 @@ instance_create(x+8,y,life_pickup_OBJ)
           <argument>
             <kind>1</kind>
             <string>event_inherited()
+//decide when to fire the minigun
+counter_f++
+if (counter_f == start_firing) then {
+ fire = 1
+}
+//CHECK FIRE VAR STATE, 0 = IDLE, 1 = CHARGING, 2 = ASSIGN SPRITE, 3 = FIRE
 if (fire == 0) then {
-    image_index = 0
+    //image_index = 0
     counter_z = 0
-} else {
+} else if (fire == 1) then {
+//charging
+ sprite_index = miniboss1_charging_SPR
+ if (counter_f &gt; start_firing + 60) then {
+  fire = 2
+ }
+} else if (fire == 2) then {
+    sprite_index = miniboss1_firing_SPR
+    fire = 3
+} else if (fire == 3) then {
+//fire minigun
     counter_z++
-    if ((counter_z mod 4)==0)&amp;&amp;(direction &lt; 180) then {
-        instance_create(x-4,y-13,en_chaingun_bullet_OBJ)
-        instance_create(x-4,y+8,en_chaingun_bullet_OBJ)
+    if ((counter_z mod 4)==0)&amp;&amp;(direction &lt; 180)&amp;&amp;(speed &gt; 0) then {
+        instance_create(x-4,y-15,en_chaingun_bullet_OBJ)
+        instance_create(x-4,y+10,en_chaingun_bullet_OBJ)
     }
-    if ((counter_z mod 4)==0)&amp;&amp;(direction &gt; 180) then {
-        instance_create(x-4,y-8,en_chaingun_bullet_OBJ)
-        instance_create(x-4,y+13,en_chaingun_bullet_OBJ)
+    if ((counter_z mod 4)==0)&amp;&amp;(direction &gt; 180)&amp;&amp;(speed &gt; 0) then {
+        instance_create(x-4,y-10,en_chaingun_bullet_OBJ)
+        instance_create(x-4,y+15,en_chaingun_bullet_OBJ)
+    }
+    if ((counter_z mod 4)==0)&amp;&amp;(speed == 0) then {
+        instance_create(x-4,y-12,en_chaingun_bullet_OBJ)
+        instance_create(x-4,y+11,en_chaingun_bullet_OBJ)
+    }
+    if (counter_f &gt; stop_firing) then {
+     fire = 0
+     alarm[1] = 1
+     sprite_index = miniboss1_SPR
     }
 }
 
@@ -141,7 +198,7 @@ if (stop == 0) then {
 
  if (x == xpos)&amp;&amp;(y == ypos) then {
   speed = 0
-  fire = 0
+  //fire = 0
   counter = counter + 1
   if (counter == 15) then {
    alarm[0] = 1
@@ -160,13 +217,13 @@ if (stop == 0) then {
  } else {
   speed = 2
   direction = point_direction(x,y,xpos,ypos)
-  fire = 1
+  //fire = 1
  }
 
 }
 
 
-if (counter_x &gt; 2000) then {
+if (counter_x &gt; 2500) then {
  stop = 1
  if (y &gt;= room_height/2) then {
   speed = 1

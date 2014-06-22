@@ -45,7 +45,8 @@ draw_sprite_part(hud_energy_bar_SPR, 0, 0, 0, width, height, hud_energy_bar_x[pl
 //-------------------------------
 
 //secondary weap ico
-secondary_ico = pl_obj[pl].secondary_weap.icon
+//secondary_ico = pl_obj[pl].secondary_weap.icon
+secondary_ico = pl_obj.secondary_weap.icon
 draw_sprite(secondary_ico,0,hud_secondary_ico_x[pl],room_height-15)
 //secondary weap ammo
 if (pl_obj.secondary_weap.ammo <0) then {temp = '-'} else {temp = string(pl_obj.secondary_weap.ammo)}

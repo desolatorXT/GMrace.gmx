@@ -5,5 +5,4 @@
 - 2player co-op mode.
 - Swap HUD icon for secondary weapon according to weap equipped.
 
-- Noticed a bug with the missile ammo and the HUD. If you are at max and pickup a missile it will flash 6 for one frame.
 - 2player shows some... interesting behavior. Investigate.

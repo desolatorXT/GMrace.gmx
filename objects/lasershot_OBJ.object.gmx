@@ -55,9 +55,9 @@ audio_play_sound(pl_laser_shot_SND,0,0)
             <string>if (!instance_exists(creator)) then {instance_destroy()}
 
 counter--
+if (instance_exists(creator)) then {x = creator.x+12 }
+if (instance_exists(creator)) then {y = creator.y}
 
-x = creator.x+12
-y = creator.y
 
 image_yscale = 0.1 + counter/15
 

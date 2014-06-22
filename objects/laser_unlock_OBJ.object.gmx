@@ -54,7 +54,7 @@ counter --
 
 if (counter == 0) then {
     sprite_index = laser_unlock_SPR
-    if (global_debugger_OBJ.fire_press = 1) then {
+    if (input_OBJ.fire_press = 1) then {
         //needs multiplayer fix
         temp = player_OBJ.secondary_weap
         player_OBJ.secondary_weap = instance_create(0,0,laser_weap_OBJ)
@@ -65,7 +65,7 @@ if (counter == 0) then {
         instance_destroy()
         exit;
     }
-    if (global_debugger_OBJ.altfire_press = 1) then {
+    if (input_OBJ.altfire_press = 1) then {
         enemy_ctrl_OBJ.level_boss = 0
         enemy_ctrl_OBJ.counter = 0
         instance_destroy()

@@ -34,6 +34,10 @@ part_count = 2
 icon = hud_laser_ico_SPR
 
 snd_start = 0
+
+//debug vars
+//ammo = 99
+max_ammo = '-'
 </string>
           </argument>
         </arguments>

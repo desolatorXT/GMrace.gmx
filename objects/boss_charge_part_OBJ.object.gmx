@@ -62,11 +62,10 @@ if (instance_exists(boss_lv1_OBJ)) then {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(boss_lv1_OBJ)) then {
-    instance_destroy()
-}
+            <string>if (!instance_exists(boss_lv1_OBJ)) then {instance_destroy()}
 
 speed += 0.1
+
 
 image_xscale = image_xscale*1.1
 if (image_xscale &gt; 2) then {image_xscale = 2}
@@ -74,10 +73,14 @@ image_yscale = image_yscale*1.1
 if (image_yscale &gt; 2) then {image_yscale = 2}
 //image_alpha = image_alpha*0.9
 
+if (!instance_exists(boss_lv1_OBJ)) then {instance_destroy()}
 
-if (point_distance(x,y,boss_lv1_OBJ.x,boss_lv1_OBJ.y)&lt;3) then {
+if instance_exists(boss_lv1_OBJ)&amp;&amp;(point_distance(x,y,boss_lv1_OBJ.x,boss_lv1_OBJ.y)&lt;3) then {
+ if (!instance_exists(boss_lv1_OBJ)) then {instance_destroy()}
     x = boss_lv1_OBJ.x
+ if (!instance_exists(boss_lv1_OBJ)) then {instance_destroy()}
     y = boss_lv1_OBJ.y
+ if (!instance_exists(boss_lv1_OBJ)) then {instance_destroy()}
     instance_destroy()
 }
 </string>
